@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>CSS 따라하기</title>
+        <!-- <style>
+            p {
+                background-color: violet;
+            }
+            #center {
+                color: red;
+            } id  선택자(중복x, 무조건 하나!고유임)
+            .center {
+                color: green;
+            } 클래스 선택자(중복 가능)*/
+            p.center {
+                font-size: 30px;
+            }  
+        </style>-->
+        <style>
+            body > div > div {
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="center">CSS 따라하기</h1>
+        <hr />
+        <div id="wrap">
+            <div>CSS 선택자 알아보기</div>
+            <p class="center">CSS 선택자 알아보기</p>
+            <p id="center">CSS 선택자 알아보기</p>
+        </div>
+    </body>
+</html>
