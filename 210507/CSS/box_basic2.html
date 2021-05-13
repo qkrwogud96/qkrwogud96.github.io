@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>box model</title>
+    <style>
+      #wrap > div {
+        width: 50px;
+        height: 50px;
+        border: 1px solid #000;
+        background-color: darkorchid;
+      }
+      #wrap {
+        width: 500px;
+        height: 500px;
+        background-color: aquamarine;
+        position: relative;
+      }
+      .box1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .box2 {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .box3 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+      .box4 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="box1">1</div>
+      <div class="box2">2</div>
+      <div class="box3">3</div>
+      <div class="box4">4</div>
+    </div>
+  </body>
+</html>

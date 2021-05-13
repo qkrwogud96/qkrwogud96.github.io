@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>box_exam</title>
+    <style>
+      #wrap {
+        width: 400px;
+        height: 300px;
+        border: 1px solid black;
+        background-image: url(../VIDEO/meong.jpg);
+        /* background-repeat: no-repeat; */
+        background-size: cover;
+        position: relative;
+        
+      }
+      #wrap > div {
+        width: 100%;
+        position: absolute;
+        text-align: left;
+        bottom: 0;
+        background-color: rgba(0, 0, 255, 0.3);
+        /* background-color: grey; */
+        /* opacity: 0.6; */
+        box-sizing: border-box;
+        padding: 10px;
+      }
+      h1{
+          font-size: 24px;
+          color: hotpink;
+      }
+      p{
+          color: black;
+          font-weight: bold;
+      }
+      span {
+        font-weight: bolder;
+        color: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div>
+        <h1><span>이름 :</span> 마리</h1> 
+        <p><span>성별 :</span> 여성<br />
+        <span>특징 :</span> 다리가 짧고 귀엽다.</p>
+      </div>
+    </div>
+  </body>
+</html>
