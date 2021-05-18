@@ -1,0 +1,110 @@
+@charset "utf-8"
+
+* {
+  margin: 0;
+  padding: 0;
+}
+/* .clear {
+    clear: both;
+  } */
+#wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+header {
+  background-color: yellow;
+  height: 350px;
+  background-image: url(../cafe/Image/header.jpg);
+  background-size: 100% 100%;
+}
+nav {
+  text-align: center;
+  /* padding: 5px; */
+  height: 50px;
+  position: relative;
+}
+.bar {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.6;
+}
+nav > ul {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0 auto;
+}
+nav > ul > li {
+  display: inline-block;
+  width: 150px;
+  height: 100%;
+  margin-top: 10px;
+}
+nav > ul a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: white;
+}
+section {
+  padding: 30px 100px;
+  border: 1px solid gray;
+}
+.photo,
+.detail {
+  width: 300px;
+  height: 250px;
+  float: left;
+  /* display: inline-block; */
+  box-sizing: border-box;
+  /* vertical-align: top; ! 위치정렬 */
+}
+.photo {
+  margin: 0 50px;
+}
+.photo > img {
+  width: 100%;
+  height: 100%;
+}
+.detail {
+  padding: 10px;
+  /* position: absolute; */
+}
+.detail > b {
+  font-size: 18px;
+}
+/* :nth-last-of-type(3) (가상선택) */
+#choice > .photo {
+  margin-right: 0;
+  margin-left: 100px;
+}
+#choice > .photo > img {
+  border-radius: 50%;
+}
+footer {
+  height: 100px;
+  background-color: black;
+}
+footer > p {
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: center;
+  height: 100%;
+  line-height: 175px;
+}
+section::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+section > h1 {
+  margin-bottom: 30px;
+}
