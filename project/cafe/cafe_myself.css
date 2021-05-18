@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+/************ all ************/
+* {
+  margin: 0 auto;
+  padding: 0;
+  font-weight: bolder;
+}
+body {
+  width: 960px;
+}
+
+/************ header ************/
+header {
+  height: 350px;
+  background-image: url(../cafe/Image/header.jpg);
+  background-size: cover;
+}
+nav {
+  height: 50px;
+  text-align: center;
+  background-color: black;
+}
+nav > ul {
+  list-style: none;
+  height: 100%;
+}
+nav li {
+  display: inline-block;
+  height: 100%;
+  margin: 15px 30px;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+}
+nav a:hover {
+  color: yellow;
+}
+/************ section ************/
+section {
+  width: 100%;
+  height: 400px;
+  border: 0.1px solid gray;
+  box-sizing: border-box;
+  padding: 35px;
+}
+section > h1 {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+#map {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.image,
+.detail {
+  display: inline-block;
+  width: 300px;
+  height: 250px;
+  float: left;
+  margin: 0 70px;
+  box-sizing: border-box;
+}
+.image > img {
+  width: 100%;
+  height: 100%;
+}
+#choice .image > img {
+  border-radius: 50%;
+}
+.detail {
+  padding: 15px;
+}
+.detail > p {
+  line-height: 3;
+}
+.detail span {
+  font-size: 11px;
+  font-style: italic;
+}
+.detail > h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.detail > ol {
+  box-sizing: border-box;
+}
+.detail li {
+  margin: 10px;
+  font-weight: 500;
+  font-size: 15px;
+}
+section::after {
+  clear: both;
+}
+/************ footer ************/
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: black;
+  position: relative;
+}
+footer > p {
+  color: white;
+  font-size: 25px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
