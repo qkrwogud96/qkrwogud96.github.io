@@ -7,7 +7,7 @@
   font-weight: bolder;
 }
 body {
-  width: 960px;
+  max-width: 960px;
 }
 
 /************ header ************/
@@ -92,6 +92,7 @@ section > h1 {
 section::after {
   clear: both;
 }
+
 /************ footer ************/
 footer {
   width: 100%;
@@ -107,4 +108,74 @@ footer > p {
   bottom: 0;
   width: 100%;
   text-align: center;
+}
+
+/************ tablet ************/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  body{
+    max-width: 768px;
+  }
+  .image {
+    width: 0;
+    height: 0;
+  }
+  .image > img {
+    visibility: hidden;
+  }
+  #info {
+    width: 50%;
+    float: left;
+  }
+  #map {
+    width: 50%;
+    float: left;
+  }
+  #choice {
+    float: left;
+    width: 100%;
+  }
+  #choice .detail {
+    width: 100%;
+  }
+  #choice ol {
+    display: inline-block;
+  }
+  #choice li {
+    width: 100%;
+  }
+  footer {
+    float: left;
+  }
+
+  footer::after {
+    clear: both;
+  }
+}
+
+/************ mobile ************/
+@media screen and (max-width: 767px) {
+  body {
+    max-width: 400px;
+  }
+nav li{
+ margin: 5px 5px;
+}
+  .image {
+    width: 0;
+    height: 0;
+  }
+  .image > img {
+    visibility: hidden;
+  }
+  header{
+   border: 2px solid black;
+
+  }
+  section{
+   padding: 30px; 
+   border: 2px solid black;
+  }
+  .detail {
+    padding: 0;
+  }
 }
