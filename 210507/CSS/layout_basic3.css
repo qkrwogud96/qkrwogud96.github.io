@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+/**********************0~319 ***************************/
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+#wrapper {
+  width: 80%;
+  min-height: 10vh;
+  max-height: 100vh;
+  margin: 0 auto;
+  border: 4px solid black;
+  box-sizing: border-box;
+}
+section {
+  display: inline-block;
+  margin-bottom: 4px;
+  height: 10vh;
+  box-sizing: border-box;
+}
+#red {
+  background-color: red;
+}
+#blue {
+  background-color: blue;
+}
+#green {
+  background-color: green;
+}
+#pink {
+  background-color: pink;
+}
+#violet {
+  background-color: violet;
+}
+
+/**********************320~767 ***************************/
+@media screen and (min-width: 320px) {
+  #red {
+    width: 100%;
+  }
+  #blue {
+    width: 100%;
+  }
+  #green {
+    width: 100%;
+  }
+  #pink {
+    width: 100%;
+  }
+  #violet {
+    width: 100%;
+  }
+}
+/**********************768~1023 ***************************/
+
+@media screen and (min-width: 768px) {
+  #red {
+    width: 50%;
+  }
+  #blue {
+    width: 50%;
+  }
+  #green {
+    width: 50%;
+  }
+  #pink {
+    width: 50%;
+  }
+}
+
+/**********************1024~~~~~ ***************************/
+@media screen and (min-width: 1024px) {
+  #red {
+    width: 20%;
+  }
+  #blue {
+    width: 20%;
+  }
+  #green {
+    width: 20%;
+  }
+  #pink {
+    width: 20%;
+  }
+  #violet {
+    width: 20%;
+  }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" text="text/ass" href="../CSS/layout_basic.css" />
+    <title>layout</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header><h1>고정 그리드 레이아웃</h1></header>
+      <section><h2>본문</h2>
+       <picture>
+         <source srcset="/project/cafe/Image/header.jpg" media="(min-width:960px)">
+         <source srcset="/project/cafe/Image/map.jpg" media="(min-width:768px)">
+         <source srcset="/project/cafe/Image/section1.jpg" media="(min-width:328px)">
+         <img src="/project/cafe/Image/ice.jpg" alt="">
+         <!-- 화면 너비에 따른 이미지 변경하는 방법. -->
+       </picture>
+      </section>
+      <aside>
+          <h2>사이드바</h2>
+        </aside>
+      <div class = "clear"></div>
+      <footer><h2>푸터</h2></footer>
+    </div>
+  </body>
+</html>
