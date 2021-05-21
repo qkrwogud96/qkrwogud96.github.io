@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex example</title>
+    <style>
+      /* * {
+        margin: 0;
+        padding: 0;
+      }
+      nav{
+          background-color: black;
+      }
+      ul {
+        display: flex;
+        list-style: none;
+        width: 600px;
+        height: 100px;
+        justify-content: space-around;
+        align-items: flex-end;
+      }
+      li {
+        text-align: center;    
+      }
+      li:hover {
+        border-radius: 10%;
+        background-color: green;
+      }
+      a {
+        text-decoration: none;
+        font-weight: bolder;
+        font-size: 1.5em;
+        color: white;
+      } */
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        border-top: 5px solid snow;
+        background-color: black;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        padding: 20px 10px 0 10px;
+        justify-content: flex-start;
+        
+      }
+      li{
+          margin: 0 5px 0 5px;
+          background-color: blue;
+          border-radius: 10px 10px 0 0;
+      }
+      li:nth-child(5){
+          margin-left: auto;
+      }
+      li:hover{
+          background-color: green;
+         
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        font-weight: bolder;
+        padding: 10px 20px 0 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">회사개요</a></li>
+        <li><a href="#">업무내용</a></li>
+        <li><a href="#">접속하기</a></li>
+        <li><a href="#">문의하기</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
