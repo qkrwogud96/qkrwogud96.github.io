@@ -1,0 +1,214 @@
+@charset "utf-8";
+
+/*all  **************/
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+#wrapper {
+  width: 62%;
+}
+/*header  **************/
+
+header {
+  /* background-color: rgb(189, 139, 123); */
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  top: 18vh;
+}
+header > h1 {
+  color: teal;
+  font-size: 20em;
+  font-style: italic;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+header > img {
+  width: 100vh;
+  height: 50vh;
+}
+
+#monitor > ul {
+  background-color: black;
+  list-style: none;
+  display: flex;
+  /* flex-direction: column; */
+  width: 100vh;
+  height: 150px;
+  position: relative;
+  top: -230px;
+}
+#monitor li {
+  margin: auto 10px 0 10px;
+  padding: 30px 40px 0 40px;
+  border-radius: 15%;
+}
+#monitor li:hover {
+  background-color: darkslategray;
+}
+#monitor a {
+  text-decoration: none;
+  font-size: 4em;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+#monitor a:hover {
+  color: yellow;
+}
+.blank {
+  height: 100vh;
+}
+
+/*section  **************/
+section {
+  border: 2px solid #000;
+}
+section > p {
+  font-weight: bolder;
+}
+#search,
+#detail,
+#text,
+#photo {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  box-sizing: content-box;
+}
+#search {
+  background-image: url(/project/selfweb/image/searchbackground.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+}
+#search > h2 {
+  font-size: 15em;
+}
+#search > p {
+  font-size: 7em;
+  font-style: italic;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-bottom: 100px;
+}
+#search > div {
+  padding: 10px;
+  font-size: 1.5em;
+}
+#search > div > input {
+  width: 1000px;
+  height: 150px;
+  font-size: 2em;
+  box-sizing: content-box;
+  padding-left: 5px;
+}
+#search > div > button {
+  width: 500px;
+  height: 150px;
+  font-size: 2em;
+  background-color: rgb(55, 54, 58);
+  color: white;
+  font-weight: bold;
+}
+#search button:hover{
+    color:yellow;
+}
+#detail {
+  text-align: center;
+  padding: 100px 200px;
+  align-items: center;
+}
+#detail p {
+  font-size: 7em;
+  font-family: cursive;
+  margin: 50px;
+}
+#detail img {
+  display: inline-block;
+  width: 800px;
+  height: 700px;
+  margin: 100px 200px;
+}
+#text {
+  margin-top: 80px;
+  background-color: rgb(234, 215, 201);
+  flex-direction: column;
+}
+#text > p {
+  font-size: 8em;
+  line-height: 2em;
+  font-style: italic;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+#photo {
+  margin-top: 28px;
+  flex-wrap: wrap;
+  box-sizing: content-box;
+  align-content: center;
+}
+#photo > img {
+  width: 21%;
+  margin: 50px;
+  height: 800px;
+}
+#photo > p {
+  font-size: 10em;
+  font-weight: 1.5em;
+  font-style: italic;
+}
+/*footer  **************/
+#bottom {
+  padding-top: 100px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(55, 54, 58);
+}
+#bottom > p {
+  font-size: 6em;
+  color: white;
+  line-height: 4em;
+}
+#bottom > div {
+  display: flex;
+  justify-content: center;
+}
+#bottom img {
+  width: 200px;
+  height: 200px;
+  margin: 0 50px;
+}
+/*adinfo  **************/
+#adinfo {
+  padding-top: 185px;
+  height: 100vh;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#adinfo > h2 {
+  font-size: 17em;
+}
+
+#adinfo > div {
+  padding: 50px 200px;
+  font-size: 15em;
+  font-weight: bolder;
+  background-color: #000;
+  color: white; 
+  margin: 200px 0;
+}
+#adinfo > div > a{
+    text-decoration: none;
+    color: white;
+}
+#adinfo a:hover{
+    color: yellow;
+}

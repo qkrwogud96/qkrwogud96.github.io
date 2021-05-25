@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+/* 공용 **************/
+* {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1400px;
+}
+
+/* header **************/
+header > nav {
+  background-color: gray;
+}
+header ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 10px 0 10px;
+}
+header li {
+  margin: 0 5px 0 5px;
+}
+header a {
+  color: white;
+  text-decoration: none;
+}
+header li:nth-child(1) {
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+header li:nth-child(6) {
+  margin-left: auto;
+}
+
+header > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* section **************/
+section {
+
+  margin: 40px 40px;
+  height: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  align-content: space-between;
+}   
+.itemlist {
+
+  display: flex;
+  flex-direction: column;
+}
+.itemimage{
+  margin: 5px;
+}
+.itemimage > img {
+  width: 100%;
+  height: 100%;
+}
+.itemsection {
+  position: relative;
+}
+.itemsection > h2{
+    display: inline-block;
+    font-size: 1em;
+}
+.itemsection > p:nth-of-type(1){
+    font-size: 0.9em;
+}
+.itemsection > p:nth-of-type(2){
+  position: absolute;
+  font-size: 0.8em;
+  font-weight: 300;
+  right: 10px;
+  top: 10px;
+}
+.itembutton{
+    margin: 0 30px 0 30px;
+
+}
+.itembutton > button{
+    font-size: 1em;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.itemfooter{
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.8em;
+    margin: 20px 10px;
+}
+.itemfooter span{
+    color: red;
+}
+
