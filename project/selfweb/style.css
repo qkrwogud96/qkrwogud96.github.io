@@ -40,7 +40,7 @@ header > img {
   top: -65px;
 }
 #monitor li {
-  margin:  0 4px;
+  margin: 0 4px;
   padding: 5px 20px 0 20px;
   border-radius: 15%;
 }
@@ -112,13 +112,13 @@ section > p {
   color: white;
   font-weight: bold;
 }
-#search button:hover{
-    color:yellow;
+#search button:hover {
+  color: yellow;
 }
 #detail {
   text-align: center;
   margin-left: 50px;
-  padding: 50px 0;
+  padding: 10px 210px;
   align-items: center;
 }
 #detail p {
@@ -145,6 +145,7 @@ section > p {
 }
 #photo {
   margin-top: 28px;
+  padding:  0 200px;
   flex-wrap: wrap;
   box-sizing: content-box;
   align-content: center;
@@ -201,13 +202,13 @@ section > p {
   font-size: 3em;
   font-weight: bolder;
   background-color: #000;
-  color: white; 
+  color: white;
   margin: 20px 0;
 }
-#adinfo > div > a{
-    text-decoration: none;
-    color: white;
+#adinfo > div > a {
+  text-decoration: none;
+  color: white;
 }
-#adinfo a:hover{
-    color: yellow;
+#adinfo a:hover {
+  color: yellow;
 }
