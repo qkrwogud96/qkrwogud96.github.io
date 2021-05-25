@@ -118,7 +118,7 @@ section > p {
 #detail {
   text-align: center;
   margin-left: 50px;
-  padding: 10px 210px;
+  padding: 10px 250px;
   align-items: center;
 }
 #detail p {
@@ -145,7 +145,7 @@ section > p {
 }
 #photo {
   margin-top: 28px;
-  padding:  0 200px;
+  padding:  0 280px;
   flex-wrap: wrap;
   box-sizing: content-box;
   align-content: center;
