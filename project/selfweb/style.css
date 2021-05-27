@@ -60,7 +60,14 @@ header > img {
 .blank {
   height: 100vh;
 }
-
+.blank > .screen{
+  display: inline-block;
+  width: 50%;
+  height: 40vh;
+  background-color: #444;
+  margin-top: 310px;
+  margin-left: 290px;
+}
 /*section  **************/
 section {
   border: 2px solid #eee;
