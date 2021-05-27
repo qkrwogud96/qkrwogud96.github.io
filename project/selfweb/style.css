@@ -62,11 +62,11 @@ header > img {
 }
 .blank > .screen{
   display: inline-block;
-  width: 50%;
+  width: 580px;
   height: 40vh;
   background-color: #444;
   margin-top: 310px;
-  margin-left: 290px;
+  margin-left: 660px;
 }
 /*section  **************/
 section {
