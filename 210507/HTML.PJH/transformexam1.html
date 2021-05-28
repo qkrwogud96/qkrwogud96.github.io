@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill Example</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrapper {
+        padding: 20px 10px;
+        width: 600px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #222;
+        color: #fff;
+        text-align: center;
+        border-radius: 15px;
+      }
+      h1 {
+        margin: 20px 0;
+        font-size: 2em;
+      }
+      .section {
+        margin: 15px auto;
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .wrap {
+        margin: 5px 0;
+        padding: 5px;
+        width: 100%;
+        border: 1px solid aqua;
+        border-radius: 5px;
+      }
+      .wrap > div {
+        height: 20px;
+        /* background-color: yellow; */
+        background: linear-gradient(to right, orange, yellow,orange);
+        animation: barGage 2s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes barGage {
+        0% {
+          width: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>SOFTWARE SKILLS</h1>
+      <div class="section">
+        <p>HTML5</p>
+        <p>90%</p>
+        <div class="wrap"><div style="width: 90%"></div></div>
+      </div>
+      <div class="section">
+        <p>CSS3</p>
+        <p>80%</p>
+        <div class="wrap">
+          <div style="width: 80%; animation-delay: 0.1s"></div>
+        </div>
+      </div>
+      <div class="section">
+        <p>jQuery</p>
+        <p>65%</p>
+        <div class="wrap">
+          <div style="width: 65%; animation-delay: 0.2s"></div>
+        </div>
+      </div>
+      <div class="section">
+        <p>Photoshop</p>
+        <p>70%</p>
+        <div class="wrap">
+          <div style="width: 70%; animation-delay: 0.3s"></div>
+        </div>
+      </div>
+      <div class="section">
+        <p>Illustrator</p>
+        <p>82%</p>
+        <div class="wrap">
+          <div style="width: 82%; animation-delay: 0.4s"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
