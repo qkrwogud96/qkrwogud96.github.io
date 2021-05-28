@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3d transform</title>
+    <style>
+      /* .wrapper {
+        perspective: 500px;
+        padding: 100px;
+      } */
+      .parent {
+        width: 200px;
+        border: 2px solid tomato;
+        /* transform-style: preserve-3d; */
+      }
+      img {
+        width: 200px;
+        height: 200px;
+        transform: perspective(500px) rotateY(45deg);
+        /* transform: rotateY(45deg); */
+        transition: 1s;
+        border: 1px solid #222;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="parent">
+          <img
+            src="/project/selfweb/practice1/image/style1.jpg"
+            alt="Womanstyle"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

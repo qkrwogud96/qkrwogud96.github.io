@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: teal;
+        /********************transition 정리
+
+                     transition-property: 속성값 (기본값 all);
+                     transition-duration: s (시간);
+                     transition-timing-function: 속도(기본값 ease);
+                     transition-delay: 2s;
+                     >> 통합 transition: width 3s steps(3);
+
+                     호버로 작동하게 만들지만 처음값에 넣어줘야함! */
+
+        /***********************transform 정리
+
+                     2D 정리
+                     transform
+                     이동 translate()
+                     크기 scale()
+                     회전 rotate(deg)
+                     기울임 skew(X , Y)
+
+
+                     3D 정리
+                     이동 translate3d(X, Y, Z)
+                     크기 scale3d(X, Y, Z)
+                     회전 rotate3d(X, Y ,Z, A)
+                     원근법 perspective(px)
+
+                     transform-origin: X Y;
+                     transform-style: preserve-3d;(기본2d flat, 3d로 바꾸기)
+                     backface-visibility : visible | hidden */
+
+        /***********************animation 정리
+
+              @keyframes identifier(이름) {
+                  0%{}
+
+                  50%{}
+
+                  100%{}
+              }
+
+              animation: first-ani 3s linear 3s infinite normal;
+              animation: name duration timing-function delay iteration-count direction fill-mode;
+                         이름   시간        속도        딜레이  반복(infinite)  방향(리버스)
+                           */
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

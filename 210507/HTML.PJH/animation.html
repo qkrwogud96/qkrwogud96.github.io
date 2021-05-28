@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+      body {
+        height: 100vh;
+      }
+      .box {
+        width: 200px;
+        height: 10px;
+        background-color: orange;
+        display: flex;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: first-ani 3s infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        transform-origin: 0 0;
+        border-radius: 10px;
+      }
+      @keyframes first-ani {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* .box:hover{
+            
+ 
+ 
+ 
+            animation-name: first-ani;
+            animation-duration: 2s; 
+            animation-timing-function: linear;
+             animation-delay: 2s; 
+            animation-iteration-count: infinite;
+        }
+        @keyframes first-ani {
+            0%{
+                width: 100px;
+            }
+            50%{
+                background-color: red;
+            }
+            100%{
+                width: 500px;
+            }
+        } */
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

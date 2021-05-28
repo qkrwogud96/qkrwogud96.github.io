@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Grid Area</title>
+    <style>
+      #wrapper {
+        padding: 10px;
+        text-align: center;
+        line-height: 5em;
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 200px);
+        grid-template-areas:
+          "header header header"
+          "main main aside"
+          "footer footer footer";
+      }
+      header {
+        grid-area: header;
+        background-color: red;
+      }
+      main {
+        padding: 15px;
+        grid-area: main;
+        background-color: chartreuse;
+        display: grid;
+        gap: 15px;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+      }
+      main > div {
+        background-color: darkorange;
+        grid-column: 1 / span 2;
+      }
+      main > section:nth-child(odd) {
+        background-color: deeppink;
+      }
+      main > section:nth-child(even) {
+        background-color: deepskyblue;
+      }
+      aside {
+        background-color: coral;
+        grid-area: aside;
+      }
+
+      footer {
+        background-color: cyan;
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>Big News!!</header>
+      <main>
+        <div>ICT폴리텍</div>
+        <section>비리!!?</section>
+        <section>폭행!!?</section>
+      </main>
+      <aside>사실 다 거짓</aside>
+      <footer>행복한 생활</footer>
+    </div>
+  </body>
+</html>

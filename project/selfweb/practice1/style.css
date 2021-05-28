@@ -23,12 +23,10 @@ header > h1 {
   font-style: italic;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-
 header > img {
   width: 64vh;
   height: 50vh;
 }
-
 #monitor > ul {
   background-color: black;
   list-style: none;
@@ -219,3 +217,5 @@ section > p {
 #adinfo a:hover {
   color: yellow;
 }
+
+

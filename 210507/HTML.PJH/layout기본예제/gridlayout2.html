@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Layout</title>
+    <style>
+      #wrapper {
+        margin: 10px;
+        padding: 10px;
+        border: 3px solid #000;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(300px, 150px));
+        grid-template-rows: minmax(300px, auto);
+        column-gap: 10px;
+        row-gap: 10px;
+      }
+      #wrapper > div {
+        padding: 10px;
+        border-radius: 10px;
+      }
+      /* .card1 {
+        background-color: #666;
+      }
+      .card2 {
+        background-color: #aaa;
+      } */
+      .card {
+        background-color: #eee;
+      }
+      .card:nth-child(odd) {
+        background-color: cadetblue;
+      }
+      /* 홀수 >>>>>> odd  |||||||||| 짝수 >>>>> even */
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="card">
+        Lorem ipsum dolor sit amet, has eripuit vituperata ut, eu nam prima
+        ipsum altera. Cu agam principes consetetur has, cu impetus fastidii has,
+        latine legendos ius ei. Lorem ipsum dolor sit amet, has eripuit
+        vituperata ut, eu nam prima ipsum altera. Cu agam principes consetetur
+        has, cu impetus fastidii has, latine legendos ius ei. Lorem ipsum dolor
+        sit amet, has eripuit vituperata ut, eu nam prima latine legendos ius
+        ei. Lorem ipsum dolor sit amet, has eripuit vituperata ut, eu nam prima
+        latine legendos ius ei.
+      </div>
+      <div class="card">Lorem ipsum dolor sit amet</div>
+      <div class="card">
+        Dicant scripta ad nec, at prompta perfecto has, eu libris placerat nec.
+      </div>
+      <div class="card">
+        Falli causae iisque pri ei, vivendo consequuntur nam at. In eam munere
+        timeam scribentur.
+      </div>
+      <div class="card">
+        singulis abhorreant per, mundi commodo torquatos ea sea. Mel et fabellas
+        patrioque quaerendum.
+      </div>
+      <div class="card">
+        Lorem ipsum dolor sit amet, has eripuit vituperata ut
+      </div>
+    </div>
+  </body>
+</html>
