@@ -4,67 +4,125 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style></style>
+    <link rel="stylesheet" href="style.css" text="text/css" />
     <title>Webpage</title>
   </head>
   <body>
+    <div id="wrapper">
+      <header>
+        <nav>
+          <p><span>NH</span> Developers</p>
+          <ul>
+            <li><a href="#">개발자센터 소개</a></li>
+            <li><a href="#">API 소개</a></li>
+            <li><a href="#">API 개발가이드</a></li>
+            <li><a href="#">오픈소스</a></li>
+            <li><a href="#">개발자 확인</a></li>
+          </ul>
+          <img src="image/menulock.JPG" alt="lock_onoff" />
+          <img src="image/menu.JPG" alt="menulist" />
+        </nav>
+        <span><h1>NH오픈플랫폼</h1></span>
+        <h2>개발자센터</h2>
+        <hr />
+        <p>다양한 오픈 소스로 간편하게</p>
+        <p>게임하실 수 있도록 실시간으로 지원합니다.</p>
+      </header>
 
-
-    <header>
-      <nav>
-        <p>NH Developers</p>
-        <ul>
-          <li><a href="#">개발자센터 소개</a></li>
-          <li><a href="#">AM 소개</a></li>
-          <li><a href="#">AM 개발가이드</a></li>
-          <li><a href="#">오픈소스</a></li>
-          <li><a href="#">개발자 확인</a></li>
-        </ul>
-        <img src="" alt="" />
-        <img src="" alt="" />
-      </nav>
-      <h1>NH오픈플랫폼</h1>
-      <h2>개발자센터</h2>
-
-      <p>
-        다양한 오픈 소스로 간편하게 <br />
-        게임하실 수 있도록 실시간으로 지원합니다.
-      </p>
-    </header>
-
-
-    <aside>
-      <div class="menuinfo">
-        <h1>시작하기</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consetetur honestatis cum te, ne postea
-          viderer tibique
-        </p>
-        <img src="" alt="" />
-      </div>
       <aside>
-
-      <section>
-        <div class="subhead">
-            <div class="title">Today 개발자센터</div>
-            <div class="title">이용실적</div>
-            <div class="detail">Lorem ipsum dolor sit amet, consetetur honestatis cum te</div>
-            <div class="day">기준일자 : 2021/05/30(KT)</div>
+        <div class="menuinfo">
+          <h1>시작하기</h1>
+          <p>Lorem ipsum dolor sit amet, consetetur honestatis cum te,</p>
+          <img src="image/ul1.JPG" alt="" />
         </div>
-        <div class="circledetail">
+        <div class="menuinfo">
+          <h1>금융조회</h1>
+          <p>Lorem ipsum dolor sit amet, consetetur honestatis cum te,</p>
+          <img src="image/ul2.JPG" alt="" />
+        </div>
+        <div class="menuinfo">
+          <h1>간편결제</h1>
+          <p>Lorem ipsum dolor sit amet, consetetur honestatis cum te,</p>
+          <img src="image/ul3.JPG" alt="" />
+        </div>
+        <div class="menuinfo">
+          <h1>P2P금융</h1>
+          <p>Lorem ipsum dolor sit amet, consetetur honestatis cum te,</p>
+          <img src="image/ul4.JPG" alt="" />
+        </div>
+        <div class="menuinfo">
+          <h1>지로공과금</h1>
+          <p>Lorem ipsum dolor sit amet, consetetur honestatis cum te,</p>
+          <img src="image/ul5.JPG" alt="" />
+        </div>
+      </aside>
+
+      <section id="APIperformance">
+        <div class="card">
+          <div class="subhead">
+            <p class="title">Today 개발자센터</p>
+            <h1>이용실적</h1>
+            <p class="detail">
+            개발자센터에서 제공되는 API 이용실적입니다.
+            </p>
+            <p class="day">기준일자 : 2021/05/30(KT)</p>
+          </div>
+          <div class="circledetail">
             <h1>74</h1>
             <p>회원수</p>
+          </div>
+          <div class="circledetail">
+            <h1>1244</h1>
+            <p>이용건수</p>
+          </div>
+          <div class="circledetail">
+            <h1>0</h1>
+            <p>1일 API 처리량</p>
+          </div>
         </div>
       </section>
 
-      <section>
-        <div class="subhead"></div>
-        <div class="step">
-            <div class="num"><p>STEP</p><h1>01</h1></div>
-            <img src="" alt="">
-            <div class="stepinfo">개발자센터 회원가입 및 테스트 인증서발급</div>
-        </div>
+      <section id="APIstep">
+        <div class="card">
+          <div class="subhead">
+            <p class="title">NH 오픈플랫폼</p>
+            <h1>이용절차</h1>
+            <p class="detail">
+              다양한 오픈소스로<br> 간편하게 개발하실 수 있도록 실시간으로 지원합니다.
+            </p>
+            <p class="day">기준일자 : 2021/05/30(KT)</p>
+          </div>
+          <div class="step">
+            <p><span>STEP</span></p>
+            <h1><span>01</span></h1>
+            <div><img src="image/dKey.JPG" alt="key" /></div>
+            <p>개발자센터 회원가입 및</p>
+            <p>테스트 인증서발급</p>
+          </div>
+          <div class="step">
+            <p><span>STEP</span></p>
+            <h1><span>02</span></h1>
+            <div><img src="image/dCheck.JPG" alt="check" /></div>
+            <p>개발자센터 회원가입 및</p>
+            <p>테스트 인증서발급</p>
+          </div>
+          <div class="step">
+            <p><span>STEP</span></p>
+            <h1><span>03</span></h1>
+            <div><img src="image/dFile.JPG" alt="file" /></div>
+            <p>개발자센터 회원가입 및</p>
+            <p>테스트 인증서발급</p>
+          </div>
+          <div class="step">
+            <p><span>STEP</span></p>
+            <h1><span>04</span></h1>
+            <div><img src="image/dLink.JPG" alt="link" /></div>
+            <p>개발자센터 회원가입 및</p>
+            <p>테스트 인증서발급</p>
+          </div>
+
       </section>
-    </aside>
+      <footer>1</footer>
+    </div>
   </body>
 </html>
