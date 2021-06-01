@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>Selector after</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: #222;
+            display: block;
+        }
+        .gnb a::before{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            font-size: 0.7em;
+            line-height: 21px;
+            content: "01";
+            background-color: royalblue;
+            color: #fff;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        .gnb a::after{
+            content: "Update";
+            background-color:mediumvioletred;
+            color: #fff;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+            font-size: 0.7em;
+            line-height: 21px;
+            text-align: center;
+            border-radius: 3px;
+            margin-left: 5px;
+        }
+        .fab{
+            width: 300px;
+            height: 300px;
+        }
+        .fa-android{
+            font-size: 4em;
+        }
+    </style>
+</head>
+<body>
+    <i class="fab fa-android"></i>
+    <div class="gnb">
+        <a href="#">FrontEnd Developer</a>
+        <a href="#">FrontEnd Developer</a>
+        <a href="#">FrontEnd Developer</a>
+        <a href="#">FrontEnd Developer</a>
+        <a href="#">FrontEnd Developer</a>
+        <a href="#">FrontEnd Developer</a>
+    </div>
+</body>
+</html>

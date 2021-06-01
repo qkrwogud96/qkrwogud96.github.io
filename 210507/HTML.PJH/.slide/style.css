@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.slide {
+  border: 3px solid red;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+img {
+  width: 300px;
+  height: 300px;
+}
+.slide-images {
+  width: 900px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0;
+  transition: 0.5s;
+}
+input[name="tab"] {
+  display: none;
+}
+input[id="tab1"]:checked ~ .slide .slide-images {
+  left: 0;
+}
+input[id="tab2"]:checked ~ .slide .slide-images {
+  left: -300px;
+}
+input[id="tab3"]:checked ~ .slide .slide-images {
+  left: -600px;
+}
+.btn {
+  text-align: center;
+  margin-top: 15px;
+}
+.btn label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 50%;
+  cursor: pointer; /* <a>가 아니여도 커서 포인터를 바꿀 수 있음*/
+}
+input[id="tab1"]:checked ~ .btn label[for="tab1"],
+input[id="tab2"]:checked ~ .btn label[for="tab2"],
+input[id="tab3"]:checked ~ .btn label[for="tab3"] {
+  background-color: #555;
+}
