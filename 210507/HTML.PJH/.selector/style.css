@@ -17,6 +17,21 @@ body {
   padding: 20px 40px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+.sns a::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: cadetblue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: 0.4s;
+
+}
+.sns a:hover::before{
+  transform: translateY(0); 
+}
 .sns a {
   text-decoration: none;
   color: #000;
@@ -25,6 +40,17 @@ body {
   display: inline-block;
   width: 50px;
   height: 50px;
-  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.sns a .fab{
+  width: 100%;
+  position: absolute;
   line-height: 50px;
+  text-align: center;
+  transition: .5s;
+}
+.sns a:hover .fab{
+  transform: perspective(500px) rotateY(360deg);
+  color: #fff;
 }
