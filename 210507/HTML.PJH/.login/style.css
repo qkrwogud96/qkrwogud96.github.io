@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5em;
+}
+.login {
+  width: 700px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  padding: 30px;
+}
+.login p {
+  font-weight: bolder;
+  margin-top: 20px;
+}
+.login input[type="email"],
+.login input[type="password"] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 15px 0 15px 40px;
+}
+.login input[type="email"] {
+  background-image: url(Image/envelope-regular.svg);
+  background-repeat: no-repeat;
+  background-position: left 10px center;
+  background-size: 20px;
+}
+.login input[type="password"] {
+  background-image: url(Image/unlock-solid.svg);
+  background-repeat: no-repeat;
+  background-position: left 10px center;
+  background-size: 20px;
+}
+.login input[type=email]:hover,
+.login input[type=password]:hover{
+    box-shadow: 0 0 5px dodgerblue;
+}
+.login input[type="email"]:focus::placeholder,
+.login input[type="password"]:focus::placeholder {
+  opacity: 0;
+}
+.check{
+    margin: 10px;
+}
+.check label{
+    float: left;
+}
+.check a{
+    float: right;
+}
+.check::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.check a:hover{
+    text-decoration: underline;
+}
+.login button{
+    background-color: dodgerblue;
+    color: #fff;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.5em;
+}
+/******************************* 내가 하다 만거 *************************/
+/* *{
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper{
+    width: 35vw;
+    height: 30vh;
+    background-color: #eee;
+    box-shadow: 0 0 10px #222;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.detail{
+    width: 100%;
+    margin-top: 20px;
+}
+.detail input[type="email"]{
+background-image: url(file:///C:/Users/ICT_1101_04/Downloads/envelope-regular.svg);
+}
+.detail p{
+    font: 0.7em;
+}
+.detail input{
+    width: 95%;
+    padding: 10px 5px;
+}
+.check{
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    color: #999;
+
+}
+.check a{
+    text-decoration: none;
+    color: #999;
+
+}
+input[type=button]{
+    width: 200px;
+    height: 40px;
+    background-color: teal;
+    color: white;
+    border: none;
+    border-radius: 3px;
+} */

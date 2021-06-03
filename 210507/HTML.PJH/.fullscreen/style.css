@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+input {
+  display: none;
+}
+section {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+section .card {
+  width: 300vw;
+  height: 100vh;
+  position: absolute;
+  transition: 1s;
+}
+section .card .scr {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  font-size: 8em;
+  font-weight: bolder;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  line-height: 100vh;
+  float: left;
+}
+section .card .scr > p {
+  transform: translateY(-60vh);
+  transition: 1s;
+  transition-delay: 0.5s;
+  opacity: 0;
+}
+.scr1 {
+  background-image: url(/project/selfweb/practice1/image/style1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  /* background: url(/project/selfweb/practice1/image/style1.jpg) no-repeat center
+    center fixed; */
+}
+.scr2 {
+  background-image: url(/project/selfweb/practice1/image/style2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.scr3 {
+  background-image: url(/project/selfweb/practice1/image/style3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+section::after {
+  clear: both;
+}
+.btn {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 15px;
+}
+.btn label {
+  display: inline-block;
+  width: 50px;
+  height: 5px;
+  background-color: #fff;
+  margin: 2px;
+  cursor: pointer;
+}
+input[id="fullscr1"]:checked ~ section .card {
+  left: 0;
+}
+input[id="fullscr2"]:checked ~ section .card {
+  left: -100vw;
+}
+input[id="fullscr3"]:checked ~ section .card {
+  left: -200vw;
+}
+input[id="fullscr1"]:checked ~ section .card .scr1 p,
+input[id="fullscr2"]:checked ~ section .card .scr2 p,
+input[id="fullscr3"]:checked ~ section .card .scr3 p {
+  transform: translateY(0);
+  opacity: 1;
+}
+input[id="fullscr1"]:checked ~ .btn label[for="fullscr1"],
+input[id="fullscr2"]:checked ~ .btn label[for="fullscr2"],
+input[id="fullscr3"]:checked ~ .btn label[for="fullscr3"] {
+  background-color: #222;
+}
