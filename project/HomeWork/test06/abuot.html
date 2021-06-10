@@ -12,6 +12,22 @@
       crossorigin="anonymous"
     />
     <title>TEST 06</title>
+    <style>
+      .banner{
+        height: 30vh;
+      }
+      #info{
+        text-align: center;
+      }
+      #info > h1{
+        font-size: 30px;
+        margin: 10px 0;
+      }
+      #info > h2{
+        font-size: 16px;
+        margin: 10px 0;
+      }
+    </style>
   </head>
   <body>
     <div id="container">
@@ -29,26 +45,22 @@
           <!------------------------>
           <ul>
             <li>
-              <a href="test.html" style="color : royalblue; font-weight: bolder;">HOME</a></li>
-            <li><a href="abuot.html" >ABOUT</a></li>
+              <a href="test.html">HOME</a>
+            </li>
+            <li><a href="abuot.html" style="color : royalblue; font-weight: bolder;">ABOUT</a></li>
             <li><a href="portfolio.html">PORTFOLIO</a></li>
             <li><a href="contact.html">CONTACT</a></li>
           </ul>
         </nav>
-        <div class="banner">
-          <div>
-            <h1>PORTFOLIO</h1>
-            <h2>I'M A FRONTEND DEVELOPER</h2>
-          </div>
-          <p>SCROLL DOWN</p>
-        </div>
+        <div class="banner"></div>
       </header>
       <section id="info">
+        <h1>ABOUT</h1>
+        <h2>Web Developer JaeHyung.Park</h2>
         <!-- 태블릿,모바일용 슬라이드처리 -->
         <input type="radio" name="check" id="tab1" checked />
         <input type="radio" name="check" id="tab2" />
         <input type="radio" name="check" id="tab3" />
-
         <div class="btn">
           <label for="tab1"></label>
           <label for="tab2"></label>
@@ -90,43 +102,6 @@
           </div>
         </div>
       </section>
-
-      <section id="image">
-        <h1>PORTFOLIO</h1>
-        <p>최근 작업</p>
-        <div class="imgwrap">
-          <div class="img img1">
-            <img src="Image/img4.jpg" alt="pofol4" />
-            <img src="Image/img5.jpg" alt="pofol5" />
-            <img src="Image/img6.jpg" alt="pofol6" />
-          </div>
-          <div class="img img2">
-            <img src="Image/img1.jpg" alt="pofol1" />
-            <img src="Image/img2.jpg" alt="pofol2" />
-            <img src="Image/img3.png" alt="pofol3" />
-          </div>
-          <div class="img img3">
-            <img src="Image/img6.jpg" alt="pofol7" />
-            <img src="Image/img7.jpg" alt="pofol8" />
-            <img src="Image/img8.jpg" alt="pofol9" />
-          </div>
-        </div>
-      </section>
-
-      <section id="QA">
-        <h1>CONTACT</h1>
-        <p>안녕하세요 박재형 입니다.</p>
-        <p>궁금한 사항을 메일로 문의해 주시면 빠른 시일내</p>
-        <p>에 답변 드리도록 하겠습니다.</p>
-        <p>감사합니다.</p>
-        <div class="sns">
-            <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
-            <a href="https://google.com"><i class="fab fa-google-plus-g"></i></a>
-        </div>
-      </section>
-
       <footer>
         <p>E-Mail. qkrwogud96@gmail.com</p>
         <p>Copyright ⓒ by PARK JAE HYUNG</p>

@@ -44,9 +44,6 @@ ul a {
   font-size: 1.5em;
   color: #000;
 }
-ul a span {
-  color: royalblue;
-}
 li:hover a,
 li:hover a span {
   color: violet;
@@ -70,6 +67,7 @@ li:hover a span {
 .banner h1 {
   color: yellow;
   font-size: 8vw;
+  letter-spacing: 2.5vw;
 }
 .banner h2 {
   font-size: 3.5vw;

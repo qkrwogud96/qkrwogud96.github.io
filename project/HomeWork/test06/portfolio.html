@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <title>TEST 06</title>
+    <style>
+      .banner{
+        height: 30vh;
+      }
+      .modal{
+        display: none;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6);
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      .close{
+        color: #fff;
+        font-size: 70px;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+      }
+      .modal_content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        max-width: 500px;
+        width: 70%;
+        animation: zoom 1s;
+      }
+      @keyframes zoom {
+      0%{
+        transform: scale(0);
+      }        
+      100%{
+        transform: scale(1);
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <nav>
+          <h1>PARK JAE <span>H</span>UYNG</h1>
+          <!-- 모바일용 메뉴 바 -->
+          <input type="checkbox" id="menu">
+          <label for="menu">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+          </label>
+          </input>
+          <!------------------------>
+          <ul>
+            <li>
+              <a href="test.html">HOME</a>
+            </li>
+            <li><a href="abuot.html">ABOUT</a></li>
+            <li><a href="portfolio.html" style="color : royalblue; font-weight: bolder;">PORTFOLIO</a></li>
+            <li><a href="contact.html" >CONTACT</a></li>
+          </ul>
+        </nav>
+        <div class="banner"></div>
+      </header>
+
+      <section id="image">
+        <h1>PORTFOLIO</h1>
+        <p>최근 작업</p>
+        <div class="imgwrap">
+          <div class="img img1">
+            <img src="Image/img4.jpg" alt="pofol4" />
+            <img src="Image/img5.jpg" alt="pofol5" />
+            <img src="Image/img6.jpg" alt="pofol6" />
+          </div>
+          <div class="img img2">
+            <img src="Image/img1.jpg" alt="pofol1" />
+            <img src="Image/img2.jpg" alt="pofol2" />
+            <img src="Image/img3.png" alt="pofol3" />
+          </div>
+          <div class="img img3">
+            <img src="Image/img6.jpg" alt="pofol7" />
+            <img src="Image/img7.jpg" alt="pofol8" />
+            <img src="Image/img8.jpg" alt="pofol9" />
+          </div>
+        </div>
+      </section> 
+      <div class="modal">
+        <span class="close" style="cursor: pointer;">&times;</span>
+        <img  class="modal_content"src="Image/img1.jpg">
+      </div>
+      <footer>
+        <p>E-Mail. qkrwogud96@gmail.com</p>
+        <p>Copyright ⓒ by PARK JAE HYUNG</p>
+        <p>All Rights Reserved</p>
+      </footer>
+    </div>
+  </body>
+  <script>
+    const imgTag = document.querySelector('.imgwrap');
+    const modal = document.querySelector('.modal');
+    imgTag.addEventListener("click", function(e){
+      let targetSrc = e.target.getAttribute("src");
+      console.log( targetSrc );
+      modal.children[1].src = targetSrc;
+      modal.style.display = "block";
+    });
+
+    const closeBtn = modal.children[0];
+    closeBtn.addEventListener("click",function(){
+      modal.style.display = "none";
+    })
+  </script>
+</html>
