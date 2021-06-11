@@ -1,14 +1,63 @@
-<!-- https://www.pinterest.co.kr/pin/8373949297581369/ -->
+<!-- https://www.pinterest.co.kr/pin/42080577759088465/ -->
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" type="text/css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
     <title>Practice 4</title>
-</head>
-<body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #back-img {
+        height: 100vh;
+        background-image: linear-gradient(to right, rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(Image/main.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     
-</body>
+      }
+      #wrapper {
+        width: 65%;
+        height: 75vh;
+        background-color: tomato;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      /* #banner {
+      } */
+    </style>
+  </head>
+  <body>
+    <div id="back-img">
+      <div id="wrapper">
+        <!-- 상단 고정 배너 -->
+        <div id="banner"></div>
+
+        <!-- 메인 화면 -->
+        <div id="main"></div>
+
+        <!-- 로딩화면 -->
+        <div id="loading"></div>
+
+        <!-- 인포화면-->
+        <div id="desk">
+          <div class="img1"></div>
+          <div class="img2"></div>
+          <div class="img3"></div>
+          <div class="img4"></div>
+        </div>
+
+        <!-- 정보화면 -->
+        <div id="info"></div>
+      </div>
+    </div>
+  </body>
 </html>
