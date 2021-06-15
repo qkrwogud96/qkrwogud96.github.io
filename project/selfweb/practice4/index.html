@@ -5,47 +5,81 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
     <title>Practice 4</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      #back-img {
-        height: 100vh;
-        background-image: linear-gradient(to right, rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(Image/main.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    
-      }
-      #wrapper {
-        width: 65%;
-        height: 75vh;
-        background-color: tomato;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-      }
-      /* #banner {
-      } */
-    </style>
   </head>
   <body>
     <div id="back-img">
       <div id="wrapper">
         <!-- 상단 고정 배너 -->
-        <div id="banner"></div>
+        <div id="banner">
+          <b>VOGUE</b>
+          <div class="line"></div>
+          <div class="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <i class="fas fa-circle"></i>
+          <p>menu</p>
+        </div>
 
         <!-- 메인 화면 -->
-        <div id="main"></div>
+        <div id="main">
+          <div class="backpage">
+            <a href="#"><i class="fas fa-long-arrow-alt-left"></i> back</a>
+          </div>
+
+          <div class="detail">
+            <b>Cover Story</b>
+            <h1>
+              Beyond <br />
+              Beauty
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet, has aliquip ceteros et<br />
+              ut tota habeo congue sea, malorum dissentiet ut vel.
+            </p>
+            <div class="btn">
+              <a href="#">Read article ←</a>
+              <p>By JAEHYUNG PARK</p>
+            </div>
+          </div>
+
+          <a href="#">Author ▼</a>
+
+          <div class="sns">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#">more sns</a>
+            <a href="#"><i class="fas fa-search"></i></a>
+          </div>
+        </div>
 
         <!-- 로딩화면 -->
-        <div id="loading"></div>
+        <div id="load">
+          <div class="logo">
+            <p>VOGUE</p>
+            <div class="loading">
+              <div class="bar bar1"></div>
+              <div class="bar bar2"></div>
+              <div class="bar bar3"></div>
+            </div>
+          </div>
+        </div>
 
         <!-- 인포화면-->
         <div id="desk">
