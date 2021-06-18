@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #wrap {
+        width: 300px;
+        height: 300px;
+        border: 1px solid #000;
+        position: relative;
+        overflow: hidden;
+      }
+      button {
+        position: absolute;
+        z-index: 5;
+      }
+      button:nth-of-type(1) {
+        left: 0;
+      }
+      button:nth-of-type(2) {
+        right: 0;
+      }
+      .imgwrap {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 1s;
+      }
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <button>&leftarrow;</button>
+      <div class="imgwrap">
+        <img src="/project/HomeWork/test06/Image/img4.jpg" alt="" />
+        <img src="/project/HomeWork/test06/Image/img5.jpg" alt="" />
+        <img src="/project/HomeWork/test06/Image/img6.jpg" alt="" />
+      </div>
+      <button>&rightarrow;</button>
+    </div>
+    <script>
+      let rightBtn = document.querySelector("button:nth-of-type(2)");
+      let leftBtn = document.querySelector("button:nth-of-type(1)");
+      let imgwrap = document.querySelector(".imgwrap");
+      let flow = 0;
+      let imgArray = ["img4", "img5", "img6"];
+
+      rightBtn.addEventListener("click", rightEvent);
+      function rightEvent() {
+        flow -= 300;
+        if(flow < -600) flow = 0;
+        imgwrap.style.left = flow + "px" ;        
+        imgwrap.style.left = flow + "px" ;          
+        imgwrap.style.left = "600px" ;        
+      }
+
+      leftBtn.addEventListener("click", leftEvent);
+      function leftEvent() {
+        if(flow == 0) flow = -900
+        flow += 300;
+        if(flow > 600) flow = 0;
+        imgwrap.style.left = flow + "px";
+      }
+     
+    </script>
+  </body>
+</html>

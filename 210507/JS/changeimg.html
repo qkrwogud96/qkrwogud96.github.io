@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Selector</title>
+    <style>
+      img {
+        width: 500px;
+        height: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="lbtn">&lt;</button>
+    <img src="/project/cafe/Image/header.jpg" />
+    <button class="rbtn">&gt;</button>
+    <script>
+      // setTimeout(left, 100); 
+      setInterval(left, 500);
+      let flag = 0;
+      let imgName = ["header", "ice", "section1"];
+
+      let obj = document.querySelector("img");
+      let lbtn = document.querySelector(".lbtn");
+      let rbtn = document.querySelector(".rbtn");
+
+      lbtn.addEventListener("click", left);
+      function left() {
+        flag++;
+        if (flag > 2) flag = 0;
+        changeImage();
+      }
+
+      rbtn.addEventListener("click", right);
+      function right() {
+        flag--;
+        if (flag < 0) flag = 2;
+        changeImage();
+      }
+
+      function changeImage() {
+        obj.setAttribute(
+          "src",
+          "/project/cafe/Image/" + imgName[flag] + ".jpg"
+        );
+      }
+    </script>
+  </body>
+</html>
