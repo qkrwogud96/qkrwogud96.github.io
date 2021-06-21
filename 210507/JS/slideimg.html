@@ -6,76 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      body {
+      #wrapper {
+        width: 100vw;
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
       }
-      #wrap {
-        width: 300px;
-        height: 300px;
-        border: 1px solid #000;
-        position: relative;
-        overflow: hidden;
-      }
-      button {
-        position: absolute;
-        z-index: 5;
-      }
-      button:nth-of-type(1) {
-        left: 0;
-      }
-      button:nth-of-type(2) {
-        right: 0;
-      }
       .imgwrap {
+        width: 400px;
+        height: 400px;
         display: flex;
-        position: absolute;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #000;
+        display: inline-block;
+      }
+      .section {
+        width: 400px;
+        height: 400px;
+        display: none;
+        float: left;
+        position: relative;
         top: 0;
         left: 0;
-        transition: 1s;
-      }
-      img {
-        width: 300px;
-        height: 300px;
       }
     </style>
   </head>
   <body>
-    <div id="wrap">
-      <button>&leftarrow;</button>
+    <div id="wrapper">
       <div class="imgwrap">
-        <img src="/project/HomeWork/test06/Image/img4.jpg" alt="" />
-        <img src="/project/HomeWork/test06/Image/img5.jpg" alt="" />
-        <img src="/project/HomeWork/test06/Image/img6.jpg" alt="" />
+        <img
+          class="section section1"
+          src="/project/HomeWork/test06/Image/img4.jpg"
+        />
+        <img
+          class="section section2"
+          src="/project/HomeWork/test06/Image/img5.jpg"
+        />
+        <img
+          class="section section3"
+          src="/project/HomeWork/test06/Image/img6.jpg"
+        />
+        <img
+          class="section section4"
+          src="/project/HomeWork/test06/Image/img7.jpg"
+        />
       </div>
-      <button>&rightarrow;</button>
+      <button class="btnleft">prev</button>
+      <button class="btnright">next</button>
     </div>
     <script>
-      let rightBtn = document.querySelector("button:nth-of-type(2)");
-      let leftBtn = document.querySelector("button:nth-of-type(1)");
-      let imgwrap = document.querySelector(".imgwrap");
-      let flow = 0;
-      let imgArray = ["img4", "img5", "img6"];
-
-      rightBtn.addEventListener("click", rightEvent);
-      function rightEvent() {
-        flow -= 300;
-        if(flow < -600) flow = 0;
-        imgwrap.style.left = flow + "px" ;        
-        imgwrap.style.left = flow + "px" ;          
-        imgwrap.style.left = "600px" ;        
-      }
-
-      leftBtn.addEventListener("click", leftEvent);
-      function leftEvent() {
-        if(flow == 0) flow = -900
-        flow += 300;
-        if(flow > 600) flow = 0;
-        imgwrap.style.left = flow + "px";
-      }
-     
     </script>
   </body>
 </html>
