@@ -6,30 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
       #wrapper {
-        width: 100vw;
+        margin: 0 auto;
+        width: 400px;
         height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        overflow: hidden;
       }
       .imgwrap {
+        margin-top: 250px;
         width: 400px;
         height: 400px;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid #000;
-        display: inline-block;
+        position: relative;
       }
       .section {
         width: 400px;
         height: 400px;
-        display: none;
-        float: left;
         position: relative;
         top: 0;
         left: 0;
+      }
+      button {
+        width: 50px;
+        padding: 10px;
+        background-color: tomato;
+        border: none;
+        border-radius: 4px;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
       }
     </style>
   </head>
@@ -53,10 +62,49 @@
           src="/project/HomeWork/test06/Image/img7.jpg"
         />
       </div>
-      <button class="btnleft">prev</button>
-      <button class="btnright">next</button>
+      <button class="btnleft" style="float: left">prev</button>
+      <button class="btnright" style="float: right">next</button>
     </div>
     <script>
+      const imgWrap = document.querySelector(".imgwrap"); //이미지가 보여지는 부분
+      const contents = document.querySelectorAll(".section"); // 이미지들 배열
+      const btnLeft = document.querySelector(".btnleft"); //왼쪽버튼
+      const btnRight = document.querySelector(".btnright"); // 오른쪽 버튼
+
+      let firstChild = imgWrap.firstElementChild; //이미지의 첫번째 자식 복사
+      let lastChild = imgWrap.lastElementChild; // 이미지의 마지막 자식 복사
+      let cloneFirst = firstChild.cloneNode(true); // 첫번째 자식 요소 처리
+      let cloneLast = lastChild.cloneNode(true); // 마지막 자식 요소 처리
+
+      imgWrap.appendChild(cloneFirst);
+      imgWrap.insertBefore(cloneLast, imgWrap.firstElementChild);
+
+      let width = 400; //이미지 너비값
+      let page = 0; //이미지 슬라이드 카운트
+      let slideCount = imgWrap.children.length; //이미지 총 개수
+      btnRight.addEventListener("click", rightEventBtn);
+      function rightEventBtn() {
+        page++;
+        console.log( page );
+        if (page >= imgWrap.children.length) page = 0;
+          imgWrap.style.transition = "0.3s";
+        // imgWrap.style.transform = `translateX(-${width * page + 1}px)`;
+        imgWrap.style.left = `-${width * page + 1}px`;
+        if (page === 5) {
+          imgWrap.style.transition = "0s";
+          imgWrap.style.left = "-400px";
+        }
+      }
+      // 오른쪽 버튼 이미지 처리
+
+      btnLeft.addEventListener("click", leftEventBtn);
+      function leftEventBtn() {
+        page--;
+        if (page < 0) page = imgWrap.children.length - 1;
+        // imgWrap.style.transform = `translateX()`;
+        imgWrap.style.left = `-${width * page}px`;
+      }
+      // 왼쪽 버튼 이미지 처리
     </script>
   </body>
 </html>
