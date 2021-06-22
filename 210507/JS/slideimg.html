@@ -14,7 +14,7 @@
         margin: 0 auto;
         width: 400px;
         height: 100vh;
-        overflow: hidden;
+        /* overflow: hidden; */
       }
       .imgwrap {
         margin-top: 250px;
@@ -22,6 +22,8 @@
         height: 400px;
         display: flex;
         position: relative;
+        transition: 0.3s;
+        left: -400px;
       }
       .section {
         width: 400px;
@@ -80,29 +82,20 @@
       imgWrap.insertBefore(cloneLast, imgWrap.firstElementChild);
 
       let width = 400; //이미지 너비값
-      let page = 0; //이미지 슬라이드 카운트
+      let page = 1; //이미지 슬라이드 카운트
       let slideCount = imgWrap.children.length; //이미지 총 개수
+      console.log(slideCount); b 
       btnRight.addEventListener("click", rightEventBtn);
       function rightEventBtn() {
-        page++;
-        console.log( page );
-        if (page >= imgWrap.children.length) page = 0;
-          imgWrap.style.transition = "0.3s";
-        // imgWrap.style.transform = `translateX(-${width * page + 1}px)`;
-        imgWrap.style.left = `-${width * page + 1}px`;
-        if (page === 5) {
-          imgWrap.style.transition = "0s";
-          imgWrap.style.left = "-400px";
-        }
+       page++;
+       if(page >= slideCount) page = 1;
+       imgWrap.style
       }
-      // 오른쪽 버튼 이미지 처리
+      // 오른쪽 버튼 이미지 처리  
 
       btnLeft.addEventListener("click", leftEventBtn);
       function leftEventBtn() {
-        page--;
-        if (page < 0) page = imgWrap.children.length - 1;
-        // imgWrap.style.transform = `translateX()`;
-        imgWrap.style.left = `-${width * page}px`;
+      
       }
       // 왼쪽 버튼 이미지 처리
     </script>

@@ -36,9 +36,11 @@
   justify-content: space-around;
   align-items: center;
   padding: 30px 40px;
-  color: white;
+  color: #000;
+  animation: color 6s;
   position: fixed;
   text-align: center;
+  z-index: 1;
 }
 #banner b {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -52,7 +54,8 @@
   margin: 0 20px;
   width: 650px;
   height: 2px;
-  background-color: white;
+  background-color: #000;
+  animation: backcolor 6s;
 }
 #banner .menu {
   display: flex;
@@ -61,7 +64,8 @@
   margin: 0 2px;
   width: 4px;
   height: 4px;
-  background-color: white;
+  background-color: #000;
+  animation: backcolor 6s;
   border: none;
   border-radius: 50%;
 }
@@ -70,7 +74,25 @@
   margin: 0 10px;
   color: yellowgreen;
 }
-
+.sns {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 70px;
+  right: 30px;
+  z-index: 1;
+}
+.sns a {
+  margin: 10px 0;
+}
+.sns i,
+.sns p {
+  color: #000;
+  animation: color 6s;
+}
+.sns a:nth-child(4) {
+  writing-mode: tb-rl;
+}
 /************** 메인화면 *************/
 #main {
   box-sizing: border-box;
@@ -81,6 +103,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
+  z-index: 10;
 }
 #main a {
   color: white;
@@ -128,19 +151,7 @@
   bottom: 40px;
   left: 30px;
 }
-#main .sns {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  bottom: 70px;
-  right: 30px;
-}
-#main .sns a {
-  margin: 10px 0;
-}
-#main .sns a:nth-child(4) {
-  writing-mode: tb-rl;
-}
+
 /************** 로딩화면 *************/
 #load {
   width: 100%;
@@ -207,7 +218,47 @@
   background-color: #444;
 }
 /************** 인포화면 *************/
-
+#desk {
+  width: 0%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: width 10s;
+  animation-delay: 10s;
+}
+.imggroup {
+  width: 550px;
+  margin: 0 auto;
+  position:relative;
+  top: 200px;
+}
+.imggroup img {
+  width: 600px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  animation: play 2s linear;
+}
+.imggroup img:nth-child(1){animation-delay: 12s;}
+.imggroup img:nth-child(2){animation-delay: 14s;}
+.imggroup img:nth-child(3){animation-delay: 16s;}
+.imggroup img:nth-child(4){animation-delay: 18s;}
+.textslide{
+  position: absolute;
+  top: 0;
+  margin: 50px;
+  opacity: 0;
+  animation: play 8s linear 12s;
+}
+.textslide p {
+  margin-top: 100px;
+  font-size: 2em;
+  writing-mode: tb-rl;
+  color: #000;
+}
 /************** 정보화면 *************/
 
 /************** 애니메이션 *************/
@@ -218,28 +269,39 @@
   }
 }
 @keyframes action {
-100%{
-  transform: translate(414px,302px);
-}  
+  100% {
+    transform: translate(414px, 293px);
+  }
 }
 @keyframes background {
-  0%{
+  0% {
     opacity: 0;
   }
+}
+
+@keyframes width {
+  20%,
+  100% {
+    width: 100%;
   }
+}
+@keyframes color {
+  0%,
+  100% {
+    color: #fff;
+  }
+}
+@keyframes backcolor {
+  0%,
+  100% {
+    background-color: #fff;
+  }
+}
 @keyframes play {
-  0%{
-   opacity: 1; 
+  0% {
+    opacity: 1;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
-/*
-#banner, #banner a{
-  color: aqua;
-}
-#banner .line, #banner .menu div{
-  background-color: aqua;
-}
-*/
