@@ -17,8 +17,9 @@
     <img src="/project/cafe/Image/header.jpg" />
     <button class="rbtn">&gt;</button>
     <script>
-      // setTimeout(left, 100); 
-      setInterval(left, 500);
+      setTimeout(left, 1000);
+      setTimeout(left, 2000);
+      // setInterval(left, 2000);
       let flag = 0;
       let imgName = ["header", "ice", "section1"];
 
@@ -27,6 +28,7 @@
       let rbtn = document.querySelector(".rbtn");
 
       lbtn.addEventListener("click", left);
+  
       function left() {
         flag++;
         if (flag > 2) flag = 0;

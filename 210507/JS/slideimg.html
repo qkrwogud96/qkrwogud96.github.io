@@ -4,100 +4,105 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>SlideBar</title>
     <style>
       * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
+        text-align: center;
       }
       #wrapper {
-        margin: 0 auto;
-        width: 400px;
-        height: 100vh;
-        /* overflow: hidden; */
+        width: 800px;
+        margin: auto;
       }
-      .imgwrap {
-        margin-top: 250px;
-        width: 400px;
-        height: 400px;
+      .slide_box {
+        width: 300px;
+        height: 300px;
+        margin: 30px auto;
+        overflow: hidden;
+      }
+      .slide_list {
         display: flex;
-        position: relative;
-        transition: 0.3s;
-        left: -400px;
       }
-      .section {
-        width: 400px;
-        height: 400px;
-        position: relative;
-        top: 0;
-        left: 0;
+      .slide_contents {
+        width: 300px;
+        height: 300px;
       }
       button {
-        width: 50px;
-        padding: 10px;
-        background-color: tomato;
-        border: none;
-        border-radius: 4px;
-        display: inline-block;
+        font-size: 1.2em;
+        color: yellow;
+        font-weight: bolder;
         position: relative;
+        bottom: 200px;
+        width: 70px;
+        height: 40px;
+        border: none;
+        outline: none;  /*버튼의 바깥 공백 처리*/
+        border-radius: 20px;
+        background-color: hotpink;
         cursor: pointer;
+      }
+      .slide_btn_prev {
+        right: 200px;
+      }
+      .slide_btn_next {
+        right: -200px;
+      }
+      .slide_current_circle .dot{
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-color: #ddd;
+        border-radius: 50%;
+        margin: 3px;
+      }
+      .slide_current_circle .dot_active{
+        background-color: #333;
       }
     </style>
   </head>
   <body>
     <div id="wrapper">
-      <div class="imgwrap">
-        <img
-          class="section section1"
-          src="/project/HomeWork/test06/Image/img4.jpg"
-        />
-        <img
-          class="section section2"
-          src="/project/HomeWork/test06/Image/img5.jpg"
-        />
-        <img
-          class="section section3"
-          src="/project/HomeWork/test06/Image/img6.jpg"
-        />
-        <img
-          class="section section4"
-          src="/project/HomeWork/test06/Image/img7.jpg"
-        />
+      <h1>Image Slide Bar</h1>
+      <div class="slide_box">
+        <div class="slide_list">
+          <img
+            src="/project/HomeWork/test06/Image/img4.jpg"
+            alt="image01"
+            class="slide_contents"
+          />
+          <img
+            src="/project/HomeWork/test06/Image/img5.jpg"
+            alt="image02"
+            class="slide_contents"
+          />
+          <img
+            src="/project/HomeWork/test06/Image/img6.jpg"
+            alt="image03"
+            class="slide_contents"
+          />
+          <img
+            src="/project/HomeWork/test06/Image/img7.jpg"
+            alt="image04"
+            class="slide_contents"
+          />
+          <img
+            src="/project/HomeWork/test06/Image/img8.jpg"
+            alt="image05"
+            class="slide_contents"
+          />
+        </div>
       </div>
-      <button class="btnleft" style="float: left">prev</button>
-      <button class="btnright" style="float: right">next</button>
+      <div class="slide_btn_box">
+        <button class="slide_btn_prev">Prev</button>
+        <button class="slide_btn_next">Next</button>
+      </div>
+      <div class="slide_current_circle">
+        <!-- <a href="" class="dot"></a>
+        <a href="" class="dot dot_active"></a> -->
+      </div>
     </div>
-    <script>
-      const imgWrap = document.querySelector(".imgwrap"); //이미지가 보여지는 부분
-      const contents = document.querySelectorAll(".section"); // 이미지들 배열
-      const btnLeft = document.querySelector(".btnleft"); //왼쪽버튼
-      const btnRight = document.querySelector(".btnright"); // 오른쪽 버튼
-
-      let firstChild = imgWrap.firstElementChild; //이미지의 첫번째 자식 복사
-      let lastChild = imgWrap.lastElementChild; // 이미지의 마지막 자식 복사
-      let cloneFirst = firstChild.cloneNode(true); // 첫번째 자식 요소 처리
-      let cloneLast = lastChild.cloneNode(true); // 마지막 자식 요소 처리
-
-      imgWrap.appendChild(cloneFirst);
-      imgWrap.insertBefore(cloneLast, imgWrap.firstElementChild);
-
-      let width = 400; //이미지 너비값
-      let page = 1; //이미지 슬라이드 카운트
-      let slideCount = imgWrap.children.length; //이미지 총 개수
-      console.log(slideCount); b 
-      btnRight.addEventListener("click", rightEventBtn);
-      function rightEventBtn() {
-       page++;
-       if(page >= slideCount) page = 1;
-       imgWrap.style
-      }
-      // 오른쪽 버튼 이미지 처리  
-
-      btnLeft.addEventListener("click", leftEventBtn);
-      function leftEventBtn() {
-      
-      }
-      // 왼쪽 버튼 이미지 처리
-    </script>
+    <script src="roofSlideBar.js"></script>
   </body>
 </html>
