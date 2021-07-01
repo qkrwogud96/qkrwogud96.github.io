@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab Contents</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #wrapper {
+        margin: 200px;
+      }
+      .list_button {
+        display: flex;
+      }
+      .list_button li {
+        list-style: none;
+        padding: 30px 50px;
+      }
+      .list_button li a {
+        text-decoration: none;
+        color: #000;
+        font-size: 1.5em;
+      }
+      .list_button li .tab-on {
+        color: green;
+        font-weight: bolder;
+      }
+      .list_detail {
+        position: relative;
+        background-color: #555;
+        width: 700px;
+        height: 400px;
+        line-height: 400px;
+        color: white;
+        font-size: 3em;
+        font-weight: bolder;
+      }
+      .list_detail div {
+        width: 100%;
+        text-align: center;
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="list_button">
+        <li><a href="#tab1" class="tab-on">Tab Button1</a></li>
+        <li><a href="#tab2">Tab Button2</a></li>
+        <li><a href="#tab3">Tab Button3</a></li>
+      </div>
+      <div class="list_detail">
+        <div id="tab1">Tab Content1</div>
+        <div id="tab2">Tab Content2</div>
+        <div id="tab3">Tab Content3</div>
+      </div>
+    </div>
+    <script>
+      const listButton = document.querySelectorAll(".list_button > li");
+      const listDetail = document.querySelectorAll(".list_detail > div");
+      
+      const initContents = () => {
+        for (let obj of listDetail) {
+          obj.style.display = "none";
+        }
+      };
+      const init = () => {
+        listDetail[0].style.display = "block";
+        for (let obj of listButton) {
+          obj.addEventListener("click", function () {
+            const tabOn = document.querySelector(".tab-on");
+            tabOn.classList.remove("tab-on");
+            this.childNodes[0].classList.add("tab-on");
+
+            initContents();
+
+            let choice = this.childNodes[0].getAttribute("href");
+            const choiceObj = document.querySelector(choice);
+            choiceObj.style.display = "block";
+          });
+        }
+      };
+
+      init();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab Change Contents</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #wrapper {
+        margin: 100px 50px;
+      }
+      .btnbox .btn {
+        width: 300px;
+        height: 80px;
+        border: none;
+        outline: none;
+        background-color: #fff;
+        font-size: 2.5em;
+        cursor: pointer;
+      }
+      .tab-on {
+        color: green;
+        font-weight: bolder;
+      }
+      .contents {
+        width: 1000px;
+        height: 400px;
+        background-color: #555;
+        text-align: center;
+        line-height: 400px;
+        color: #fff;
+        font-size: 5em;
+        font-weight: bolder;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="btnbox">
+        <button class="btn btn1 tab-on">Tab Button1</button>
+        <button class="btn btn2">Tab Button2</button>
+        <button class="btn btn3">Tab Button3</button>
+      </div>
+      <div class="contents">Tab Content1</div>
+    </div>
+    <script>
+      const tabContents = document.querySelector(".contents");
+      const tabList = document.querySelectorAll(".btnbox > .btn");
+
+      const init = () => {
+        for (let obj of tabList) {
+          obj.addEventListener("click", function () {
+            const tabOn = document.querySelector(".tab-on");
+            tabOn.classList.remove("tab-on");
+            this.classList.add("tab-on");
+            for (let i = 0; i < 3; i++) {
+              if (this === tabList[i]) {
+                tabContents.innerText = "Tab Content" + (i + 1);
+              }
+            }
+          });
+        }
+      };
+      init();
+    </script>
+  </body>
+</html>

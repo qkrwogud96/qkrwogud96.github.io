@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scroll down</title>
+    <style>
+      .title {
+        background-color: #000;
+        color: #fff;
+        padding: 30px;
+      }
+      .detail {
+        background-color: #999;
+        padding: 30px 30px 2500px;
+      }
+      #top_btn {
+        background-color: red;
+        color: #fff;
+        font-weight: bolder;
+        font-size: 2em;
+        border: none;
+        outline: none;
+        padding: 20px;
+        border-radius: 9px;
+        position: fixed;
+        right: 15px;
+        bottom: 15px;
+        z-index: 100;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="top_btn">TOP</button>
+    <div class="title">Scroll Down</div>
+    <div class="detail">
+      Lorem ipsum dolor sit amet, alii menandri maluisset mea ut, no dico
+      viderer perpetua
+    </div>
+    <script>
+      const topBtn = document.querySelector("#top_btn");
+      function clickEvent() {
+        document.documentElement.scrollTop = 0;
+      }
+      function scrollEvent() {
+        if (document.documentElement.scrollTop > 50) {
+          topBtn.style.display = "block";
+        } else {
+          topBtn.style.display = "none";
+        }
+      }
+      const init = () => {
+        window.addEventListener("scroll", scrollEvent);
+        topBtn.addEventListener("click", clickEvent);
+      };
+      init();
+    </script>
+  </body>
+</html>
