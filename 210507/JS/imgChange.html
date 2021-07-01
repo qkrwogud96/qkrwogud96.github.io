@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Click Image Change</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #wrapper {
+        width: 1000px;
+        margin: 0 auto;
+      }
+      h1 {
+        font-size: 3em;
+        margin: 50px 0;
+      }
+      #section {
+        display: inline-block;
+      }
+      .large_pic {
+        width: 400px;
+        height: 400px;
+        position: relative;
+      }
+      .large_pic .large {
+        transition: 1s;
+        width: 100%;
+        height: 100%;
+      }
+      .large_pic .btn button {
+        position: absolute;
+        top: 50%;
+        font-size: 1.5em;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        cursor: pointer;
+      }
+      .large_pic .btn .btn_prev {
+        left: 0;
+      }
+      .large_pic .btn .btn_next {
+        right: 0;
+      }
+      .small_pic .small {
+        width: 120px;
+        height: 120px;
+        margin: 50px 2px 0 2px;
+      }
+      .small_pic .pic_active {
+        border: 5px solid aqua;
+      }
+      #info {
+        display: inline-block;
+        margin-left: 100px;
+      }
+      #info p {
+        font-size: 1.5em;
+        line-height: 2em;
+      }
+      span {
+        color: blue;
+      }
+      .btn_basket {
+        margin: 40px 0;
+        width: 400px;
+        height: 80px;
+        font-size: 1.5em;
+        background-color: #ccc;
+        outline: none;
+        border: 1px solid #888;
+      }
+      #detail{
+          margin-top: 15px;
+          margin-left: 510px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>에디오피아 게뎁</h1>
+      <div id="section">
+        <div class="large_pic">
+          <img
+            src="/project/HomeWork/test06/Image/img4.jpg"
+            alt="img01"
+            class="large"
+          />
+          <div class="btn">
+            <button class="btn_prev">&lt;</button>
+            <button class="btn_next">&gt;</button>
+          </div>
+        </div>
+        <div class="small_pic">
+          <img
+            src="/project/HomeWork/test06/Image/img4.jpg"
+            alt="img01"
+            class="small pic_active"
+            pic_index = "0"
+          />
+          <img
+            src="/project/HomeWork/test06/Image/img5.jpg"
+            alt="img02"
+            class="small"
+            pic_index = "1"
+          />
+          <img
+            src="/project/HomeWork/test06/Image/img6.jpg"
+            alt="img03"
+            class="small"
+            pic_index = "2"
+          />
+        </div>
+      </div>
+      <div id="info">
+        <p>상품명 : 에디오피아 게뎁</p>
+        <p><span>판매가 : 9,000원</span></p>
+        <p>배송비 : 3,000원</p>
+        <p>(50,000원 이상 구매 시 무료)</p>
+        <p>적립금 : 180원(2%)</p>
+        <p>로스팅 : 2019.06.17</p>
+        <button class="btn_basket">장바구니 담기</button>
+        <p class="show_detail"></span>상세 설명 보기</span></p>
+      </div>
+      <div id="detail">
+          <h2>상세 설명</h2>
+          <p>Lorem ipsum dolor sit amet, no vidisse nostrud nominavi </p>
+          <p>vix,eam nulla expetendis id.  Ne congue bonorum </p>
+          <p>mediocrem pri. Id ubique accusamus adipiscing eum, hinc </p>
+      </div>
+    </div>
+    <script src="imgChange.js"></script>
+  </body>
+</html>
