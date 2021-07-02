@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse</title>
+    <style>
+        *{
+            margin: 10px;
+        }
+      #box {
+        width: 200px;
+        height: 200px;
+        background-color: tomato;
+        text-align: center;
+        line-height: 200px;
+        font-size: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">mouse move</div>
+    <script>
+      const boxObj = document.querySelector("#box");
+
+      const mouseMoveEvent = (e) => {
+        console.log(`page (${e.pageX}, ${e.pageY})`);  //전체 페이지에 대한 마우스 위치
+        console.log(`offset (${e.offsetX}, ${e.offsetY})`); // 컨텐츠 내부에 대한 마우스 위치
+        console.log(`client (${e.clientX}, ${e.clientY})`); //현재 보여지는 스크린에 대한 마우스 위치
+      };
+      const init = () => {
+        boxObj.addEventListener("click", mouseMoveEvent);
+      };
+      init();
+    </script>
+  </body>
+</html>
+

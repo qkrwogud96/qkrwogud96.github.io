@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .content {
+        height: 1000vh;
+        background-color: yellowgreen;
+        padding: 20%;
+      }
+      img {
+        width: 150px;
+        transition: 1s;
+      }
+      .zoom {
+        transform: scale(2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <p>
+        ak sdlfjasdkf alskdjf a sdkf asldfm kasjdrlsdm flkasdjklsdmfakl
+        sdjksdjras dr
+      </p>
+      <p>
+        ak sdlfjasdkf alskdjf a sdkf asldfm kasjdrlsdm flkasdjklsdmfakl
+        sdjksdjras dr
+      </p>
+      <p>
+        ak sdlfjasdkf alskdjf a sdkf asldfm kasjdrlsdm flkasdjklsdmfakl
+        sdjksdjras dr
+      </p>
+      <p>
+        ak sdlfjasdkf alskdjf a sdkf asldfm kasjdrlsdm flkasdjklsdmfakl
+        sdjksdjras dr
+      </p>
+      <p>
+        ak sdlfjasdkf alskdjf a sdkf asldfm kasjdrlsdm flkasdjklsdmfakl
+        sdjksdjras dr
+      </p>
+      <img src="/project/HomeWork/test06/Image/img4.jpg"    />
+    </div>
+    <script>
+      const imgObj = document.querySelector("img");
+
+      const scrollEvent = () => {
+        let posY = imgObj.getBoundingClientRect().top;
+        let h = window.innerHeight * 0.333333333333333333;
+        if (posY < h) {
+          imgObj.classList.add('zoom');
+          console.log(imgObj);
+        } else {
+          imgObj.classList.remove("zoom");
+        }
+      };
+
+      const init = () => {
+        window.addEventListener("scroll", scrollEvent);
+      };
+      init();
+    </script>
+  </body>
+</html>

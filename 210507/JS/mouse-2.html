@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box {
+        width: 400px;
+        height: 400px;
+        background-color: wheat;
+        text-align: center;
+        line-height: 200px;
+        padding: 50px;
+      }
+      #box div {
+        float: left;
+        width: 50%;
+        background-color: teal;
+      }
+      #box div:nth-child(2),
+      #box div:nth-child(3) {
+        background-color: tomato;
+      }
+      .cell {
+        opacity: 0.3;
+      }
+      .on {
+        opacity: 1;
+      }
+      #move{
+          position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <div class="cell">cell-1</div>
+      <div class="cell">cell-2</div>
+      <div class="cell">cell-3</div>
+      <div class="cell">cell-4</div>
+    </div>
+    <span id="move">
+        <img src="/project/cafe/Image/ice.jpg">
+    </span>
+    <script>
+      const boxObj = document.querySelector("#box");
+      const spanObj = document.querySelector('#move');
+      const mouseEvent = e =>{
+        const target = e.target;
+        console.log( target );
+        if( target.classList.contains( 'cell' ) ){
+            target.classList.toggle('on');
+        }
+      }
+      const mouseMoveEvent = e =>{
+        spanObj.style.top = e.clientY +'px';
+        spanObj.style.left = e.clientX + 'px';
+
+      }
+      const init = () => {
+        boxObj.addEventListener("mouseover", mouseEvent);
+        boxObj.addEventListener("mouseout", mouseEvent);
+        spanObj.addEventListener("mousemove", mouseMoveEvent);
+    };
+      init();
+    </script>
+  </body>
+</html>

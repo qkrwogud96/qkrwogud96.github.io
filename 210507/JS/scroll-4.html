@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Example</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-color: yellowgreen;
+      }
+      .banner {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: white;
+      }
+      .line {
+        width: 0;
+        height: 8px;
+        background-color: blue;
+      }
+      h1 {
+        margin: 50px 0;
+        background-color: white;
+      }
+      p {
+        line-height: 15em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <h1>Hello World</h1>
+      <div class="line"></div>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet, vix in veritus verterem voluptatibus, <br />
+      cu ius adhuc omittam accumsan. Pro nisl animal ex, at pri omittam
+      vivendum.
+      <br />
+      Nobis dicant mei no, dicant vidisse reprehendunt in mea. Ex nec regione
+      <br />
+      mediocrem, eu eruditi definitionem eam. Saepe constituam intellegebat in
+      <br />
+      nam, autem consulatu usu ei. Est atqui causae cotidieque in, per no congue
+      <br />
+      singulis. Has ad case simul aliquid. Ad tota tractatos nec, prima causae
+      <br />
+      te vis. Ne vis meis voluptua, pro an mucius latine, mea in equidem <br />
+      nostrum. Ei eum movet diceret. Ei duo illum facilisis. Ne mel causae
+      <br />
+      nonumes qualisque. Ei vim timeam accumsan referrentur. Laoreet appellantur
+      <br />
+      ut eam, denique iracundia ei nam. Qui dolorum alienum temporibus et,
+      <br />
+      dolorem aliquando ut per. Eum eu menandri sensibus aliquando, duo veri
+      <br />
+      nominavi fabellas ea. Ea ponderum pericula adolescens pro, erant tollit ad
+      <br />
+      pri, vis movet graeco alterum an. Vitae commune te cum, cu mei pericula
+      <br />
+      accusamus. Iriure prodesset his id. In lorem senserit ius. Constituam
+      <br />
+      definitiones an est. Per legendos mnesarchum signiferumque id, no debitis
+      <br />
+      alienum intellegam his. Est et soleat integre sensibus. Pro nisl expetenda
+      <br />
+      accusamus ei. Euismod fastidii duo an, vim volutpat assueverit te. Ut
+      <br />
+      graecis senserit vix, mea convenire vituperatoribus ei. <br />
+    </p>
+    <script>
+        const scrollBar = document.querySelector('.line');
+
+    const scrollEvent = () => {
+        const totalHeight = document.documentElement.scrollHeight; // 전체 스크롤해야할 영역
+        const clientHeight = document.documentElement.clientHeight; //현재 보여지고있는 영역
+        const contentHeight = totalHeight - clientHeight; //스크롤이 남은 영역
+        const scrollTop = document.documentElement.scrollTop; //현재 스크롤 위치
+        let percent = (scrollTop / contentHeight) * 100;
+
+        scrollBar.style.width = percent +"%";
+      };
+
+      const init = () => {
+        window.addEventListener("scroll", scrollEvent);
+      };
+      init();
+    </script>
+  </body>
+</html>
