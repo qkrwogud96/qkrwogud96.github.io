@@ -75,16 +75,16 @@
       graecis senserit vix, mea convenire vituperatoribus ei. <br />
     </p>
     <script>
-        const scrollBar = document.querySelector('.line');
+      const scrollBar = document.querySelector(".line");
 
-    const scrollEvent = () => {
-        const totalHeight = document.documentElement.scrollHeight; // 전체 스크롤해야할 영역
-        const clientHeight = document.documentElement.clientHeight; //현재 보여지고있는 영역
-        const contentHeight = totalHeight - clientHeight; //스크롤이 남은 영역
-        const scrollTop = document.documentElement.scrollTop; //현재 스크롤 위치
-        let percent = (scrollTop / contentHeight) * 100;
+      const scrollEvent = () => {
+        const totalHeight = document.documentElement.scrollHeight; // 전체 스크롤해야할 영역(총 높이)
+        const clientHeight = document.documentElement.clientHeight; // 현재 보여지고있는 영역(100vh높이값)
+        const contentHeight = totalHeight - clientHeight; // 스크롤이 남은 영역 >> 스크롤을 끝까지 내렸을때 100vh값만큼 빼줘야 남은 영역을 알 수 있음
+        const scrollTop = document.documentElement.scrollTop; // 현재 스크롤 위치
+        let percent = (scrollTop / contentHeight) * 100; // 너비값을 위한 백분율 공식
 
-        scrollBar.style.width = percent +"%";
+        scrollBar.style.width = percent + "%";
       };
 
       const init = () => {

@@ -42,13 +42,13 @@
     <script>
       const topBtn = document.querySelector("#top_btn");
       function clickEvent() {
-        document.documentElement.scrollTop = 0;
+        document.documentElement.scrollTop = 0;  // TOP 클릭시 맨 위로 이동하기
       }
       function scrollEvent() {
         if (document.documentElement.scrollTop > 50) {
-          topBtn.style.display = "block";
+          topBtn.style.display = "block"; // 스크롤 50이상 일시 TOP 나타내기
         } else {
-          topBtn.style.display = "none";
+          topBtn.style.display = "none"; // 스크롤 50이하 일시 TOP 감추기
         }
       }
       const init = () => {

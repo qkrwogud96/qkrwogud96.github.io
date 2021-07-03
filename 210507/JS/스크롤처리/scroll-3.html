@@ -48,13 +48,13 @@
       const imgObj = document.querySelector("img");
 
       const scrollEvent = () => {
-        let posY = imgObj.getBoundingClientRect().top;
-        let h = window.innerHeight * 0.333333333333333333;
+        let posY = imgObj.getBoundingClientRect().top; //img의 TOP값 저장
+        let h = window.innerHeight * 0.333333333333333333; // 스크린에 담긴 HEIGHT(innerheight) 값의 1/3 지점 저장
         if (posY < h) {
-          imgObj.classList.add('zoom');
+          imgObj.classList.add('zoom'); // img의 TOP이 1/3 통과 시 zoom 으로 확대
           console.log(imgObj);
         } else {
-          imgObj.classList.remove("zoom");
+          imgObj.classList.remove("zoom"); // img의 TOP이 1/3보다 높을 시에는 제거
         }
       };
 
