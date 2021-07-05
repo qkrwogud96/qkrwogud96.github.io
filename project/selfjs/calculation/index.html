@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-align: center;
+      }
+      h1 {
+        width: 100%;
+        padding: 20px;
+        font-size: 3em;
+        background-color: tomato;
+        color: white;
+      }
+      #wrapper {
+          
+        border: 1px solid #000;
+        width: 400px;
+        height: 600px;
+        margin: 20px auto;
+      }
+      #calculate_screen {
+        width: 300px;
+        height: 150px;
+        background-color: turquoise;
+        margin: 0 auto;
+        overflow: auto;
+      }
+      .table {
+        width: 300px;
+        margin: 10px auto;
+        display: flex;
+        justify-content: space-around;
+      }
+      #arithmetic_operation {
+        margin: 10px auto;
+        width: 350px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .pad1 {
+        width: 75px;
+        height: 75px;
+        line-height: 75px;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>계산기 By.박재형</h1>
+
+    <div id="wrapper">
+      <div id="calculate_screen"></div>
+      <div class="table table1">
+        <div class="pad1 one">1</div>
+        <div class="pad1 two">2</div>
+        <div class="pad1 three">3</div>
+      </div>
+      <div class="table table2">
+        <div class="pad1 four">4</div>
+        <div class="pad1 five">5</div>
+        <div class="pad1 six">6</div>
+      </div>
+      <div class="table table3">
+        <div class="pad1 seven">7</div>
+        <div class="pad1 eight">8</div>
+        <div class="pad1 nine">9</div>
+      </div>
+      <div class="table">
+        <div class="pad1 zero">0</div>
+        <div class="pad1 clear">CL</div>
+        <div class="pad1 back">←</div>
+      </div>
+      <div id="arithmetic_operation">
+        <div class="pad1 addition">+</div>
+        <div class="pad1 subtraction">-</div>
+        <div class="pad1 multipication">X</div>
+        <div class="pad1 division">%</div>
+      </div>
+    </div>
+  </body>
+</html>
