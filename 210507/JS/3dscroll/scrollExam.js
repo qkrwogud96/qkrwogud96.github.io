@@ -15,10 +15,9 @@ const moveEvent = (e) => {
   //   console.log(e.clientX-(window.innerWidth * 0.5), e.clientY- (window.innerHeight * 0.5));
   const pointX = -1 + (e.clientX / window.innerWidth) * 2;
   const pointY = 1 - (e.clientY / window.innerHeight) * 2;
-    // console.log(pointX,pointY);
+     console.log(pointX,pointY);
 
   boxObj.style.transform = `rotateX(${3 * pointY}deg) rotateY(${3 * pointX}deg)`;
-  console.log(boxObj.style.transform);
 };
 const init = () => {
   window.addEventListener("mousemove", moveEvent);

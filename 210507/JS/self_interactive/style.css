@@ -6,7 +6,7 @@
   box-sizing: 0;
 }
 body{
-  height: 500vh;
+  height: 1000vh;
 }
 #wrapper {
   background-image: url(image/background.jpg);
@@ -20,25 +20,33 @@ body{
   perspective: 1000px;
 }
 #zbox {
-  height: 1000vh;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100vw;
+  height: 1000vh;
   transform-style: preserve-3d;
-  transform: rotateY(90deg) translateZ(-500px);
+  transform: translateZ(-500vh);
+}
+#move_box{
+  width: 100vw;
+  height: 100vh;
+  
 }
 #year_1970 {
-  transform: translateZ(350px);
+  transform: translateZ(50vh);
 }
 #year_1980 {
-  transform: translateZ(150px);
+  transform: translateZ(-50vh);
 }
 #year_2000 {
-  transform: translateZ(-50px);
+  transform: translateZ(-150vh);
 }
 #year_2010 {
-  transform: translateZ(-250px);
+  transform: translateZ(-250vh);
 }
 #year_2020 {
-  transform: translateZ(-500px);
+  transform: translateZ(-350vh);
 }
 
 nav {
