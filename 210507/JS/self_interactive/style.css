@@ -6,117 +6,122 @@
   box-sizing: 0;
 }
 body{
-  height: 1000vh;
+  height: 500vh;
 }
 #wrapper {
+  width: 100vw;
+  height: 100vh;
   background-image: url(image/background.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  width: 100vw;
-  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
   perspective: 1000px;
 }
-#zbox {
+#stage{
+  transform-style: preserve-3d;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#box{
+  transform-style: preserve-3d;
+  width: 100vw;
+  height: 100vh;
+  transform: translateZ(-500vh);
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 50px;
+}
+.logo{
+  background-image: url(image/logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 80px;
+  height: 80px;
+}
+li{
+  display: flex;
+}
+li a{
+  text-decoration: none;
+  color: #fff;
+  margin: 0 50px;
+}
+li a:nth-child(1){
+  margin-left: auto;
+}
+li a:hover{
+  color: red;
+} 
+.btn_gameyear{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.btn_gameyear a{
+  margin: 10px 0;
+  padding: 5px 50px 5px 3px;
+  border-radius: 0 20px 20px 0;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #eee;
+  background-color: red;
+  transition: .3s;
+}
+.btn_gameyear a:hover{
+  /* padding-right: 100px; */
+  color: mediumslateblue;
+}
+.contents{
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 1000vh;
-  transform-style: preserve-3d;
-  transform: translateZ(-500vh);
-}
-#move_box{
-  width: 100vw;
   height: 100vh;
-  
+  display: flex;
+  justify-content: space-around;
 }
-#year_1970 {
-  transform: translateZ(50vh);
+#year_1970{transform: translateZ(300vh);}
+#year_1980{transform: translateZ(100vh);}
+#year_2000{transform: translateZ(-100vh);}
+#year_2010{transform: translateZ(-300vh);}
+#year_2020{transform: translateZ(-500vh);}
+
+.contents img{
+  width: 50%;
+  height: 100%;
+  display: inline-block;
 }
-#year_1980 {
-  transform: translateZ(-50vh);
+.contents .info{
+  margin:0 100px;
 }
-#year_2000 {
-  transform: translateZ(-150vh);
+.contents .info h1{
+  font-size: 6em;
+  margin-bottom: 250px;
 }
-#year_2010 {
-  transform: translateZ(-250vh);
-}
-#year_2020 {
-  transform: translateZ(-350vh);
+.contents .info p{
+  font-size: 3em;
 }
 
-nav {
-  display: flex;
-}
-.logo img {
-  margin: 10px 50px;
-  width: 150px;
-  height: 150px;
-}
-li {
-  margin-top: 50px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
-li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.2em;
-  margin: 0 60px;
-}
-li a:hover {
-  color: yellowgreen;
-}
-.btn_gameyear {
-  margin: 150px 0 0 100px;
-  display: flex;
-  flex-direction: column;
-}
-.btn_gameyear a {
-  text-decoration: none;
-  color: #fff;
-  margin: 20px 0;
-  font-size: 2em;
-}
-.contents img {
-  width: 500px;
-  height: 450px;
-}
-.contents h1 {
-  font-size: 4em;
-  margin-bottom: 30px;
-}
-.contents p {
-  font-size: 1.5em;
-}
-.left {
+b{
   position: absolute;
-  top: 350px;
-  left: 500px;
-}
-.left .info {
-  margin-left: 600px;
-  margin-top: -150px;
-  color: #fff;
-}
-.right {
-  position: absolute;
-  top: 150px;
-  left: 1200px;
-}
-.right .info {
-  margin-left: -700px;
-  margin-top: -500px;
-  color: #fff;
-}
-b {
+  bottom: 20px;
+  right: 50px;
+  font-size: 1.1em;
   color: #ccc;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
+}
+.act{
+  opacity: 1;
+}
+.noact{
+  opacity: 0.2;
 }

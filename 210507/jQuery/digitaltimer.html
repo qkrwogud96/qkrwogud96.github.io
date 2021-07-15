@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .wrap {
+        margin: 10px 20px;
+        width: 700px;
+        height: 300px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .time {
+        display: flex;
+      }
+      h1 {
+        font-size: 2.5em;
+      }
+      p {
+        font-size: 1.5em;
+        margin-left: 10px;
+      }
+      span {
+        color: red;
+      }
+    </style>
+    <title>jQuery Digital Timer</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="time">
+        <h1 class="hour">hour</h1>
+        <h1 class="minute">minute</h1>
+        <h1 class="second">second</h1>
+      </div>
+      <p>AM ? PM</p>
+    </div>
+    <script>
+      $(
+        setInterval(function time() {
+          let nowDate = new Date();
+          let Hour = Math.floor(nowDate.getHours());
+          let Minute = Math.floor(nowDate.getMinutes());
+          let second = Math.floor(nowDate.getSeconds());
+          let digiHour = addzero(Hour);
+          let digiMin = addzero(Minute);
+          let digiSec = addzero(second);
+
+          function colorText(obj) {
+            if (obj >= 50) {
+              return $(".second").css("color", "red");
+            } else {
+              return $(".second").css("color", "black");
+            }
+          }
+          function ampm(obj) {
+            if (obj < 12) {
+              $("p").text("AM");
+            } else {
+              $("p").text("PM");
+              digiHour -= 12;
+            }
+          }
+          function addzero(num) {
+            if (num >= 0 && num < 10) {
+              return "0" + num;
+            } else {
+              return num;
+            }
+          }
+          ampm(digiHour);
+          colorText(digiSec);
+          $(".hour").text(digiHour + ":");
+          $(".minute").text(digiMin + ":");
+          $(".second").text(digiSec);
+        }),
+        1000
+      );
+    </script>
+  </body>
+</html>
