@@ -49,14 +49,21 @@
     <script>
       $(
         setInterval(function time() {
-          let nowDate = new Date();
+          const nowDate = new Date();
           let Hour = Math.floor(nowDate.getHours());
           let Minute = Math.floor(nowDate.getMinutes());
           let second = Math.floor(nowDate.getSeconds());
-          let digiHour = addzero(Hour);
-          let digiMin = addzero(Minute);
-          let digiSec = addzero(second);
+          const digiHour = addzero(Hour);
+          const digiMin = addzero(Minute);
+          const digiSec = addzero(second);
 
+          function addzero(num) {
+            if (num >= 0 && num < 10) {
+              return "0" + num;
+            } else {
+              return num;
+            }
+          }
           function colorText(obj) {
             if (obj >= 50) {
               return $(".second").css("color", "red");
@@ -70,13 +77,6 @@
             } else {
               $("p").text("PM");
               digiHour -= 12;
-            }
-          }
-          function addzero(num) {
-            if (num >= 0 && num < 10) {
-              return "0" + num;
-            } else {
-              return num;
             }
           }
           ampm(digiHour);
