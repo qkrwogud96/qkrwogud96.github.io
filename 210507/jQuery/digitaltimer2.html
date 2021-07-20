@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery.js"></script>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        .wrap{margin:10px;padding: 10px; width: 300px;height: 200px;border: 1px solid #ccc; border-radius: 15px; background-color:burlywood;text-align: center;}
+        h1{font-size: 2.5em; color: whitesmoke;margin-bottom: 30px;}
+        span:nth-child(2){font-size: 2em;}
+        p{display: inline-block; font-weight: bolder; color: cadetblue;} 
+    </style>
+    <title>Digital Timer</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Digital Timer</h1>
+      <span>05 : 31 <span class="sec">: 30</span></span>
+      <p>오전 오후</p>
+    </div>
+    <script>
+      $(function time(){
+        const nowDate = new Date();
+        console.log(nowDate);
+
+
+      });
+
+    </script>
+  </body>
+</html>

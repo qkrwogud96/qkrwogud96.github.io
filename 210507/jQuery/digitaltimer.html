@@ -44,15 +44,17 @@
         <h1 class="minute">minute</h1>
         <h1 class="second">second</h1>
       </div>
-      <p>AM ? PM</p>
+      <p>AM</p>
     </div>
     <script>
       $(
-        setInterval(function time() {
+        setInterval(
+          function time() {
           const nowDate = new Date();
           let Hour = Math.floor(nowDate.getHours());
           let Minute = Math.floor(nowDate.getMinutes());
           let second = Math.floor(nowDate.getSeconds());
+          
           const digiHour = addzero(Hour);
           const digiMin = addzero(Minute);
           const digiSec = addzero(second);
@@ -76,7 +78,7 @@
               $("p").text("AM");
             } else {
               $("p").text("PM");
-              digiHour -= 12;
+              obj -= 12;
             }
           }
           ampm(digiHour);
@@ -84,9 +86,8 @@
           $(".hour").text(digiHour + ":");
           $(".minute").text(digiMin + ":");
           $(".second").text(digiSec);
-        }),
-        1000
-      );
+        })
+        ,1000);
     </script>
   </body>
 </html>

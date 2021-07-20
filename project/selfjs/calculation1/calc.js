@@ -47,7 +47,6 @@ const saveCalc = (calc, cur, save) => {
       return save / cur;
     default:
       return calcNum;
-      break;
   }
 };
 const mouseEvent = (e) => {
