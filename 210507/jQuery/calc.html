@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+
+      .screen {
+        width: 200px;
+        height: 50px;
+        background-color: #ccc;
+      }
+      .clear {
+        width: 150px;
+        height: 50px;
+        background-color: #999;
+      }
+      .z {
+        display: flex;
+
+      }
+      .btn {
+        display: grid;
+        grid-template-rows: repeat(1, 50px);
+        grid-template-columns: repeat(3, 50px);
+      }
+      .btn:nth-of-type(6) > button:nth-child(1) {
+        grid-column: 1 / 3;
+      }
+      .calc {
+        display: grid;
+        grid-template-columns: repeat(1, 50px);
+        grid-template-rows: repeat(5, 50px);
+      }
+    </style>
+    <title>calculation</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="screen"></div>
+      <div class="clear">AC</div>
+      <div class="z">
+        <div>
+          <div class="btn">
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+          </div>
+          <div class="btn">
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+          </div>
+          <div class="btn">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+          </div>
+          <div class="btn">
+            <button>0</button>
+            <button>.</button>
+          </div>
+        </div>
+        <div class="calc">
+          <button>/</button>
+          <button>*</button>
+          <button>-</button>
+          <button>+</button>
+          <button>=</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
