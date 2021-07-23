@@ -253,6 +253,6 @@ for( let obj of bodyObj.children){
   list.forEach( obj =>console.log(obj) );
 
   list.forEach( function(obj) { console.log(obj) }); //배열 안에 구성 요소 확인
-
+  
 
 
