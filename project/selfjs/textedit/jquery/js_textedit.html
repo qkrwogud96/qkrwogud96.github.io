@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Text Editor</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="btn_wrap">
+        <div class="btn">
+          <button val="dec">-</button>
+          <button val="ori">100%</button>
+          <button val="inc">+</button>
+        </div>
+        <p>16px</p>
+      </div>
+      <div class="input_wrap">
+        <div class="input_box">
+          <input type="radio" name="색상" value="글자" id="text" checked />
+          <label for="text">글자</label>
+          <input type="radio" name="색상" value="배경" id="bg" />
+          <label for="bg">배경색</label>
+        </div>
+        <div class="check_color">
+          <div color='white' class="active"></div>
+          <div color='orange'></div>
+          <div color='yellow'></div>
+          <div color='green'></div>
+          <div color='blue'></div>
+          <div color='black'></div>
+        </div>
+        <button val="change">색상변경</button>
+        <button val="obli">기울게</button>
+        <button val="bold">굵게</button>
+        <button val="under">밑줄</button>
+      </div>
+
+      <div class="text_edit">
+        <span>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </span>
+      </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="textEdit.js"></script>
+  </body>
+</html>
