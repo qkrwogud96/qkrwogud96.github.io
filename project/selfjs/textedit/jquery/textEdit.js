@@ -4,10 +4,12 @@ $(function () {
   const textsize = $("p");
   const inputboxs = $("input");
   const checkedcolor = $(".check_color div");
+ 
   let savecolor = "white";
   let savevalue = "color";
   let cursize = 16;
   let check = false;
+
   function fontsize() {
     showtext.css("fontSize", cursize);
     textsize.text(cursize + "px");

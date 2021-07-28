@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#wrapper {
+  margin: 100px auto;
+  padding: 50px;
+  width: 80%;
+  height: 70vh;
+  border: 1px solid #000;
+}
+.btn_wrap {
+  margin: 0 50px;
+  display: inline-block;
+  text-align: center;
+}
+.btn_wrap .btn {
+  margin: 15px;
+}
+.btn_wrap .btn button {
+  font-size: 16px;
+  padding: 3px 5px;
+}
+.input_wrap {
+  display: inline-block;
+}
+.input_wrap .check_color div {
+  margin: 5px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  display: inline-block;
+}
+.input_wrap .check_color div.active {
+  border: 2px solid red;
+}
+.input_wrap .check_color div:nth-child(1) {
+  background-color: white;
+}
+.input_wrap .check_color div:nth-child(2) {
+  background-color: orange;
+}
+.input_wrap .check_color div:nth-child(3) {
+  background-color: yellow;
+}
+.input_wrap .check_color div:nth-child(4) {
+  background-color: green;
+}
+.input_wrap .check_color div:nth-child(5) {
+  background-color: blue;
+}
+.input_wrap .check_color div:nth-child(6) {
+  background-color: black;
+}
+
+.text_edit {
+  margin: 100px auto 0;
+  width: 80%;
+  height: 350px;
+  overflow: auto;
+}
+.text_edit span.obli{
+  font-style: italic;
+}
+.text_edit span.bold{
+  font-weight: bolder;
+}
+.text_edit span.under{
+  text-decoration: underline;
+}
