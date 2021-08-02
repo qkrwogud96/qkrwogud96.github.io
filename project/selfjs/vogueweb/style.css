@@ -1,0 +1,226 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#bg-img {
+  height: 100vh;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(Image/main.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#wrapper {
+  width: 1023px;
+  height: 75vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  overflow: hidden;
+}
+
+/************** 상단배너 *************/
+#banner {
+  padding: 30px 40px;
+  width: 1023px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  position: fixed;
+  text-align: center;
+}
+#banner b {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 2em;
+}
+#banner .line {
+  margin: 0 20px;
+  width: 650px;
+  height: 2px;
+  background-color: #fff;
+}
+#banner .menu {
+  padding: 10px 2px;
+  display: flex;
+  cursor: pointer;
+}
+#banner .menu div {
+  margin: 0 2px;
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+}
+#banner i {
+  margin: 0 10px;
+  font-size: 0.6em;
+  color: orange;
+}
+#banner a {
+  padding: 10px 2px;
+  text-decoration: none;
+  color: #fff;
+}
+.sns {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 70px;
+  right: 30px;
+}
+.sns a {
+  margin: 10px 0;
+}
+.sns a:nth-child(4) {
+  writing-mode: tb-rl;
+}
+/************** 메인화면 *************/
+#main {
+  padding: 30px 40px;
+  width: 100%;
+  height: 100%;
+  background-image: url(Image/main.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+#main a {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+#main .backpage {
+  margin-top: 100px;
+  display: inline-block;
+}
+#main .backpage a {
+  cursor: pointer;
+}
+#main .detail {
+  padding-top: 50px;
+}
+#main .detail b {
+  font-size: 1.2em;
+}
+#main .detail h1 {
+  margin: 15px 0;
+  font-size: 5em;
+  line-height: 1em;
+  letter-spacing: 8px;
+}
+#main .detail p {
+  font-size: 1.3em;
+}
+#main .btn {
+  margin-top: 30px;
+}
+#main .btn a {
+  padding: 8px 25px;
+  margin-right: 30px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  cursor: pointer;
+}
+#main .btn p {
+  display: inline-block;
+  font-size: 0.8em;
+}
+#main > a {
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+}
+/************** 로딩화면 *************/
+#load {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#load::before {
+  content: "";
+  display: inline-block;
+  background-color: #998473;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+#load .logo {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#load .logo p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 2em;
+  position: relative;
+}
+#load .logo .bargage {
+  font-size: 0;
+  width: 100px;
+  height: 3px;
+  position: relative;
+}
+#load .logo .bargage .bar {
+  background-color: #999;
+  display: inline-block;
+  width: 100px; /*바꿀부분*/
+  height: 3px;
+}
+/************** 인포화면 *************/
+#desk {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.imggroup {
+  width: 550px;
+  margin: 0 auto;
+  position:relative;
+}
+.imggroup img {
+  width: 600px;
+  height: 300px;
+  position: absolute;
+}
+.imggroup img:nth-child(1){top: 0;}
+.imggroup img:nth-child(2){top: 150px;}
+.imggroup img:nth-child(3){top: 300px;}
+.imggroup img:nth-child(4){top: 450px;}
+.textslide{
+  position: absolute;
+  top: 0;
+  margin: 50px;
+}
+.textslide p {
+  margin-top: 100px;
+  font-size: 2em;
+  writing-mode: tb-rl;
+  color: #000;
+}
