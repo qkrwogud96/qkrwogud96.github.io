@@ -43,14 +43,10 @@ const targetEvent = (obj) => {
         fontValue();
         break;
       case "obli":
-        fontStyle("obli");
-        break;
       case "bold":
-        fontStyle("bold");
-        break;
       case "under":
-        fontStyle("under");
-        break;
+        fontStyle( obj );
+      break;
       case "change":
        change(); 
         break;
