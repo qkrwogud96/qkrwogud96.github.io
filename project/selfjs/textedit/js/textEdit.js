@@ -53,10 +53,10 @@ const targetEvent = (obj) => {
       break;
   }
 };
-const btnClickEvent = (e) => {
-  const target = e.target.getAttribute("val");
-  targetEvent(target);
-};
+  const btnClickEvent = (e) => {
+    const target = e.target.getAttribute("val");
+    targetEvent(target);
+  };
 const inputClickEvent = (e) => {
   const target = e.target.value;
   if (target === "backgroundColor") {
