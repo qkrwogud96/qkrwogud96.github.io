@@ -1,4 +1,8 @@
+
+const mouseClickEvent = () =>{
+    
+}
 const init = () =>{
-    console.log( 'hi' );
+    window.addEventListener('click', mouseClickEvent);
 };
 init();

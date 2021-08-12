@@ -151,6 +151,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 0;
 }
 #load::before {
   content: "";
@@ -198,21 +199,23 @@
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 0;
 }
 .imggroup {
   width: 550px;
+  height: 100%;
   margin: 0 auto;
   position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .imggroup img {
   width: 600px;
   height: 300px;
   position: absolute;
 }
-.imggroup img:nth-child(1){top: 0;}
-.imggroup img:nth-child(2){top: 150px;}
-.imggroup img:nth-child(3){top: 300px;}
-.imggroup img:nth-child(4){top: 450px;}
+.imggroup img:nth-child(1){z-index: 10;}
 .textslide{
   position: absolute;
   top: 0;

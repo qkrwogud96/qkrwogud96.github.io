@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Menu</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        body{margin: 50px;}
+      .btnBox button {
+        width: 20px;
+        height: 20px;
+        outline: none;
+        border: 1px solid #000;
+      }
+      .btnBox button.active{
+          border: 2px solid red;
+          box-shadow: 0 0 2px red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="btnBox">
+      <button class="active"></button>
+      <button></button>
+      <button></button>
+      <button></button>
+      <button></button>
+    </div>
+    <button class="change">색상변경</button>
+    <script>
+      $(function () {
+        let colors = ["white", "orange", "green", "blue", "black"];
+        let btnElems = $(".btnBox button");
+        const saveColor = "";
+
+        for (let i = 0; i < btnElems.length; i++) {
+          $(btnElems[i]).css("background-color", colors[i]);
+        }
+
+        btnElems.on('click',function(){
+            $('.active').removeClass();
+            $(this).addClass('active');
+        });
+
+        $('.change').on('click',function(){
+            const color = $('.active').css('background-color');
+            $('body').css('background-color', color);
+        });
+
+        $.each( btnElems, function(idx, el){
+            $(el).on('click',function(){
+                console.log('click', idx);
+            });
+        })
+      });
+    </script>
+  </body>
+</html>

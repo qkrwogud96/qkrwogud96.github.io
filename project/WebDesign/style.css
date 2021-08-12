@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "맑은고딕";
+  color: #333333;
+}
+#wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+header {
+  background-color: red;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+header .logo {
+  display: inline-block;
+  width: 200px;
+  height: 100%;
+  background-color: #000;
+}
+header > ul {
+  background-color: gray;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 30px;
+}
+header > ul > li {
+  color: #000;
+  text-align: center;
+}
+header > ul > li > a {
+  margin: 0 30px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bolder;
+}
+header .submenu {
+  display: none;
+  background-color: #fff;
+}
+header .submenu li{
+    padding: 5px 0;
+}
+#info-section {
+  height: 300px;
+  background-color: orange;
+  position: relative;
+}
+#info-section .slideImg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#info-section .slideImg p{
+    padding: 10px 25px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#info-section .slideImg img{
+    width: 100%;
+    height: 100%;
+}
+#info-section .slideImg:nth-of-type(2),
+#info-section .slideImg:nth-of-type(3){
+    display: none;
+}
+#img-section {
+  height: 200px;
+  display: flex;
+}
+#img-section div {
+  width: 400px;
+  height: 100%;
+}
+#img-section div:nth-child(1) {
+  background-color: skyblue;
+}
+#img-section div:nth-child(2) {
+  background-color: green;
+}
+#img-section div:nth-child(3) {
+  background-color: yellow;
+}
+#footer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+#footer .logo {
+  width: 30%;
+  height: 100%;
+  background-color: #ccc;
+}
+#footer .f_right {
+  width: 70%;
+  height: 100%;
+}
+#footer .copyright {
+  width: 100%;
+  height: 50%;
+  background-color: #555;
+}
+#footer .sns {
+  width: 100%;
+  height: 50%;
+  background-color: #eee;
+}
