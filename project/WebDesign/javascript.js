@@ -1,5 +1,6 @@
 $(function(){
     $('header > ul > li').on('mouseover', function(){
+        $(this).css('background-color', 'pink');
         $(this).find('.submenu').stop().slideDown();
     });
     $('header > ul > li').on('mouseout', function(){
