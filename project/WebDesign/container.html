@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" type="text/css" />
     <title>Web Design Practice</title>
-    <script src="/210507/jQuery/js/jquery.js"></script>
-    <script src="javascript.js"></script>
+    <!-- <script src="/210507/jQuery/js/jquery.js"></script>
+    <script src="javascript.js"></script> -->
   </head>
   <body>
     <div id="wrapper">
       <header>
-        <div class="logo"></div>
+        <div class="logo"><a href="#"></a></div>
         <ul>
           <li>
             <a href="#">MENU-1</a>
@@ -53,22 +53,24 @@
         </ul>
       </header>
       <section id="info-section">
-        <div class="slideImg">
-          <p>이미지1</p>
-          <img src="/images/image-01.png" alt="이미지1" />
-        </div>
-        <div class="slideImg">
-          <p>이미지2</p>
-          <img src="/images/image-02.png" alt="이미지2" />
-        </div>
-        <div class="slideImg">
-          <p>이미지3</p>
-          <img src="/images/image-03.png" alt="이미지3" />
+        <div class="slide-list">
+          <div class="slideImg">
+            <p>이미지1</p>
+            <img src="/images/image-01.png" alt="이미지1" />
+          </div>
+          <div class="slideImg">
+            <p>이미지2</p>
+            <img src="/images/image-02.png" alt="이미지2" />
+          </div>
+          <div class="slideImg">
+            <p>이미지3</p>
+            <img src="/images/image-03.png" alt="이미지3" />
+          </div>
         </div>
       </section>
       <section id="img-section">
-        <content>
-          <div class="menu active">공지사항</div>
+        <div class="content">
+          <div class="menu active"><a href="#">공지사항</a></div>
           <div class="contents contents1 on">
             <div>
               <p>[중요]강원 천문대 장기휴관 안내</p>
@@ -95,15 +97,15 @@
               <p>2019-03-01</p>
             </div>
           </div>
-          <div class="menu">갤러리</div>
+          <div class="menu"><a href="#">갤러리</a></div>
           <div class="contents contents2">
             <img src="image/mars.jpg" alt="화성" />
             <img src="image/moon.jpg" alt="달" />
             <img src="image/venus.jpg" alt="금성" />
           </div>
-        </content>
-        <content></content>
-        <content></content>
+        </div>
+        <div class="content"></div>
+        <div class="content"></div>
       </section>
       <footer id="footer">
         <div class="logo"></div>
@@ -136,5 +138,6 @@
         </div>
       </div>
     </div>
+    <script src="slide.js"></script>
   </body>
 </html>
