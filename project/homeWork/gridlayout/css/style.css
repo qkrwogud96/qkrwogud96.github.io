@@ -4,12 +4,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap");
 
 body {
+  /* width: 100vw; */
+  /* height: 100vh; */
   font-family: "Orbitron";
 }
 #wrapper {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  perspective: 2000px;
+  perspective: 1000px;
   box-sizing: border-box;
 }
 /* bar menu */
@@ -22,24 +24,25 @@ body {
   color: #eee;
   /* display: none; */
   opacity: 0;
-  transition: all 0.7s;
+  /* transition: all 0.3s; */
 }
 /* header */
 #main-menu {
   width: 150px;
-  height: 100vh;
+  height: 100%;
   background-color: #eee;
   z-index: 1;
   text-align: center;
   position: fixed;
   top: 0;
   left: 0;
+  transform-style: preserve-3d;
   transform-origin: left center;
-  transform: rotateY(30deg);
-  transition: all 0.5s;
+  transform: rotateY(10deg);
+  /* transition: all 0.3s; */
 }
 #main-menu.on {
-  transform: rotateY(120deg);
+  transform: rotateY(200deg);
 }
 #main-menu .logo {
   width: 80%;
@@ -61,14 +64,15 @@ body {
 /* container */
 #container {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  transform-style: preserve-3d;
   transition: all 0.5s;
 }
 #container.on {
-  transform: rotateY(-9.8deg);
+  transform: rotateY(-5deg);
   transform-origin: right center;
 }
 #container > div {
@@ -81,6 +85,8 @@ body {
   top: 0;
   left: 0;
   opacity: 0;
+  /* transform-style: preserve-3d; */
+  box-sizing: border-box;
 }
 #container > div.on {
   opacity: 1;
@@ -98,6 +104,7 @@ body {
   font-size: 30px;
   transition: all 0.5s;
   transform: rotateY(180deg);
+  transform-style: preserve-3d;
 }
 #container > div > .sns > a {
   color: #fff;
@@ -226,4 +233,3 @@ body {
   background-repeat: none;
   background-size: cover;
 }
-
