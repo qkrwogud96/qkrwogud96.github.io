@@ -246,9 +246,9 @@ i.fa-sign-out-alt {
   }
   #clock {
     position: inherit;
-    top: 40%;
+    top: 30%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-30%, -50%);
     text-align: center;
     font-size: 50px;
     font-family: "Inter", sans-serif;
@@ -301,6 +301,10 @@ i.fa-sign-out-alt {
     font-family: "Single Day", cursive;
     color: #fff;
     width: 100%;
+  }
+  #log_submit {
+    margin-top: 50px;
+    text-align: center;
   }
   #log_submit h1 {
     padding-top: 30px;
