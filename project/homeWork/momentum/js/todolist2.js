@@ -3,8 +3,6 @@ const todoInputElem = todoFormElem.querySelector("input");
 const todoUl = document.querySelector("#to-do-ul");
 const TODOLIST_KEY = "todos";
 let TODOS = [];
-let curIdx = 1;
-// [{id:length, value:Input.value},{id:length + 1, value:Input.value}] >> length로 할때 id값이 중복이 된다. 해결 : 전역변수 curIdx 선언
 // id : Date.now;
 const deleteBtnEvent = (e) => {
   const target = e.target.parentElement;
@@ -18,18 +16,17 @@ const saveTodoStorage = () => {
   const strTodo = JSON.stringify(TODOS);
   localStorage.setItem(TODOLIST_KEY, strTodo);
 };
-const saveLocal = (value) => {
+const saveLocal = (id, value) => {
   const newObj = {
-    id: curIdx,
+    'id': id,
     value: value,
   };
   TODOS.push(newObj);
   saveTodoStorage();
-  curIdx++;
 };
-const addTodoList = (value) => {
+const addTodoList = (id, value) => {
   const li = document.createElement("li");
-  li.id = curIdx;
+  li.id = id;
   const btn = document.createElement("button");
   const span = document.createElement("span");
 
@@ -39,13 +36,23 @@ const addTodoList = (value) => {
   li.appendChild(btn);
   li.appendChild(span);
   todoUl.appendChild(li);
-  saveLocal(value);
+  saveLocal(id, value);
 
   btn.addEventListener("click", deleteBtnEvent);
 };
 const todoSubmitEvent = (event) => {
   event.preventDefault();
   const value = todoInputElem.value;
-  addTodoList(value);
+  addTodoList(Date.now(), value);
 };
+const loadTodoStorage = () => {
+  const loadTodos = localStorage.getItem(TODOLIST_KEY);
+  if (loadTodos) {
+    const objTodos = JSON.parse(loadTodos);
+    objTodos.forEach((item) => {
+      addTodoList(item.id, item.value);
+    });
+  }
+};
+loadTodoStorage();
 todoFormElem.addEventListener("submit", todoSubmitEvent);
