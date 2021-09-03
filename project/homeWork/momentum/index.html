@@ -4,54 +4,77 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/reset.css" type="text/css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/reset.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <title>Momentum</title>
   </head>
   <body>
     <div id="wrap">
       <div class="bg">
-      <h1 id="greet">Set your focus for the day</h1>
-      <div id="quote">
-        <p></p> <br>
-        <span></span>
+        <h1 id="greet">메일 추가/ 날씨 추가 /</h1>
+        <div id="quote">
+          <p></p>
+          <br />
+          <span></span>
+        </div>
+        <h2 id="clock">00 : 00</h2>
+        <div id="to-do">
+          <form id="to-do-form">
+            <input
+              required
+              type="text"
+              maxlength="40"
+              placeholder="할일을 입력하세요.(최대 10개)"
+            />
+          </form>
+          <ul id="to-do-ul"></ul>
+        </div>
+        <div id="log_submit">
+          <h1>Hello</h1>
+          <form id="log-in-form">
+            <input
+              required
+              minlength="2"
+              maxlength="10"
+              type="text"
+              placeholder="로그인 이름을 입력하세요."
+            />
+          </form>
+        </div>
+        <form
+          action="https://script.google.com/macros/s/AKfycbxmbUZs_6-oebL6fSU80JLzUWK1eBV55AtMs4ULxhu__1yP6ncwnHMe1YfpRmtBahga/exec"
+          class="gform"
+          method="POST"
+        >
+          <input type="text" id="name" name="name" placeholder="name"/>
+          <input type="email" id="email" name="email" placeholder="email"/>
+          <textarea name="message" id="message"></textarea>
+          <button type="submit">문의하기</button>
+
+          <div style="display: none;" class="thankyou_meesaage">
+          <h1>thankYou_Message</h1>
+        </div>
+        </form>
+        <div class="log-out">
+          <i class="fas fa-sign-out-alt"></i>
+        </div>
       </div>
-      <h2 id="clock">00 : 00</h2>
-      <div id="to-do">
-        <form id="to-do-form">
-          <input required 
-          type="text" 
-          maxlength="40"
-          placeholder="할일을 입력하세요.(최대 10개)" />      
-         </form>
-       <ul id="to-do-ul"></ul>
-     </div>
-     <div id="log_submit">
-       <h1>Hello</h1>
-      <form id="log-in-form">
-        <input
-          required
-          minlength="2"
-          maxlength="10"
-          type="text"
-          placeholder="로그인 이름을 입력하세요."
-         />
-      </form>
-     </div>
-     <div class="log-out">
-      <i class="fas fa-sign-out-alt"></i>
-      </div>
-     </div>
     </div>
     <!-- <script src="js/event.js"></script>-->
-     <script src="js/login.js"></script>
-     <script src="js/setbg.js"></script>
-     <script src="js/logout.js"></script>
-     <script src="js/todolist2.js"></script>
-     <script src="js/quotes.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/setbg.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/todolist2.js"></script>
+    <script src="js/quotes.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/work.js"></script>
     <script src="js/weader.js"></script>
+    <script src="js/form-submission-handler.js"></script>
   </body>
 </html>

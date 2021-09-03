@@ -1,0 +1,228 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: "Montserrat", sans-serif; */
+  /* font-family: "Nunito", sans-serif; */
+}
+a {
+  text-decoration: none;
+}
+.wrap {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  background-image: linear-gradient(45deg, #ac8def, #2ddbdc);
+  position: relative;
+  overflow: hidden;
+}
+h1 {
+  font-family: "Nunito", sans-serif;
+  font-size: 40px;
+  color: #fff;
+  position: absolute;
+  top: 80px;
+  left: 50px;
+}
+.wrap .auto {
+  position: absolute;
+  left: 100px;
+  bottom: 100px;
+  z-index: 11;
+}
+.wrap .auto li {
+  float: left;
+  margin-right: 30px;
+  transition: all .3s ease;
+}
+.wrap .auto li:hover {
+  transform: scale(1.5);
+}
+.wrap .auto li i {
+  font-size: 25px;
+  color: #fff;
+}
+.wrap .auto li i:hover {
+  color: #fff1cc;
+}
+/* slide */
+.swiper-wrapper .swiper-slide {
+  width: 600px;
+  height: 600px;
+  position: relative;
+  top: 50%;
+  margin-top: -300px;
+}
+.swiper-wrapper .swiper-slide-active .inner{
+  opacity: 1;
+  box-shadow: 0 20px 50px rgba(155, 155, 155, 0.8);
+}
+.swiper-wrapper .inner {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 50px;
+  opacity: 0.7;
+}
+.swiper-wrapper .inner .inner_box {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.swiper-wrapper .inner .inner_box h2 {
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  color: #11010d;
+}
+.swiper-wrapper .inner .inner_box p {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  color: #11010d;
+}
+.swiper-wrapper .inner .inner_box img {
+  width: 100%;
+  height: 70%;
+}
+.swiper-pagination-fraction {
+  width: auto;
+  top: 80px;
+  left: auto;
+  bottom: auto;
+  right: 150px;
+  font-size: 30px;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+}
+.swiper-pagination-fraction .swiper-pagination-current {
+  font-size: 40px;
+  font-weight: bolder;
+  color: #fff1cc;
+}
+.swiper-button-next::after,
+.swiper-button-prev:after {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+}
+.swiper-button-next:after:hover,
+.swiper-button-prev:after:hover {
+  color: #fff1cc;
+  font-weight: bolder;
+}
+.swiper-button-prev {
+  top: auto;
+  bottom: 100px;
+  left: auto;
+  right: 200px;
+}
+.swiper-button-next {
+  top: auto;
+  left: auto;
+  bottom: 100px;
+  right: 150px;
+}
+/* 
+element.style {
+  transition-duration: 0ms;
+  transform: translate3d(-1083.33px, 0px, -2166.67px) rotateX(
+0deg
+) rotateY(
+270.833deg
+) scale(1);
+  z-index: -4;
+  margin-right: 50px;
+}
+.swiper-wrapper .swiper-slide {
+  width: 600px;
+  height: 600px;
+  position: relative;
+  top: 50%;
+  margin-top: -300px;
+}
+.swiper-3d .swiper-cube-shadow, .swiper-3d .swiper-slide, .swiper-3d .swiper-slide-shadow, .swiper-3d .swiper-slide-shadow-bottom, .swiper-3d .swiper-slide-shadow-left, .swiper-3d .swiper-slide-shadow-right, .swiper-3d .swiper-slide-shadow-top, .swiper-3d .swiper-wrapper {
+  transform-style: preserve-3d;
+}
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
+element.style {
+  transition-duration: 0ms;
+  transform: translate3d(-1083.33px, 0px, -2166.67px) rotateX(
+0deg
+) rotateY(
+270.833deg
+) scale(1);
+  z-index: -4;
+  margin-right: 50px;
+}
+.swiper-3d .swiper-cube-shadow, .swiper-3d .swiper-slide, .swiper-3d .swiper-slide-shadow, .swiper-3d .swiper-slide-shadow-bottom, .swiper-3d .swiper-slide-shadow-left, .swiper-3d .swiper-slide-shadow-right, .swiper-3d .swiper-slide-shadow-top, .swiper-3d .swiper-wrapper {
+  transform-style: preserve-3d;
+}
+.swiper-wrapper .swiper-slide {
+  width: 600px;
+  height: 600px;
+  position: relative;
+  top: 50%;
+  margin-top: -300px;
+}
+.swiper-wrapper .swiper-slide {
+  width: 600px;
+  height: 600px;
+  position: relative;
+  top: 50%;
+  margin-top: -300px;
+}
+.swiper-3d .swiper-cube-shadow, .swiper-3d .swiper-slide, .swiper-3d .swiper-slide-shadow, .swiper-3d .swiper-slide-shadow-bottom, .swiper-3d .swiper-slide-shadow-left, .swiper-3d .swiper-slide-shadow-right, .swiper-3d .swiper-slide-shadow-top, .swiper-3d .swiper-wrapper {
+  transform-style: preserve-3d;
+}
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+}
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; */

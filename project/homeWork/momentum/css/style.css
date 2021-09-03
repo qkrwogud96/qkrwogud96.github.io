@@ -302,6 +302,10 @@ i.fa-sign-out-alt {
     color: #fff;
     width: 100%;
   }
+  form.gform{
+    position: absolute;
+    z-index: 10;
+  }
   #log_submit {
     margin-top: 50px;
     text-align: center;
