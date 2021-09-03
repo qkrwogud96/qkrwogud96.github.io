@@ -2,34 +2,39 @@ const todoFormElem = document.querySelector("#to-do-form");
 const todoInputElem = todoFormElem.querySelector("input");
 const todoUl = document.querySelector("#to-do-ul");
 
-
 // 개수 최대 처리 및 저장된 값 불러오기 해야함
 const LISTVALUE_KEY = "listvalue";
 let TODOS = [];
 let curList = 0;
 
-const todosStrorage = () =>{
+const todosStrorage = () => {
   const todosStr = JSON.stringify(TODOS);
   localStorage.setItem(LISTVALUE_KEY, todosStr);
-}
+};
 const deleteBtnEvent = (e) => {
   const target = e.target.parentElement;
-  TODOS = TODOS.filter((item) =>{
-    return item.id != target.id
+  TODOS = TODOS.filter((item) => {
+    return item.id != target.id;
   });
-  todosStrorage();  
-  target.remove();  
+  todosStrorage();
+  target.remove();
 };
 const saveLocal = (value) => {
   const todosForm = {
-    'id' : curList + 1,
-    'value' : value
+    id: curList + 1,
+    value: value,
   };
   curList++;
+  if (TODOS.length > 9) {
+    const lastList = document.querySelector("#to-do-ul li:last-child");
+    lastList.remove();
+    TODOS.pop();
+  }
   TODOS.push(todosForm);
-  todosStrorage();  
+  todosStrorage();
 };
 const addTodoList = (value) => {
+  saveLocal(value);
   const li = document.createElement("li");
   li.id = curList + 1;
   const btn = document.createElement("button");
@@ -41,7 +46,7 @@ const addTodoList = (value) => {
   li.appendChild(btn);
   li.appendChild(span);
   todoUl.appendChild(li);
-  saveLocal(value);
+
   btn.addEventListener("click", deleteBtnEvent);
 };
 const todoSubmitEvent = (event) => {
