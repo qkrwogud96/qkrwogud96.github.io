@@ -4,51 +4,131 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/reset.css" type="text/css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/reset.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_piT76SJGRFDhIZ0Uy8laJ");
+
+        const name = document.querySelector("input[name=name]");
+        const email = document.querySelector("input[name=email]");
+        const message = document.querySelector("textarea[name=message]");
+
+        templateObj = {
+          name: name.value,
+          email: email.value,
+          meesage: meesage.value,
+        };
+
+        emailjs.send("service_dths5kf", "template_du4b8nh", templateObj).then(
+          (response) => {
+            console.log("SUCCESS!", response.status, respose.text);
+          },
+          (error) => {
+            console.log("FAILDE", error);
+          }
+        );
+      })();
+    </script>
     <title>Momentum</title>
   </head>
   <body>
     <div id="wrap">
       <div class="bg">
-      <h1 id="greet">Set your focus for the day</h1>
-      <div id="quote">
-        <p></p> <br>
-        <span></span>
+        <h1 id="greet">Set your focus for the day</h1>
+        <div id="pop-up">
+          <form
+            action="https://script.google.com/macros/s/AKfycbxmbUZs_6-oebL6fSU80JLzUWK1eBV55AtMs4ULxhu__1yP6ncwnHMe1YfpRmtBahga/exec"
+            class="gform"
+            method="POST"
+          >
+            <button class="close">close</button>
+            <label class="sending_name"
+              >Name :
+              <input type="text" id="name" name="name" placeholder="name"
+            /></label>
+            <br />
+            <label class="sending_email"
+              >Email :
+              <input type="email" name="email" placeholder="email" /> </label
+            ><br />
+            <textarea
+              name="message"
+              id="message"
+              cols="35"
+              rows="16"
+              placeholder="If you have any questions, please contact our customer service."
+            ></textarea>
+            <button type="submit">submit</button>
+            <button type="reset">reset</button>
+            <div style="display: none" class="thankyou_meesaage">
+              <h1>thankYou_Message</h1>
+            </div>
+          </form>
+        </div>
+        <div id="quote">
+          <p></p>
+          <br />
+          <span></span>
+        </div>
+        <h2 id="clock">00 : 00</h2>
+        <div id="weather">
+          <img src="" alt="날씨" />
+          <span class="area"></span>
+          <span class="temp"></span>
+        </div>
+        <div id="to-do">
+          <form id="to-do-form">
+            <input
+              required
+              type="text"
+              maxlength="30"
+              placeholder="Enter your to-do.     (up to 10)"
+            />
+          </form>
+          <ul id="to-do-ul"></ul>
+        </div>
+        <div id="log_submit">
+          <h1>Hello</h1>
+          <form id="log-in-form">
+            <input
+              required
+              minlength="2"
+              maxlength="10"
+              type="text"
+              placeholder="Enter Your Name."
+            />
+          </form>
+        </div>
+        <div id="content">
+          <ul>
+            <li class="log-out">
+              <a href="#"><i class="fas fa-sign-out-alt"></i></a>
+            </li>
+            <li class="mail">
+              <a href="#"><i class="far fa-envelope"></i></a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <h2 id="clock">00 : 00</h2>
-      <div id="to-do">
-        <form id="to-do-form">
-          <input required 
-          type="text" 
-          maxlength="40"
-          placeholder="할일을 입력하세요.(최대 10개)" />      
-         </form>
-       <ul id="to-do-ul"></ul>
-     </div>
-     <div id="log_submit">
-       <h1>Hello</h1>
-      <form id="log-in-form">
-        <input
-          required
-          minlength="2"
-          maxlength="10"
-          type="text"
-          placeholder="로그인 이름을 입력하세요."
-         />
-      </form>
-     </div>
-     <div class="log-out">
-      <i class="fas fa-sign-out-alt"></i>
-      </div>
-     </div>
     </div>
-     <script src="js/login.js"></script>
-     <script src="js/setbg.js"></script>
-     <script src="js/logout.js"></script>
-     <script src="js/todolist.js"></script>
-     <script src="js/quotes.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/setbg.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/todolist.js"></script>
+    <script src="js/quotes.js"></script>
     <script src="js/clock.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/mail.js"></script>
   </body>
 </html>

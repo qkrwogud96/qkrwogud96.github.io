@@ -4,6 +4,7 @@ const todoUl = document.querySelector("#to-do-ul");
 
 // 개수 최대 처리 및 저장된 값 불러오기 해야함
 const LISTVALUE_KEY = "listvalue";
+const USERNAME_KEY = "username";
 let TODOS = [];
 let curList = 0;
 
@@ -52,7 +53,25 @@ const addTodoList = (value) => {
 const todoSubmitEvent = (event) => {
   event.preventDefault();
   const value = todoInputElem.value;
-  addTodoList(value);
+  const username = localStorage.getItem(USERNAME_KEY);
+  if (username) {
+    addTodoList(value);
+  }
+  else{
+    alert("이름을 입력하세요.");
+  }
 };
-
+const loadTodos = () => {
+  //localStorage value값 읽기
+  //TODOS에 저장하기
+  //li에 추가하기
+  const loadValue = localStorage.getItem(LISTVALUE_KEY);
+  if (loadValue) {
+    const strValue = JSON.parse(loadValue);
+    for (let i = 0; i < strValue.length; i++) {
+      addTodoList(strValue[i].value);
+    }
+  }
+};
+loadTodos();
 todoFormElem.addEventListener("submit", todoSubmitEvent);

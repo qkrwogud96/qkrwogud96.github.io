@@ -10,7 +10,7 @@ const signUp = () => {
 }
 const signIn = (value) =>{
     //로그인
-    loginGreet.style.display = 'block';
+    loginGreet.style.display = 'inline-block';
     loginGreet.innerText = 'Hello ' + value;
     loginElem.style.display = 'none';
 }
