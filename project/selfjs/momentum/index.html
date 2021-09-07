@@ -4,6 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_piT76SJGRFDhIZ0Uy8laJ');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                this.contact_number.value = Math.random() * 100000 | 0;
+                emailjs.sendForm('gmail', 'template_66rw967', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
     <link rel="stylesheet" href="css/reset.css" type="text/css" />
     <link
       rel="stylesheet"
@@ -12,34 +35,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("user_piT76SJGRFDhIZ0Uy8laJ");
-
-        const name = document.querySelector("input[name=name]");
-        const email = document.querySelector("input[name=email]");
-        const message = document.querySelector("textarea[name=message]");
-
-        templateObj = {
-          name: name.value,
-          email: email.value,
-          meesage: meesage.value,
-        };
-
-        emailjs.send("service_dths5kf", "template_du4b8nh", templateObj).then(
-          (response) => {
-            console.log("SUCCESS!", response.status, respose.text);
-          },
-          (error) => {
-            console.log("FAILDE", error);
-          }
-        );
-      })();
-    </script>
+    
     <title>Momentum</title>
   </head>
   <body>
@@ -48,20 +44,16 @@
         <h1 id="greet">Set your focus for the day</h1>
         <div id="pop-up">
           <form
-            action="https://script.google.com/macros/s/AKfycbxmbUZs_6-oebL6fSU80JLzUWK1eBV55AtMs4ULxhu__1yP6ncwnHMe1YfpRmtBahga/exec"
+            id="contact-form"
             class="gform"
             method="POST"
           >
             <button class="close">close</button>
-            <label class="sending_name"
-              >Name :
-              <input type="text" id="name" name="name" placeholder="name"
-            /></label>
-            <br />
-            <label class="sending_email"
-              >Email :
-              <input type="email" name="email" placeholder="email" /> </label
-            ><br />
+            <input type="hidden" name="contact_number">
+            <label >Name: </label>
+            <input type="text" id="name" name="name" placeholder="name"/> <br>
+            <label>Email :</label>
+            <input type="email" name="email" placeholder="email" /> <br />
             <textarea
               name="message"
               id="message"
@@ -71,9 +63,6 @@
             ></textarea>
             <button type="submit">submit</button>
             <button type="reset">reset</button>
-            <div style="display: none" class="thankyou_meesaage">
-              <h1>thankYou_Message</h1>
-            </div>
           </form>
         </div>
         <div id="quote">

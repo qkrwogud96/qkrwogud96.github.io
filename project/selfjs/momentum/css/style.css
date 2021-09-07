@@ -57,7 +57,7 @@ textarea:focus:-ms-input-placeholder {
   /*text-shadow: 1px 1px 4px #333;*/
 }
 #pop-up {
-  /* display: none; */
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
