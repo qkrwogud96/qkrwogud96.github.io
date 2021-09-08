@@ -1,4 +1,4 @@
-const mailForm = document.querySelector(".gform");
+// const mailForm = document.querySelector(".gform");
 const openMailBtn = document.querySelector(".mail");
 const closeMailBtn = document.querySelector(".gform .close");
 const MailModal = document.querySelector("#pop-up");

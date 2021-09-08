@@ -225,7 +225,7 @@ textarea:focus:-ms-input-placeholder {
   color: #fff;
 }
 #to-do #to-do-form input::placeholder {
-  color: #11010d;
+  color: #fff;
   font-weight: bold;
 }
 #to-do #to-do-ul {
