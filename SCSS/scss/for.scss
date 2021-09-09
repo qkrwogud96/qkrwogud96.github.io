@@ -1,0 +1,17 @@
+body {
+  @for $i from 1 through 3 {
+    div:nth-child(#{$i}) {
+      width: 20px * $i;
+    }
+  }
+}
+
+$value: (one,two,three);
+
+div{
+    @each $data in $value {
+        div.#{$data}{
+            background-image: url();
+        }
+    }
+}

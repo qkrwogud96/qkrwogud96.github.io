@@ -1,0 +1,23 @@
+body div:nth-child(1) {
+  width: 20px;
+}
+
+body div:nth-child(2) {
+  width: 40px;
+}
+
+body div:nth-child(3) {
+  width: 60px;
+}
+
+div div.one {
+  background-image: url();
+}
+
+div div.two {
+  background-image: url();
+}
+
+div div.three {
+  background-image: url();
+}

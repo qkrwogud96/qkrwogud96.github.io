@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/*scss if문 구성*/
+/*
+@mixin >> 속성값 묶기(@include)
+@extend >> ,로 표현하기
+@function >>계산해서 처리하기
+*/
+#box1 {
+  color: #fff;
+  background-color: #000;
+}
+
+#box2 {
+  color: #ccc;
+  background-color: #666;
+}
+
+#box3 {
+  color: #00f;
+  background-color: #0f0;
+}

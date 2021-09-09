@@ -1,0 +1,31 @@
+/*scss if문 구성*/
+
+/*
+@mixin >> 속성값 묶기(@include)
+@extend >> ,로 표현하기
+@function >>계산해서 처리하기
+*/
+@mixin textAndBgColor($textColor, $bgColor) {
+  color: $textColor;
+  background-color: $bgColor;
+}
+@mixin thema($mood) {
+  @if $mood == "dark" {
+    @include textAndBgColor(#fff, #000);
+  } 
+  @else if $mood == "light" {
+    @include textAndBgColor(#ccc, #666);
+  } 
+  @else {
+    @include textAndBgColor(#00f, #0f0);
+  }
+}
+#box1 {
+  @include thema("dark");
+}
+#box2 {
+  @include thema("light");
+}
+#box3 {
+  @include thema("basic");
+}
