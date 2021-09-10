@@ -1,0 +1,35 @@
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: translate(300px, 300px);
+            transform: translate(300px, 300px);
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: translate(300px, 300px);
+            transform: translate(300px, 300px);
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+.box2 {
+  font-size: 5rem;
+  -webkit-animation-name: animate;
+          animation-name: animate;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}

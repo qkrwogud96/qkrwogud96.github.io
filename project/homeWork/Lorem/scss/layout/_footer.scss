@@ -1,0 +1,27 @@
+footer {
+  background-color: $color-grey-dark;
+  color: $color-grey-light;
+  padding: 4rem 5rem;
+
+  display: flex;
+  .footer-logo-text {
+      width: 25%;
+      font-size: 4rem;
+      line-height: 6rem;
+      text-transform: uppercase;
+      
+  }
+
+  .copyright {
+      font-size: 2rem;
+      width: 75%;
+
+      p:nth-child(1){
+          column-count: 3;
+          column-gap: 3rem;
+          column-rule-style: dashed;
+          column-rule-width: 1px;
+          column-rule-color: $color-grey-light;
+      }
+  }
+}

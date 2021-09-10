@@ -1,0 +1,19 @@
+@keyframes animate {
+  0% {
+    transform: translate(300px, 300px);
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+.box2 {
+  font-size: 5rem;
+  animation: {
+    name: animate;
+    duration: 5s;
+    fill-mode: backwards;
+    iteration-count: 3;
+    delay: 0.5s;
+  }
+}
