@@ -197,10 +197,10 @@ footer .gnb {
   transition: all 0.2s linear;
 }
 footer .gnb li {
-  margin: 0 5rem;
+  margin: 0 3.5rem;
 }
 footer .gnb li a {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 500;
   letter-spacing: 0.3rem;
 }
