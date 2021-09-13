@@ -4,6 +4,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  color: #11010d;
 }
 
 html {
@@ -12,7 +13,7 @@ html {
 
 body {
   width: 100vw;
-  height: 500vh;
+  /* height: 500vh; */
   padding: 2rem;
   font-family: "Urbanist", sans-serif;
   transition: all 0.2s linear;
@@ -29,45 +30,106 @@ a {
   height: 100%;
   color: inherit;
 }
-
-h1 {
-  padding-top: 1.2rem;
-  font-size: 3rem;
-  font-weight: 500;
-  text-align: center;
-  letter-spacing: 0.4rem;
-  color: #11010d;
-  transition: all 0.2s linear;
-}
-
 #wrap {
   width: 80%;
-  height: 95vh;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  background-image: url(../images/img05.jpg);
-  background-size: 100% 100%;
-  background-color: #fff;
+}
+.submenu {
+  /* display: block; */
+  z-index: 3;
+  position: absolute;
+  top: -80vh;
+  left: 0;
+  width: 100vw;
+  height: 80vh; 
+  background-color: beige;
+  text-align: center;
+  transition: all 0.5s linear;
+}
+.submenu h1 {
+  padding: 1rem;
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: 0.4rem;
+}
+.submenu > ul li {
+  margin: 0.5rem 0;
+}
+.submenu > ul li a {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: -0.2rem;
+}
+.submenu .menu_footer {
+  display: inline-block;
+  position: absolute;
+  bottom: 7rem;
+  left: 0;
+  width: 70rem;
+  border-top: 2px solid #11010d;
+}
+.submenu .menu_footer ul {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+.submenu .menu_footer ul li a {
+  margin: 0 1.3rem;
+  font-size: 1.6rem;
+}
+.submenu .menu_footer .copyright p {
+  font-size: 1.2rem;
+}
+.submenu button {
+  position: absolute;
+  bottom: 5rem;
+  right: 5rem;
+  font-size: 3rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+/* header */
+header {
+  width: 100%;
+  height: 15rem;
+}
+header .logo {
+  padding: 1rem;
+  text-align: center;
+}
+header .logo h1 {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: 0.4rem;
+  cursor: pointer;
+  transition: all 0.2s linear;
 }
 
-#wrap .gnb {
-  display: -webkit-box;
-  display: -ms-flexbox;
+header .mainmenu ul {
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
 }
-#wrap .gnb label{
-  display: none;
-  font-size: 2rem;
-  font-weight: bold;
+header .mainmenu ul li {
+  margin: 0 1.5rem;
 }
-#wrap .gnb input{
+header .mainmenu ul li a i {
+  font-size: 1.8rem;
+  transition: all 0.2s linear;
+}
+header .mainmenu label {
+  display: none; /*block*/
+  text-align: center;
+  transition: all 0.2s linear;
+}
+header .mainmenu label input {
   margin: 0.5rem 1rem;
   outline: none;
   border: none;
@@ -77,54 +139,69 @@ h1 {
   width: 50rem;
   font-weight: bold;
 }
-#wrap .gnb > div {
-  margin: 0 1rem;
+header .mainmenu label i {
   font-size: 2rem;
-  color: #11010d;
-  transition: all 0.2s linear;
+  font-weight: bold;
+  cursor: pointer;
 }
-
-#wrap .gnb > div > a {
-  color: inherit;
+/* main */
+main {
+  width: 100%;
+  height: 75rem;
+  position: relative;
 }
-
-h2 {
+main h2 {
   display: inline-block;
   width: 80px;
   height: 80px;
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 5rem;
-  z-index: 2;
   color: #11010d;
   border: 3px solid #11010d;
   border-radius: 50%;
   padding: 5px 10px;
 }
+main .swiper {
+  width: 80vw;
+  height: 100vh;
+  position: absolute;
+  top: -15rem;
+  left: 0;
+  z-index: -1;
+}
+main .swiper img {
+  width: 100%;
+  height: 95%;
+}
 
-nav {
-  position: fixed;
-  font-size: 2rem;
-  bottom: -3rem;
-  left: 50%;
-  transform: translateX(-50%);
+/* footer */
+footer {
+  width: 100%;
+  height: 5rem;
 }
-nav > ul {
+footer .gnb {
   display: flex;
-}
-nav > ul > li {
-  margin: 0 6rem;
-  letter-spacing: 0.3rem;
+  justify-content: center;
   transition: all 0.2s linear;
 }
-nav > li > a {
-  color: #11010d;
+footer .gnb li {
+  margin: 0 5rem;
 }
-.changeBgColor{
+footer .gnb li a {
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+}
+
+.changeBgColor {
   background-color: #11010d;
 }
-.changeTextColor{
+.changeTextColor {
   color: #fff;
+}
+input.changeBorderColor {
+  border-bottom: 2px solid #fff;
 }
