@@ -23,7 +23,18 @@ body {
 ul {
   list-style: none;
 }
-ul,li,a,h1,input,label,i,button,div,header,main,footer{
+ul,
+li,
+a,
+h1,
+input,
+label,
+i,
+button,
+div,
+header,
+main,
+footer {
   color: inherit;
 }
 a {
@@ -105,20 +116,20 @@ header .mainmenu label i {
 main {
   padding: 4rem;
 }
-main h1{
+main h1 {
   font-size: 2rem;
   font-weight: 500;
   margin: 1rem 0;
 }
-main form .choice{
+main form .choice {
   margin: 2rem 3rem;
 }
-main form .choice > input{
+main form .choice > input {
   margin: 0 1rem;
 }
-main form input[type='text'],
-main form input[type='password'],
-main form input[type='email'] {
+main form input[type="text"],
+main form input[type="password"],
+main form input[type="email"] {
   width: 35rem;
   margin: 1rem 0;
   padding: 0.5rem 0;
@@ -143,7 +154,7 @@ main form button {
   margin: 0.5rem 0;
   /* color: #fff; */
 }
-.sign-up li:nth-child(1) a{
+.sign-up li:nth-child(1) a {
   display: inline;
 }
 .sign-up li {

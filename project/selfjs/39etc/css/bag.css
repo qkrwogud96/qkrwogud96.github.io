@@ -38,6 +38,9 @@ main,
 footer {
   color: inherit;
 }
+i {
+  z-index: 1;
+}
 a {
   text-decoration: none;
   display: inline-block;
@@ -154,9 +157,13 @@ footer .gnb li a {
 .changeBgColor {
   background-color: #11010d;
 }
+.changeBgColor-light {
+  background-color: #fff;
+}
 .changeTextColor {
   color: #fff;
 }
-input.changeBorderColor {
-  border-bottom: 2px solid #fff;
+.changeTextColor-dark {
+  color: #11010d;
 }
+
