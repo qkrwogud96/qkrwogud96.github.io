@@ -1,9 +1,3 @@
-//mode 색상 바꾸기
-
-//search 검색 활성화 / 비활성화
-
-//logo submenu호출
-
 const modeBtn = document.querySelector(".fa-lightbulb");
 const searchBtn = document.querySelector(".fa-search");
 const closeSearchBtn = document.querySelector("label i");
@@ -30,7 +24,6 @@ const openSearch = () => {
 };
 const changeColor = () => {
   bodyElem.classList.toggle("changeBgColor");
-
   logoElem.classList.toggle("changeTextColor");
   modeBtn.classList.toggle("changeTextColor");
   searchBtn.classList.toggle("changeTextColor");
@@ -46,10 +39,10 @@ const changeColor = () => {
   gnbElem.forEach((element) => element.classList.toggle("changeTextColor"));
 };
 const openSubmenu = () => {
-  submenuElem.style.top = "0";
+  submenuElem.classList.add("on");
 };
 const closeSubmenu = () => {
-  submenuElem.style.top = "-80vh";
+  submenuElem.classList.remove("on");
 };
 const clickBtnEvent = () => {
   modeBtn.addEventListener("click", changeColor);
@@ -57,7 +50,7 @@ const clickBtnEvent = () => {
   closeSearchBtn.addEventListener("click", closeSearch);
   logoElem.addEventListener("click", openSubmenu);
   closesubBtn.addEventListener("click", closeSubmenu);
-  gnbElem[0].addEventListener('click', function (){
+  gnbElem[0].addEventListener("click", function () {
     alert("준비중입니다.");
   });
 };
@@ -65,3 +58,10 @@ const init = () => {
   clickBtnEvent();
 };
 init();
+
+//추가해보고싶은것들
+
+//submenu 닫는 부분 확장
+//mode 클릭시 이미지 색상 반전
+//colorchange 간소화
+//swiper 이미지 클릭으로 넘기는 방식

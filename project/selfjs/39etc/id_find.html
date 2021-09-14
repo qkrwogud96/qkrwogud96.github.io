@@ -40,8 +40,16 @@
         </div>
       </header>
       <main>
-        <h1>SIGN IN TO YOUR ACCOUNT</h1>
+        <h1>FIND ID</h1>
         <form action="POST">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            autocomplete="off"
+          />
+          <br />
           <input
             type="text"
             id="id"
@@ -50,20 +58,10 @@
             autocomplete="off"
           />
           <br />
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Password"
-          />
-          <br />
-          <button type="submit">SIGN IN</button>
+          <button type="submit">OK</button>
         </form>
         <ul class="sign-up">
-          <li>
-            <a href="id_find.html">FIND ID</a> /
-            <a href="pass_find.html"> PASSWORD</a>
-          </li>
+          <li><a href="id_find.html">FIND ID</a> / <a href="pass_find.html"> PASSWORD</a></li>
           <li><a href="id_create.html">CREATE A NEW ACCOUNT</a></li>
           <li><a href="id_guest.html">GUEST LOGIN</a></li>
         </ul>
@@ -78,5 +76,6 @@
     </div>
     <!-- <script src="script/account.js"></script> -->
     <script src="script/modeChange.js"></script>
+
   </body>
 </html>

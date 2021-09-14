@@ -40,8 +40,16 @@
         </div>
       </header>
       <main>
-        <h1>SIGN IN TO YOUR ACCOUNT</h1>
+        <h1>JOIN US</h1>
         <form action="POST">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            autocomplete="off"
+          />
+          <br />
           <input
             type="text"
             id="id"
@@ -57,7 +65,30 @@
             placeholder="Password"
           />
           <br />
-          <button type="submit">SIGN IN</button>
+          <input
+            type="password"
+            id="password_confirm"
+            name="password_confirm"
+            placeholder="Password Confirm"
+          />
+          <br />
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            placeholder="Phone"
+            autocomplete="off"
+          />
+          <br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            autocomplete="off"
+          />
+          <br />
+          <button type="submit">SIGN UP</button>
         </form>
         <ul class="sign-up">
           <li>
@@ -78,5 +109,6 @@
     </div>
     <!-- <script src="script/account.js"></script> -->
     <script src="script/modeChange.js"></script>
+
   </body>
 </html>

@@ -23,13 +23,14 @@ body {
 ul {
   list-style: none;
 }
-
+ul,li,a,h1,input,label,i,button,div,header,main,footer{
+  color: inherit;
+}
 a {
   text-decoration: none;
   display: inline-block;
   width: 100%;
   height: 100%;
-  color: inherit;
 }
 
 #wrap {
@@ -64,11 +65,10 @@ header .logo h1 {
   font-size: 2.3rem;
   font-weight: 500;
   letter-spacing: 0.4rem;
-  cursor: pointer;
   transition: all 0.2s linear;
 }
-header .mainmenu{
-    height: 4rem;
+header .mainmenu {
+  height: 4rem;
 }
 header .mainmenu ul {
   display: flex;
@@ -103,27 +103,55 @@ header .mainmenu label i {
 }
 /* main */
 main {
-    padding: 4rem;
+  padding: 4rem;
 }
-
-main form input{
-    width: 40rem;
-    margin: 1rem 0;
-    border: none;
-    border-bottom: 2px solid #11010d;
-    outline: none;
-    font-size: 1.5rem;
-    background-color: transparent;
+main h1{
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 1rem 0;
 }
-main form button{
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    color: #fff;
-    background-color: #11010d;
-    margin-top: 1rem;
-    padding: 5px 15px;
-    cursor: pointer;
+main form .choice{
+  margin: 2rem 3rem;
+}
+main form .choice > input{
+  margin: 0 1rem;
+}
+main form input[type='text'],
+main form input[type='password'],
+main form input[type='email'] {
+  width: 35rem;
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+  border: none;
+  border-bottom: 2px solid #11010d;
+  outline: none;
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+main form button {
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #11010d;
+  color: #fff;
+  margin-top: 1rem;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+.sign-up {
+  display: inline-block;
+  margin: 0.5rem 0;
+  /* color: #fff; */
+}
+.sign-up li:nth-child(1) a{
+  display: inline;
+}
+.sign-up li {
+  padding: 0.05rem 0;
+  color: inherit;
+}
+.sign-up li a {
+  font-size: 1.2rem;
 }
 /* footer */
 footer {
@@ -148,6 +176,12 @@ footer .gnb li a {
 .changeBgColor {
   background-color: #11010d;
 }
+.changeBgColor-light {
+  background-color: #fff;
+}
 .changeTextColor {
   color: #fff;
+}
+.changeTextColor-dark {
+  color: #11010d;
 }
