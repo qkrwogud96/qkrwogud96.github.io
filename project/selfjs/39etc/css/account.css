@@ -44,7 +44,9 @@ a {
   width: 100%;
   height: 100%;
 }
-
+a:hover{
+  color: #888;
+}
 #wrap {
   margin: 0 auto;
   text-align: center;
@@ -87,9 +89,7 @@ header .mainmenu ul {
   justify-content: center;
 }
 header .mainmenu ul li {
-  margin: 0 0.8rem;
-}
-header .mainmenu ul li a i {
+  margin: 0 0.8rem;  
   font-size: 1.9rem;
   transition: all 0.2s linear;
 }
@@ -166,6 +166,9 @@ main form button {
   margin-top: 1rem;
   padding: 5px 15px;
   cursor: pointer;
+}
+main form button:hover{
+  color: #888;
 }
 .sign-up {
   display: inline-block;

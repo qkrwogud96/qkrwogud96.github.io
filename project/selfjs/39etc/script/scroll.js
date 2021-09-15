@@ -1,14 +1,23 @@
 const submenuLogoElem = document.querySelector(".logo");
 const navElem = document.querySelector("header nav ul");
 const scrollEvent = () => {
-//   console.log(document.documentElement.scrollTop);
+  //   console.log(document.documentElement.scrollTop);
   if (document.documentElement.scrollTop > 100) {
     submenuLogoElem.style.top = "-10rem";
-    navElem.style.flexDirection = 'column';
+    navElem.style.top = "-10rem";
   } else {
     submenuLogoElem.style.top = "0";
-    navElem.style.flexDirection = 'row';
+    navElem.style.top = "0";
   }
 };
-
 window.addEventListener("scroll", scrollEvent);
+
+//스크롤 맨 위로 올리기
+
+const scrollTopBtn =document.querySelector('.scroll_top button');
+
+const moveScrollTop = () =>{
+  document.documentElement.scrollTop = 0;
+  
+}
+scrollTopBtn.addEventListener('click',moveScrollTop);

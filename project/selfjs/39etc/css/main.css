@@ -141,8 +141,6 @@ header .mainmenu ul {
 }
 header .mainmenu ul li {
   margin: 0 1.5rem;
-}
-header .mainmenu ul li a i {
   font-size: 1.8rem;
   transition: all 0.2s linear;
 }
