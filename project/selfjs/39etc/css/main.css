@@ -64,6 +64,7 @@ a:hover {
   width: 100vw;
   height: 80vh;
   background-color: beige;
+  color: #11010d;
   text-align: center;
   transition: all 0.5s linear;
 }
