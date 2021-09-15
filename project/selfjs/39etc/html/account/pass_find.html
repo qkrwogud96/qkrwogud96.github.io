@@ -10,12 +10,12 @@
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/account.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/account.css" type="text/css" />
     <title>Web 39etc</title>
   </head>
   <body>
     <div id="wrap">
-      <h1><a href="main.html">39</a></h1>
+      <h1><a href="../../index.html">39</a></h1>
       <header>
         <div class="logo">
           <h1>
@@ -40,15 +40,25 @@
         </div>
       </header>
       <main>
-        <h1>FIND ID</h1>
-        <form >
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Name"
-            autocomplete="off"
-          />
+        <h1>FIND PASSWORD</h1>
+        <form>
+          <label for="phone" class="choice"
+            ><input
+              type="radio"
+              id="phone"
+              name="choice"
+              value="phone"
+              checked
+            />Phone</label
+          >
+          <label for="email" class="choice"
+            ><input
+              type="radio"
+              id="email"
+              name="choice"
+              value="email"
+            />Email</label
+          >
           <br />
           <input
             type="text"
@@ -58,10 +68,30 @@
             autocomplete="off"
           />
           <br />
-          <button type="submit">OK</button>
+          <input
+            class="find"
+            type="text"
+            id="phone"
+            name="phone"
+            placeholder="Phone (-없이 입력하세요)"
+          />
+          <br />
+
+          <input
+            class="find"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+          />
+          <br />
+          <button type="submit">SIGN IN</button>
         </form>
         <ul class="sign-up">
-          <li><a href="id_find.html">FIND ID</a> / <a href="pass_find.html"> PASSWORD</a></li>
+          <li>
+            <a href="id_find.html">FIND ID</a> /
+            <a href="pass_find.html"> PASSWORD</a>
+          </li>
           <li><a href="id_create.html">CREATE A NEW ACCOUNT</a></li>
           <li><a href="id_guest.html">GUEST LOGIN</a></li>
         </ul>
@@ -70,14 +100,15 @@
         <ul class="gnb">
           <li><a href="#">KR/USD</a></li>
           <li><a href="account.html">ACCOUNT</a></li>
-          <li><a href="bag.html">BAG</a></li>
+          <li><a href="../bag/bag.html">BAG</a></li>
         </ul>
       </footer>
     </div>
     <!-- <script src="script/account.js"></script> -->
-    <script src="script/modeChange.js"></script>
-    <script src="script/search.js"></script>
-    <script src="script/translation.js"></script>
-    <script src="script/submit.js"></script>
+    <script src="../../script/modeChange.js"></script>
+    <script src="../../script/search.js"></script>
+    <script src="../../script/translation.js"></script>
+    <script src="../../script/submit.js"></script>
+    <script src="../../script/findPassword.js"></script>
   </body>
 </html>

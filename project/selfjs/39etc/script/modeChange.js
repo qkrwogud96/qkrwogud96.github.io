@@ -3,10 +3,9 @@ const wrapElem = document.querySelector("#wrap");
 const logoElem = document.querySelector("#wrap > h1");
 const inputElem = wrapElem.querySelectorAll("input");
 const labelElem = wrapElem.querySelectorAll("label");
-const buttonElem = wrapElem.querySelector("button");
-
+const buttonElem = wrapElem.querySelectorAll("button");
+const submainElem = wrapElem.querySelector(".sub_main");
 const modeBtn = wrapElem.querySelector(".fa-lightbulb");
-
 const DARKMODE = {
   color: "#fff",
   bgcolor: "#11010d",
@@ -21,11 +20,15 @@ let check = false;
 const modeChange = () => {
   bodyElem.classList.toggle("changeBgColor");
   wrapElem.classList.toggle("changeTextColor");
-  if (buttonElem != null) {
-    buttonElem.classList.toggle("changeBgColor-light");
-    buttonElem.classList.toggle("changeTextColor-dark");
-  }
 
+  if (buttonElem != null) {
+    buttonElem.forEach((obj) => {
+      obj.classList.toggle("changeBgColor-light");
+      if(buttonElem.length < 2){
+      obj.classList.toggle("changeTextColor-dark");
+      }
+    });
+  }
   if (check) {
     inputElem.forEach((obj) => {
       obj.style.borderBottom = LIGHTMODE.border;
@@ -36,6 +39,9 @@ const modeChange = () => {
     });
     if (logoElem != null) {
       logoElem.style.border = LIGHTMODE.border;
+    }
+    if (submainElem != null) {
+      submainElem.style.borderTop = LIGHTMODE.border;
     }
     check = false;
   } else {
@@ -48,6 +54,9 @@ const modeChange = () => {
     });
     if (logoElem != null) {
       logoElem.style.border = DARKMODE.border;
+    }
+    if (submainElem != null) {
+      submainElem.style.borderTop = DARKMODE.border;
     }
     check = true;
   }

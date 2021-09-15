@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,600;0,700;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #11010d;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+    margin: 0 auto;
+  width: 90vw;
+  /* height: 100%; */
+  padding: 2rem;
+  position: relative;
+  font-family: "Urbanist", sans-serif;
+  transition: all 0.2s linear;
+  /* overflow:hidden; */
+}
+
+ul {
+  list-style: none;
+}
+nav,
+ul,
+li,
+a,
+h1,
+h2,
+p,
+input,
+label,
+i,
+button,
+div,
+header,
+main,
+footer {
+  color: inherit;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+a:hover {
+  color: #888;
+}
+#wrap {
+  width: 100%;
+  height: 230vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow:hidden;
+}
+.submenu {
+  /* display: block; */
+  z-index: 3;
+  position: fixed;
+  top: -80vh;
+  left: 0;
+  width: 100vw;
+  height: 80vh;
+  background-color: beige;
+  color: #11010d;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+.submenu.on {
+  top: 0;
+}
+.submenu h1 {
+  padding: 1rem;
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: 0.4rem;
+}
+.submenu > ul li {
+  margin: 0.5rem 0;
+}
+.submenu > ul li a {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: -0.2rem;
+}
+
+.submenu .menu_footer {
+  display: inline-block;
+  position: absolute;
+  bottom: 7rem;
+  left: 0;
+  width: 70rem;
+  border-top: 2px solid #11010d;
+}
+.submenu .menu_footer ul {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+.submenu .menu_footer ul li a {
+  margin: 0 1.3rem;
+  font-size: 1.6rem;
+}
+
+.submenu .menu_footer .copyright p {
+  font-size: 1.2rem;
+}
+.submenu button {
+  position: absolute;
+  bottom: 5rem;
+  right: 5rem;
+  font-size: 3rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+/* header */
+header {
+  width: 100%;
+  /* height: 15vh; */
+  position: fixed;
+  z-index: 2;
+}
+header nav,
+header .logo,
+header .mainmenu {
+  position: inherit;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+header nav ul li a {
+  padding: 2rem 2.5rem;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 300;
+}
+header .logo {
+  padding: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  transition: all 0.5s ease;
+
+}
+header .logo h1 {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: 0.4rem;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+header .mainmenu {
+  right: 10rem;
+  top: 3rem;
+}
+header .mainmenu ul {
+  display: flex;
+  justify-content: center;
+}
+header .mainmenu ul li {
+  margin: 0 1.5rem;
+}
+header .mainmenu ul li a i {
+  font-size: 1.8rem;
+  transition: all 0.2s linear;
+}
+header .mainmenu label {
+  display: none; /*block*/
+  text-align: center;
+  transition: all 0.2s linear;
+}
+header .mainmenu label input {
+  margin: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #11010d;
+  padding: 0.5rem;
+  width: 20rem;
+  font-weight: bold;
+}
+header .mainmenu label i {
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* main */
+main {
+  margin-top: 20rem;
+  border-top: 2px solid #11010d;
+  width: 100%;
+  height: 95vh;
+  position: relative;
+}
+main h1 {
+  position: relative;
+  top: -5rem;
+}
+main .product_wrap {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+main .product_wrap .product {
+  width: 40%;
+  display: inline-block;
+  margin: 0 2rem;
+}
+main .product_wrap .product img {
+  /* display: inline-block; */
+  width: 100%;
+  height: 100%;
+  cursor: pointer;  
+}
+main .product_wrap .product img:hover {
+  opacity: 0.6;
+}
+main .product_wrap .product .inner {
+  padding: 0 2rem;
+  text-align: left;
+}
+main .product_wrap .product .inner h2 {
+  font-size: 2rem;
+}
+main .product_wrap .product .inner p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+main .product_page {
+  display: flex;
+  margin: 2rem 0;
+  margin-top: 3rem;
+  width: 100%;
+  justify-content: center;
+}
+main .product_page button {
+  padding: 1rem 0.5rem;
+  margin: 0 0.5rem;
+  outline: none;
+  border: none;
+  font-size: 2rem;
+  background-color: transparent;
+}
+main .page_num{
+    height: 100%;
+    line-height: 5rem;
+}
+main .product_page a {
+  display: inline;
+  cursor: pointer;
+  text-align: center;
+  font-size: 2rem;
+  padding: 0 2rem;
+}
+/* footer */
+footer {
+  position: fixed;
+  top: 7rem;
+  right: 9rem;
+  z-index: 2;
+}
+footer .gnb {
+  /* display: flex; */
+  justify-content: center;
+  transition: all 0.2s linear;
+}
+footer .gnb li {
+  margin: 0 1rem;
+}
+footer .gnb li a {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+}
+
+/* add class */
+.changeBgColor {
+  background-color: #11010d;
+}
+.changeBgColor-light {
+  background-color: #fff;
+}
+.changeTextColor {
+  color: #fff;
+}
+.changeTextColor-dark {
+  color: #11010d;
+}
+
+a.now_page{
+  font-weight: bolder;
+  font-size: 2rem;
+}
