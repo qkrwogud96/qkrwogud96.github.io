@@ -41,12 +41,23 @@
       </header>
       <main>
         <h1>FIND PASSWORD</h1>
-        <form action="POST">
+        <form>
           <label for="phone" class="choice"
-            ><input type="radio" id="phone" name="choice" checked />Phone</label
+            ><input
+              type="radio"
+              id="phone"
+              name="choice"
+              value="phone"
+              checked
+            />Phone</label
           >
           <label for="email" class="choice"
-            ><input type="radio" id="email" name="choice" />Email</label
+            ><input
+              type="radio"
+              id="email"
+              name="choice"
+              value="email"
+            />Email</label
           >
           <br />
           <input
@@ -58,13 +69,21 @@
           />
           <br />
           <input
+            class="find"
             type="text"
             id="phone"
             name="phone"
             placeholder="Phone (-없이 입력하세요)"
           />
           <br />
-          <input type="email" id="email" name="email" placeholder="Email" />
+
+          <input
+            class="find"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+          />
           <br />
           <button type="submit">SIGN IN</button>
         </form>
@@ -88,6 +107,8 @@
     <!--     <script src="script/account.js"></script> -->
     <script src="script/modeChange.js"></script>
     <script src="script/search.js"></script>
-    <script src="translation.js"></script>
+    <script src="script/translation.js"></script>
+    <script src="script/submit.js"></script>
+    <script src="script/findPassword.js"></script>
   </body>
 </html>

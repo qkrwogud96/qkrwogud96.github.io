@@ -34,7 +34,8 @@ button,
 div,
 header,
 main,
-footer {
+footer,
+p {
   color: inherit;
 }
 a {
@@ -121,11 +122,20 @@ main h1 {
   font-weight: 500;
   margin: 1rem 0;
 }
+main form {
+  margin: 0 auto;
+  width: 35rem;
+}
 main form .choice {
   margin: 2rem 3rem;
 }
 main form .choice > input {
   margin: 0 1rem;
+}
+main form .find{
+  display: none;
+  position: relative;
+  top: 1rem;
 }
 main form input[type="text"],
 main form input[type="password"],
@@ -138,6 +148,14 @@ main form input[type="email"] {
   outline: none;
   font-size: 1.5rem;
   background-color: transparent;
+}
+main form p {
+  position: relative;
+  padding: 0.1rem 0.4rem;
+  width: 35rem;
+  font-size: 0.8rem;
+  display: inline-block;
+  background-color: #fff;
 }
 main form button {
   border: none;
