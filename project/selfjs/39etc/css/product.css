@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    margin: 0 auto;
+  margin: 0 auto;
   width: 90vw;
   /* height: 100%; */
   padding: 2rem;
@@ -48,16 +48,26 @@ a {
   width: 100%;
   height: 100%;
 }
-a:hover {
+/* a:hover {
   color: #888;
+} */
+
+a:hover,
+.submenu .submenu_logo h1:hover,
+.submenu button i:hover,
+.mainmenu ul li:hover,
+.logo h1:hover,
+.scroll_top button:hover {
+  color: #888;
+  transform: scale(1.1);
 }
 #wrap {
   width: 100%;
-  height: 230vh;
+  /* height: 230vh; */
   position: absolute;
   top: 0;
   left: 0;
-  overflow:hidden;
+  /* overflow: hidden; */
 }
 .submenu {
   /* display: block; */
@@ -67,7 +77,7 @@ a:hover {
   left: 0;
   width: 100vw;
   height: 80vh;
-  background-color: beige;
+  background-color: rgba(245, 245, 220,0.9);
   color: #11010d;
   text-align: center;
   transition: all 0.5s ease;
@@ -75,51 +85,70 @@ a:hover {
 .submenu.on {
   top: 0;
 }
-.submenu h1 {
+.submenu .submenu_logo {
+  width: 100%;
+  height: 15%;
+}
+.submenu .submenu_logo h1 {
   padding: 1rem;
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-weight: 500;
   letter-spacing: 0.4rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
 }
-.submenu > ul li {
-  margin: 0.5rem 0;
+.submenu .submenu_section {
+  width: 100%;
+  height: 30%;
 }
-.submenu > ul li a {
-  font-size: 2.5rem;
+.submenu .submenu_section ul li {
+  display: block;
+  padding: 0.5rem;
+}
+.submenu .submenu_section ul li a {
+  display: inline-block;
+  width: inherit;
+  font-size: 1.8rem;
   font-weight: bold;
   letter-spacing: -0.2rem;
+  transition: all 0.5s ease;
 }
-
-.submenu .menu_footer {
+.submenu .submenu_footer {
   display: inline-block;
-  position: absolute;
-  bottom: 7rem;
-  left: 0;
-  width: 70rem;
-  border-top: 2px solid #11010d;
+  width: 50%;
+  height: 10%;
+  border-top: 1px solid #11010d;
 }
-.submenu .menu_footer ul {
+.submenu .submenu_footer ul {
+  width: 100%;
   display: flex;
   justify-content: center;
   padding: 2rem 0;
 }
-.submenu .menu_footer ul li a {
+.submenu .submenu_footer ul li a {
   margin: 0 1.3rem;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
+  transition: all 0.5s ease;
 }
-
-.submenu .menu_footer .copyright p {
-  font-size: 1.2rem;
+.submenu .submenu_footer .copyright {
+  display: inline-block;
+}
+.submenu .submenu_footer .copyright p {
+  font-size: 1rem;
 }
 .submenu button {
+  display: inline-block;
   position: absolute;
   bottom: 5rem;
   right: 5rem;
-  font-size: 3rem;
+  font-size: 2.4rem;
   outline: none;
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+.submenu button i {
+  transition: all 0.5s ease;
 }
 /* header */
 header {
@@ -137,13 +166,17 @@ header nav ul {
   display: flex;
   flex-direction: row;
   position: inherit;
-  transition: all 0.5s ease;
 }
 header nav ul li a {
-  padding: 2rem 2.5rem;
-  font-size: 1.5rem;
+  padding: 2rem 1.5rem;
+  font-size: 1.3rem;
   font-style: italic;
   font-weight: 300;
+  transition: all 0.5s ease;
+}
+header nav ul li a.now_page {
+  font-weight: bold;
+  font-size: 1.6rem;
 }
 header .logo {
   margin-left: 0.8rem;
@@ -155,7 +188,7 @@ header .logo {
 }
 header .logo h1 {
   display: inline-block;
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-weight: 500;
   letter-spacing: 0.4rem;
   cursor: pointer;
@@ -170,14 +203,15 @@ header .mainmenu ul {
   justify-content: center;
 }
 header .mainmenu ul li {
-  margin: 0 1.5rem;
-  font-size: 1.8rem;
-  transition: all 0.2s linear;
+  padding: 0 1.5rem;
+  font-size: 1.3rem;
+  transition: all 0.5s ease;
+  cursor: pointer;
 }
 header .mainmenu label {
   display: none; /*block*/
   text-align: center;
-  transition: all 0.2s linear;
+  transition: all 0.5s ease;
 }
 header .mainmenu label input {
   margin: 0.5rem 1rem;
@@ -190,9 +224,10 @@ header .mainmenu label input {
   font-weight: bold;
 }
 header .mainmenu label i {
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-weight: bold;
   cursor: pointer;
+  transition: all 0.5s ease;
 }
 /* main */
 main {
@@ -213,29 +248,31 @@ main .product_wrap {
   margin: 0 auto;
 }
 main .product_wrap .product {
-  width: 40%;
+  width: 35%;
   display: inline-block;
-  margin: 0 2rem;
+  margin: 0 5rem;
 }
 main .product_wrap .product img {
   /* display: inline-block; */
   width: 100%;
   height: 100%;
-  cursor: pointer;  
+  cursor: pointer;
 }
 main .product_wrap .product img:hover {
+  border: 1px solid #11010d;
   opacity: 0.6;
 }
 main .product_wrap .product .inner {
-  padding: 0 2rem;
-  text-align: left;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
 }
 main .product_wrap .product .inner h2 {
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 main .product_wrap .product .inner p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: 1.3rem;
 }
 main .product_page {
   display: flex;
@@ -249,19 +286,23 @@ main .product_page button {
   margin: 0 0.5rem;
   outline: none;
   border: none;
-  font-size: 2rem;
+  font-size: 2.4rem;
   background-color: transparent;
 }
-main .page_num{
-    height: 100%;
-    line-height: 5rem;
+main .page_num {
+  height: 100%;
+  line-height: 5rem;
 }
 main .product_page a {
   display: inline;
   cursor: pointer;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.3rem;
   padding: 0 2rem;
+}
+main .product_page a.now_page {
+  font-size: 1.6rem;
+  font-weight: bold;
 }
 /* footer */
 footer {
@@ -279,27 +320,31 @@ footer .gnb li {
   margin: 0 1rem;
 }
 footer .gnb li a {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 500;
   letter-spacing: 0.3rem;
+  transition: all 0.5s ease;
+
 }
 
-.scroll_top{
+.scroll_top {
   position: fixed;
   right: 10rem;
   bottom: 10rem;
   z-index: 2;
 }
-.scroll_top button{
+.scroll_top button {
   outline: none;
   border: none;
   background-color: transparent;
-  font-size: 2rem;
+  font-size: 2.4rem;
   padding: 0.5rem;
   /* border-radius: 1rem; */
   cursor: pointer;
+  transition: all 0.5s ease;
+
 }
-.scroll_top button:hover{
+.scroll_top button:hover {
   color: #888;
 }
 /* add class */
@@ -314,9 +359,4 @@ footer .gnb li a {
 }
 .changeTextColor-dark {
   color: #11010d;
-}
-
-a.now_page{
-  font-weight: bolder;
-  font-size: 2rem;
 }

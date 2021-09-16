@@ -82,18 +82,6 @@ body {
   font-family: "Nanum Gothic", sans-serif;
 }
 
-h2 {
-  margin: 5rem 6rem;
-  font-size: 3rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  background-image: -webkit-gradient(linear, left top, right top, from(#ff6c6c), color-stop(40%, #f5be7b));
-  background-image: linear-gradient(to right, #ff6c6c 0%, #f5be7b 40%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
 header {
   width: 100%;
   height: 90vh;
@@ -171,23 +159,107 @@ main .main-about {
   background-color: #eee;
 }
 
+main .main-about h2 {
+  margin: 5rem 23rem;
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff6c6c), color-stop(40%, #f5be7b));
+  background-image: linear-gradient(to right, #ff6c6c 0%, #f5be7b 40%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+main .main-about h2:hover {
+  padding-left: 3rem;
+}
+
 main .main-about-text {
   float: left;
   width: 60%;
+  padding: 1rem 10rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+main .main-about-text h3 {
+  font-size: 2rem;
+  font-style: italic;
+}
+
+main .main-about-text h3:hover {
+  padding-right: 2rem;
+}
+
+main .main-about-text P {
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  padding: 2rem;
+  font-weight: 700;
+}
+
+main .main-about-text P:hover {
+  padding-left: 2rem;
+}
+
+main .main-about-text a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff6c6c;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #ff6c6c;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main .main-about-text a:hover {
+  background-color: #f5be7b;
+  color: #fff;
+  border-bottom: none;
 }
 
 main .main-about-photo {
   float: left;
   width: 40%;
+  position: relative;
+}
+
+main .main-about-photo .photo {
+  width: 40%;
+  position: absolute;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+main .main-about-photo .photo:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  padding: 0.2rem;
+  border: 3px solid rgba(139, 0, 0, 0.719);
+  z-index: 10;
+}
+
+main .main-about-photo .photo:nth-child(1) {
+  top: 1rem;
+  left: 6rem;
+}
+
+main .main-about-photo .photo:nth-child(2) {
+  top: 6rem;
+  left: 15rem;
 }
 
 main .main-about-photo img {
-  width: 15rem;
-  height: 15rem;
+  width: 100%;
+  height: 100%;
 }
 
 main .main-about::after {
-  content: '';
+  content: "";
   display: block;
   clear: both;
 }
@@ -276,4 +348,94 @@ footer .copyright p:nth-child(1) {
           column-rule-width: 1px;
   -webkit-column-rule-color: #b9b9b9;
           column-rule-color: #b9b9b9;
+}
+
+.gnb a {
+  text-decoration: none;
+}
+
+.gnb label[for="gnb_toggle"] {
+  width: 7rem;
+  height: 7rem;
+  background-color: #f5be7b;
+  position: fixed;
+  top: 8rem;
+  right: 8rem;
+  z-index: 20;
+}
+
+.gnb > #gnb_toggle {
+  display: none;
+}
+
+.gnb > #gnb_toggle:checked ~ .gnb_bg {
+  -webkit-transform: scale(55);
+          transform: scale(55);
+  opacity: 1;
+}
+
+.gnb > #gnb_toggle:checked ~ .gnb_body {
+  display: block;
+}
+
+.gnb > .gnb_bg {
+  width: 7rem;
+  height: 7rem;
+  background-color: #ff6c6c;
+  position: fixed;
+  top: 8rem;
+  right: 8rem;
+  z-index: 18;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.gnb > .gnb_body {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 18;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.gnb > .gnb_body > ul {
+  list-style: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.gnb > .gnb_body > ul li {
+  text-align: center;
+  font-size: 5rem;
+  color: #474747;
+}
+
+.gnb > .gnb_body > ul li span:nth-child(1) {
+  padding-right: 1rem;
+}
+
+.gnb > .gnb_body > ul a {
+  display: block;
+  color: #b9b9b9;
+  border-radius: 1rem;
+  background-image: linear-gradient(150deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 230%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  padding: 1rem;
+}
+
+.gnb > .gnb_body > ul a:hover {
+  color: #ff6c6c;
+  background-position: 100%;
+  -webkit-transform: translate(2rem);
+          transform: translate(2rem);
 }

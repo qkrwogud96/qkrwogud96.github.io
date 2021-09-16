@@ -14,7 +14,7 @@ html {
 body {
   width: 100vw;
   height: 100vh;
-  padding: 2rem;
+  /* padding: 2rem; */
   font-family: "Urbanist", sans-serif;
   transition: all 0.2s linear;
   overflow: hidden;
@@ -47,8 +47,12 @@ a {
   width: 100%;
   height: 100%;
 }
-a:hover{
+.logo h1:hover,
+a:hover,
+header .mainmenu ul li:hover
+{
   color: #888;
+  transform: scale(1.1);
 }
 #wrap {
   margin: 0 auto;
@@ -57,21 +61,10 @@ a:hover{
   height: 100vh;
   position: relative;
 }
-#wrap > h1 {
-  margin: 0 auto;
-  text-align: center;
-  width: 5rem;
-  height: 5rem;
-  font-size: 3.8rem;
-  font-weight: 500;
-  border: 2px solid #11010d;
-  border-radius: 50%;
-  text-align: center;
-  transition: all 0.2s linear;
-}
 /* header */
 header {
   width: 100%;
+  height: 15vh;
 }
 header .logo {
   padding: 1rem;
@@ -79,10 +72,11 @@ header .logo {
 }
 header .logo h1 {
   display: inline-block;
-  font-size: 2.3rem;
+  font-size: 2.4rem;
   font-weight: 500;
   letter-spacing: 0.4rem;
-  transition: all 0.2s linear;
+  cursor: pointer;
+  transition: all 0.5s ease;
 }
 header .mainmenu {
   height: 4rem;
@@ -92,14 +86,14 @@ header .mainmenu ul {
   justify-content: center;
 }
 header .mainmenu ul li {
-  margin: 0 0.8rem;
-  font-size: 1.9rem;
-  transition: all 0.2s linear;
+  margin: 0 1.5rem;
+  font-size: 1.3rem;
+  transition: all 0.5s ease;
 }
 header .mainmenu label {
   display: none; /*block*/
   text-align: center;
-  transition: all 0.2s linear;
+  transition: all 0.5s ease;
 }
 header .mainmenu label input {
   margin: 0.5rem 1rem;
@@ -112,48 +106,48 @@ header .mainmenu label input {
   font-weight: bold;
 }
 header .mainmenu label i {
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-weight: bold;
   cursor: pointer;
 }
 /* main */
 main {
-  padding: 4rem;
+  width: 100%;
+  height: 80vh;
+  padding-top: 1rem;
 }
 main .your-list {
   width: 100%;
-  height: 70vh;
+  height: 100%;
   /* background-color: #333; */
 }
 main .your-list h2 {
-  font-size: 3rem;
-  font-weight: 500;
+  font-size: 1.6rem;
+  font-weight: 600;
   color: inherit;
 }
 main .your-list p {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: inherit;
 }
 /* footer */
 footer {
   width: 100%;
-  position: absolute;
-  bottom: 5rem;
 }
 footer .gnb {
   display: flex;
   justify-content: center;
-  transition: all 0.2s linear;
+  transition: all 0.5s ease;
 }
 footer .gnb li {
   margin: 0 3.5rem;
 }
 footer .gnb li a {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 500;
   letter-spacing: 0.3rem;
+  transition: all 0.5s ease;
 }
-
 .changeBgColor {
   background-color: #11010d;
 }
@@ -166,4 +160,3 @@ footer .gnb li a {
 .changeTextColor-dark {
   color: #11010d;
 }
-

@@ -8,11 +8,27 @@
   }
 }
 
-@mixin clearfix(){
-  &::after{
-      content: '';
-      display: block;
-      clear: both;
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
   }
 }
 
+// tablet , pc , mobile 값 받아와서 적용
+@mixin mq($screen_width) {
+  @if $screen_width == "mobile" {
+    @media screen and (max-width: 480px) {
+      @content;
+    }
+  } @else if $screen_width == "tablet" {
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+      @content;
+    }
+  } @else if $screen_width == "pc" {
+    @media screen and (min-width: 769px) {
+      @content;
+    }
+  }
+}

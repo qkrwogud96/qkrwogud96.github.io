@@ -4,38 +4,41 @@ let curIdx = 1;
 let nextIdx = 2;
 let IMG_SRC = [];
 
-// 각 div마다 src 읽기
+// // 각 div마다 src 읽기
 
 product.forEach((element) => {
   const image = element.children[0].getAttribute("src");
   IMG_SRC.push(image);
 });
-// +1 하면서 src 바꾸기.
+let isStop = false;
 
-const srcChange = (cur, next) => {
-  IMG_SRC.forEach((item, num) => {
-    IMG_SRC[num] = item.replace(cur, next);
-  });
-};
-// 이미지 교체하기.
+const mouseEvent = (e) => {
+  isStop = false;
+  const playInterval = setInterval(function () {
+    if (!isStop) {
+      let targetSrc = e.target.getAttribute("src");
 
-const imgChange = () => {
-  IMG_SRC.forEach((item, idx) => {
-    const img = product[idx].children[0];
-    img.setAttribute("src", item);
-  });
-};
-
-setInterval(function(){
-    srcChange(curIdx, nextIdx);
-    imgChange();
-    if(nextIdx < 3){
+      targetSrc = targetSrc.replace(curIdx, nextIdx);
+      e.target.setAttribute("src", targetSrc);
+      if (nextIdx < 3) {
         curIdx = nextIdx;
         nextIdx++;
-    }
-    else{
+      } else {
         curIdx = nextIdx;
         nextIdx = 1;
+      }
+    } else {
+      clearInterval(playInterval);
     }
-},3000);
+  }, 500);
+};
 
+//이미지 변경 함수
+const stopInterval = () => {
+  isStop = true;
+};
+IMG_SRC.forEach((item, idx) => {
+  const image = product[idx].children[0];
+  image.addEventListener("mouseover", mouseEvent);
+  image.addEventListener("mouseout", stopInterval);
+});
