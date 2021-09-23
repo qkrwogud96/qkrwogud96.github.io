@@ -263,16 +263,16 @@ main .product_wrap .product img:hover {
   opacity: 0.6;
 }
 main .product_wrap .product .inner {
-  margin-bottom: 2rem;
+  margin-bottom: 10rem;
   display: flex;
   justify-content: space-between;
 }
 main .product_wrap .product .inner h2 {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
 }
 main .product_wrap .product .inner p {
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
 }
 main .product_page {
   display: flex;
