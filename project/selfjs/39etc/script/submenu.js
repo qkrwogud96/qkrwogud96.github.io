@@ -1,19 +1,21 @@
-const logoBtn = document.querySelector(".logo h1");
+const barsBtn = document.querySelector(".fa-bars");
 const submenuElem = document.querySelector(".submenu");
 const closesubmenuBtn = document.querySelector(".submenu .fa-times");
 
 //submenu 호출하기
 const slideDownSubMenu = () => {
   submenuElem.style.top = "0";
+  barsBtn.style.opacity = '0';
 };
 const slideUpSubMenu = () => {
-  submenuElem.style.top = "-80vh";
+  submenuElem.style.top = "-100vh";
+  barsBtn.style.opacity = '1';
 };
 
 
 
 function submenuEvent() {
-  logoBtn.addEventListener("click", slideDownSubMenu);
+  barsBtn.addEventListener("click", slideDownSubMenu);
   closesubmenuBtn.addEventListener("click", slideUpSubMenu);
 }
 submenuEvent();
