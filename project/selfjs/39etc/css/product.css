@@ -86,13 +86,14 @@ header nav ul {
   display: flex;
   flex-direction: row;
   position: inherit;
+  transition: all 0.5s ease;
+
 }
 header nav ul li a {
   padding: 2rem 1.5rem;
   font-size: 1.3rem;
   font-style: italic;
   font-weight: 300;
-  transition: all 0.5s ease;
 }
 header nav ul li a.now_page {
   font-weight: bold;
@@ -121,12 +122,13 @@ header .mainmenu {
 header .mainmenu ul {
   display: flex;
   justify-content: center;
+
 }
 header .mainmenu ul li {
   padding: 0 1.5rem;
   font-size: 1.3rem;
-  transition: all 0.5s ease;
   cursor: pointer;
+  transition: all 0.5s ease;
 }
 header .mainmenu label {
   display: none; /*block*/
@@ -277,4 +279,187 @@ footer .gnb li a {
 }
 .changeTextColor-dark {
   color: #11010d;
+}
+
+/* 태블릿 */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  header nav ul li a {
+    padding: 2rem 0.7rem;
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: 300;
+    transition: all 0.5s ease;
+  }
+  header .mainmenu {
+    right: 2rem;
+    top: 2rem;
+  }
+  main .product_wrap {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  main .product_wrap .product {
+    width: 35%;
+    display: inline-block;
+    margin: 0 5rem;
+  }
+  main .product_wrap .product .inner {
+    margin-bottom: 6rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  main .product_wrap .product .inner h2 {
+    font-size: 1.3rem;
+  }
+  main .product_wrap .product .inner p {
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+  main .product_page button {
+    padding: 1rem 0.5rem;
+    margin: 0 0.5rem;
+    outline: none;
+    border: none;
+    font-size: 1.3rem;
+    background-color: transparent;
+  }
+  main .product_page a {
+    display: inline;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0 2rem;
+  }
+  main .product_page a.now_page {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  footer {
+    position: fixed;
+    top: 5rem;
+    right: -0.5rem;
+    z-index: 2;
+  }
+  .scroll_top {
+    position: fixed;
+    right: 2rem;
+    bottom: 5rem;
+    z-index: 2;
+  }
+  .scroll_top button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 2.4rem;
+    padding: 0.5rem;
+    /* border-radius: 1rem; */
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+}
+
+/* 모바일 */
+@media screen and (max-width: 767px) {
+  header nav ul {
+    flex-direction: column;
+  }
+  header nav ul li a {
+    padding: 0.6rem 0;
+    font-size: 1.3rem;
+  }
+  header .mainmenu {
+    right: 1rem;
+    top: 2rem;
+  }
+  main .product_wrap {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  header .mainmenu label input {
+    width: 10rem;
+  }
+  header .logo h1 {
+    font-size: 1.3rem;
+  }
+  header .mainmenu ul li {
+    padding: 0 1rem;
+    font-size: 1rem;
+  }
+  header .mainmenu label {
+    position: absolute;
+    top: -0.5rem;
+    left: -5.5rem;
+  }
+  header .mainmenu label input {
+    padding: 0;
+    margin: 0;
+    width: 4.5rem;
+  }
+  header .mainmenu label i {
+    font-size: 1rem;
+  }
+
+  main h1 {
+    position: relative;
+    font-size: 1.4rem;
+    top: -5rem;
+    transition: all 0.2s linear;
+  }
+  main .product_wrap {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  main .product_wrap .product {
+    width: 70%;
+    display: inline-block;
+    margin: 0 3rem;
+  }
+  main .product_wrap .product .inner {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  main .product_wrap .product .inner h2 {
+    font-size: 1rem;
+  }
+  main .product_wrap .product .inner p {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  main .product_page button {
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+  }
+  main .product_page a {
+    display: inline;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  main .product_page a.now_page {
+    font-size: 1rem;
+  }
+
+  footer {
+    top: 4rem;
+    right: -1rem;
+  }
+  footer .gnb li a {
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+  }
+  .scroll_top {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 2;
+  }
+  .scroll_top button {
+    font-size: 1.6rem;
+  }
 }

@@ -2,9 +2,9 @@ const submenuLogoElem = document.querySelector(".logo");
 const navElem = document.querySelector("header nav ul");
 const scrollEvent = () => {
   //   console.log(document.documentElement.scrollTop);
-  if (document.documentElement.scrollTop > 100) {
-    submenuLogoElem.style.top = "-10rem";
-    navElem.style.top = "-10rem";
+  if (document.documentElement.scrollTop > 50) {
+    submenuLogoElem.style.top = "-20rem";
+    navElem.style.top = "-20rem";
   } else {
     submenuLogoElem.style.top = "0";
     navElem.style.top = "0";
