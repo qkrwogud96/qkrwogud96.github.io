@@ -64,7 +64,7 @@ header .mainmenu ul li:hover,
 .fa-bars{
   position:absolute;
   top: 1.5rem;
-  left: -17rem;
+  right: -5rem;
   font-size: 3rem;
   cursor: pointer;
   transition: all 0.5s ease;
@@ -140,88 +140,7 @@ header .mainmenu ul li:hover,
 .submenu button i {
   transition: all 0.5s ease;
 }
-/*
-.submenu {
-  z-index: 3;
-  position: fixed;
-  top: -80vh;
-  left: 0;
-  width: 100vw;
-  height: 80vh;
-  background-color: rgba(245, 245, 220,0.9);
-  color: #11010d;
-  text-align: center;
-  transition: all 0.5s ease;
-}
-.submenu.on {
-  top: 0;
-}
-.submenu .submenu_logo {
-  width: 100%;
-  height: 15%;
-}
-.submenu .submenu_logo h1 {
-  padding: 1rem;
-  font-size: 2.4rem;
-  font-weight: 500;
-  letter-spacing: 0.4rem;
-  cursor: pointer;
-  transition: all 0.5s ease;
-}
-.submenu .submenu_section {
-  width: 100%;
-  height: 30%;
-}
-.submenu .submenu_section ul li {
-  display: block;
-  padding: 0.5rem;
-}
-.submenu .submenu_section ul li a {
-  display: inline-block;
-  width: inherit;
-  font-size: 1.8rem;
-  font-weight: bold;
-  letter-spacing: -0.2rem;
-  transition: all 0.5s ease;
-}
-.submenu .submenu_footer {
-  display: inline-block;
-  width: 50%;
-  height: 10%;
-  border-top: 1px solid #11010d;
-}
-.submenu .submenu_footer ul {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 2rem 0;
-}
-.submenu .submenu_footer ul li a {
-  margin: 0 1.3rem;
-  font-size: 1.3rem;
-  transition: all 0.5s ease;
-}
-.submenu .submenu_footer .copyright {
-  display: inline-block;
-}
-.submenu .submenu_footer .copyright p {
-  font-size: 1rem;
-}
-.submenu button {
-  display: inline-block;
-  position: absolute;
-  bottom: 5rem;
-  right: 5rem;
-  font-size: 2.4rem;
-  outline: none;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-.submenu button i {
-  transition: all 0.5s ease;
-}
-*/
+
 /* header */
 header {
   width: 100%;
