@@ -112,7 +112,7 @@ aside {
   grid-area: aside;
   display: flex;
   justify-content: center;
-  transform: translateY(-50%);
+  transform: translateY(-20%);
   box-sizing: border-box;
 }
 .menuinfo {
@@ -124,6 +124,7 @@ aside {
   position: relative;
   text-decoration: none;
   color: #000;
+  transition: all .5s ease;
 }
 .menuinfo > h1 {
   margin-bottom: 10px;
@@ -139,7 +140,7 @@ aside {
 .menuinfo:hover {
   transform: scale(1.4);
   z-index: 1;
-  border: 1px solid #555;
+  box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.6);
 }
 /*section ******************/
 #APIperformance {
@@ -172,7 +173,7 @@ aside {
   margin: 0 10px;
   width: 200px;
   height: 200px;
-  border: 4px solid navy;
+  border: 4px solid royalblue;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
@@ -189,7 +190,7 @@ aside {
   line-height: 200px;
   font-size: 1.2em;
   font-weight: bolder;
-  background-color: rgba(0, 255, 255, 0.8);
+  background-color: rgba(0, 80, 200, 0.6);
   position: absolute;
   top: 0;
   left: 0;
@@ -211,7 +212,7 @@ aside {
 .circledetail > h1 {
   margin-bottom: 23px;
   font-size: 3em;
-  color: navy;
+  color: midnightblue;
 }
 .circledetail > p {
   font-size: 0.9em;
@@ -231,7 +232,7 @@ aside {
   align-items: center;
 }
 .step span {
-  color: #0e30be;
+  color: midnightblue;
 }
 .step > p {
   font-weight: bolder;

@@ -52,7 +52,7 @@ li:hover a span {
   height: 60vh;
   background-image: url(Image/backimg.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   color: white;
   position: relative;
 }
