@@ -1,16 +1,14 @@
 const productsElem = document.querySelectorAll(".product_wrap > .product");
+// console.log(productsElem);
 
-function newPage(item) {
-  window.location.href =
-    "http://127.0.0.1:5500/project/selfjs/39etc/html/item_info.html";
-
-  saveItem(item);
+function newPage(e) {
+  saveItem(e);
 }
 
-const saveItem = (item) => {
-  const nowProductSrc = item.children[0].getAttribute("src");
-  const nowProductName = item.children[1].children[0].innerText;
-  const nowProductPrice = item.children[1].children[1].innerText;
+const saveItem = (e) => {
+  const nowProductSrc = e.target.getAttribute('src')
+  const nowProductName = e.target.parentElement.children[1].children[0].innerText
+  const nowProductPrice = e.target.parentElement.children[1].children[1].innerText
 
   const PRODUCT = {
     src: nowProductSrc,
@@ -27,5 +25,5 @@ const saveLocalStorage = (item) => {
 };
 
 productsElem.forEach((item) => {
-  item.addEventListener("click", newPage(item));
+  item.addEventListener("click", newPage);
 });

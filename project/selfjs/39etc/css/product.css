@@ -118,6 +118,8 @@ header .logo h1 {
 header .mainmenu {
   right: 10rem;
   top: 3rem;
+  z-index: 2;
+
 }
 header .mainmenu ul {
   display: flex;
@@ -179,6 +181,10 @@ main .product_wrap .product img {
   width: 100%;
   height: 100%;
   cursor: pointer;
+}
+main .product_wrap .product a:hover{
+  color: inherit;
+  transform: scale(1);
 }
 main .product_wrap .product img:hover {
   border: 1px solid #11010d;
