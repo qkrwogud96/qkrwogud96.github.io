@@ -1,8 +1,8 @@
 const productsElem = document.querySelectorAll(".product_wrap > .product");
 
 function newPage(item) {
-  // window.location.href =
-  //   "http://127.0.0.1:5500/project/selfjs/39etc/html/item_info.html";
+  window.location.href =
+    "http://127.0.0.1:5500/project/selfjs/39etc/html/item_info.html";
 
   saveItem(item);
 }

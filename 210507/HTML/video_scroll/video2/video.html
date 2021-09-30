@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 300vh;
+      }
+      body.before-load {
+        overflow-y: hidden;
+      }
+      video {
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body class="before-load">
+    <video src="images/Green.mp4" class="sample-video" muted></video>
+    <script>
+      const videoElem = document.querySelector(".sample-video");
+      let progress = 0;
+
+      const init = () => {
+        document.body.classList.remove("before-load");
+        window.addEventListener("scroll", () => {
+          progress =
+            window.pageYOffset /
+            (document.body.offsetHeight - window.innerHeight);
+
+          videoElem.currentTime = videoElem.duration * progress;
+
+        });
+      };
+
+      videoElem.addEventListener('dataload', () =>{
+          init();
+      })
+      init();
+    </script>
+  </body>
+</html>

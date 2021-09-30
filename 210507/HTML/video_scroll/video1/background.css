@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+/*
+font-family: 'Titillium Web', sans-serif;
+font-family: 'Monoton', cursive; 
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+}
+
+.video_frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.video_frame::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(-135deg, #91aee2 0, transparent 100%);
+}
+
+.logo {
+  position: absolute;
+  top: 15rem;
+  left: 15rem;
+  font-size: 6rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.contents {
+  position: absolute;
+  left: 15rem;
+  bottom: 15rem;
+  width: 70rem;
+  color: #fff;
+  animation: contents-ani 2s ease;
+  animation-fill-mode: backwards;
+  animation-delay: 1s;
+}
+.contents h1 {
+  font-size: 6rem;
+}
+.contents h1 span:nth-child(1) {
+  color: crimson;
+}
+.contents h1 span:nth-child(3) {
+  color: powderblue;
+}
+.contents p {
+  margin-left: 2.5rem;
+  padding: 2rem 0;
+  font-size: 3rem;
+}
+.contents a {
+  margin: 0.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 2rem;
+  display: inline-block;
+  width: 17rem;
+  height: 4rem;
+  text-align: center;
+  line-height: 4rem;
+  font-size: 1.2rem;
+  transition: 0.2s ease;
+}
+.contents .btn-book {
+  margin-left: 3rem;
+}
+.contents a:hover {
+  background-color: #222;
+  color: #eee;
+  border-color: transparent;
+}
+
+.anniversary {
+  position: absolute;
+  bottom: 15rem;
+  right: 7rem;
+  text-align: center;
+  animation: anniversary-ani 2s ease;
+  animation-delay: 3s;
+  animation-fill-mode: backwards;
+}
+.anniversary p:nth-child(1) {
+  font-size: 5rem;
+  letter-spacing: 0.3rem;
+  margin-bottom: -2rem;
+}
+.anniversary p:nth-child(2) {
+  font-family: "Monoton", cursive;
+  font-size: 12rem;
+}
+
+@keyframes contents-ani {
+  0% {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+}
+@keyframes anniversary-ani {
+  0% {
+    opacity: 0;
+    transform: translateX(30%);
+  }
+}
