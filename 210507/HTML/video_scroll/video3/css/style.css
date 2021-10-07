@@ -83,6 +83,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
 }
 .main-message p {
     font-size: 2.8rem;
@@ -91,6 +92,9 @@ p {
 }
 
 /* section 1 */
+#scroll-section-1{
+  height: 100vh;
+}
 #scroll-section-1 .description {
   max-width: 100rem;
   margin: 0 auto;
@@ -141,6 +145,7 @@ p {
   display: none;
   position: fixed;
   width: 100%;
+  height: 20rem;
   top: 60vh;
   left: 0;
 }
@@ -150,4 +155,20 @@ p {
 #show-scene-2 #scroll-section-2 .sticky-elem,
 #show-scene-3 #scroll-section-3 .sticky-elem {
   display: block;
+}
+
+
+@media screen and (min-width: 1024px){
+  #scroll-section-0 h1 {
+    font-size: 8vw;
+  }
+  .main-message{
+    font-size: 3vw;
+  }  
+  #scroll-section-1 .description {
+    font-size: 2rem;
+  }
+  #scroll-section-1 .description strong {
+    font-size: 5rem;
+  }
 }
