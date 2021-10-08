@@ -70,7 +70,7 @@ p {
 .scroll-section {
   box-sizing: border-box;
   padding-top: 50vh;
-  border: 3px solid red;
+  /* border: 3px solid red; */
 }
 
 /* section 0 */
@@ -78,6 +78,8 @@ p {
   font-size: 5.6rem;
   font-weight: bolder;
   text-align: center;
+  position: relative;
+  top: -10vh;
 }
 .main-message {
   display: flex;
@@ -92,13 +94,11 @@ p {
 }
 
 /* section 1 */
-#scroll-section-1{
-  height: 100vh;
-}
 #scroll-section-1 .description {
   max-width: 100rem;
   margin: 0 auto;
   padding: 0 1.4rem;
+  font-size: 2rem;
 }
 #scroll-section-1 .description strong {
   font-size: 4.2rem;
@@ -107,8 +107,9 @@ p {
 }
 /* section 2 */
 #scroll-section-2 .main-message {
-  font-size: 3rem;
+  font-size: 10rem;
   text-align: center;
+  top: 40vh;
 }
 #scroll-section-2 .main-message small {
   display: block;
@@ -116,6 +117,15 @@ p {
 }
 #scroll-section-2 .desc-message {
   width: 40%;
+  font-size: 2rem;
+}
+#scroll-section-2 .desc-message.a{
+  top: 10vh;
+  left: 60vw;
+}
+#scroll-section-2 .desc-message.b{
+  top: 60vh;
+  left: 50vw;
 }
 #scroll-section-2 .desc-message .pin {
   width: 1px;
@@ -127,6 +137,7 @@ p {
   max-width: 100rem;
   margin: 0 auto;
   padding: 0 1.4rem;
+  font-size: 3rem;
 }
 /* footer */
 .footer {
@@ -149,6 +160,17 @@ p {
   top: 60vh;
   left: 0;
 }
+.sticky-elem-canvas{
+  top: 0;
+  height: 100vh;
+  z-index: -1;
+}
+.sticky-elem-canvas canvas{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+}
 
 #show-scene-0 #scroll-section-0 .sticky-elem,
 #show-scene-1 #scroll-section-1 .sticky-elem,
@@ -166,9 +188,21 @@ p {
     font-size: 3vw;
   }  
   #scroll-section-1 .description {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   #scroll-section-1 .description strong {
+    font-size: 10rem;
+  }
+  #scroll-section-2 .main-message p{
+    font-size: 5rem;
+  }
+  #scroll-section-2 .main-message small {
+    font-size: 3rem;
+  }
+  #scroll-section-2 .desc-message {
+    font-size: 3rem;
+  }
+  #scroll-section-3 .canvas-caption {
     font-size: 5rem;
   }
 }
