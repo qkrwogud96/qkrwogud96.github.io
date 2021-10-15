@@ -1,7 +1,11 @@
+//현재 스크롤 위치를 저장할 변수
 let yOffset = 0;
+// 현재 보여지고있는 영역을 저장할 변수
 let currentScene = 0;
+// 지나간 스크롤 영역들 높이를 저장할 변수
 let preScrollHeight = 0;
 
+// 영역들 세팅 변수
 const sceneInfo = [
   // section-0
   {
@@ -11,7 +15,6 @@ const sceneInfo = [
     heightNum: 5,
     //영역의 높이 값 저장
     scrollHeight: 0,
-    //영역 및 보여져야 할 메세지들
     objs: {
       container: document.querySelector("#scroll-section-0"),
       messageA: document.querySelector("#scroll-section-0 .main-message.a"),
@@ -22,10 +25,8 @@ const sceneInfo = [
       context: document.querySelector("#video-canvas-0").getContext("2d"),
       videoImages: [],
     },
-    //메세지들 in_out 처리
     values: {
       // 객체 : [시작 명암 , 끝 명암, { 임의의 비율 설정 ( 실제 비율x ) }],
-
       messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
       messageA_opacity_out: [1, 0, { start: 0.25, end: 0.3 }],
       messageB_opacity_in: [0, 1, { start: 0.3, end: 0.4 }],
@@ -51,6 +52,7 @@ const sceneInfo = [
   },
   // section-1
   {
+    //일반 영역
     type: "normal",
     heightNum: 5,
     scrollHeight: 0,
@@ -104,6 +106,7 @@ const sceneInfo = [
     },
   },
 ];
+
 //canvas 세팅
 const setCanvasImages = () => {
   let imgElem;
@@ -115,6 +118,7 @@ const setCanvasImages = () => {
     sceneInfo[2].objs.videoImages.push(imgElem);
   }
 };
+
 //영역 비율 세팅
 const calcValues = (values, currentYOffset) => {
   //보여지고있는 영역의 높이
@@ -375,6 +379,7 @@ const playAnimation = () => {
   }
 };
 
+//스크롤 영역 세팅
 const scrollLoop = () => {
   preScrollHeight = 0;
   //보여져야할 영역의 전 구간 높이들 저장
@@ -404,8 +409,7 @@ const setLayout = () => {
         window.innerHeight * 0.5
       );
 
-      sceneInfo[i].scrollHeight =
-        sceneInfo[i].objs.container.offsetHeight;
+      sceneInfo[i].scrollHeight = sceneInfo[i].objs.container.offsetHeight;
     }
     sceneInfo[i].objs.container.style.height = `${sceneInfo[i].scrollHeight}px`;
   }
@@ -431,6 +435,7 @@ const setLayout = () => {
   sceneInfo[2].objs.canvas.style.transform = `translate(-50%,-50%) scale(${heightRatio})`;
 };
 
+//스크롤 이벤트
 const scrollEvent = () => {
   yOffset = window.pageYOffset;
   scrollLoop();
