@@ -1,0 +1,270 @@
+@charset 'utf-8';
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,600;0,700;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #11010d;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  /* padding: 2rem; */
+  font-family: "Urbanist", sans-serif;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+}
+ul,
+li,
+a,
+h1,
+input,
+label,
+i,
+button,
+div,
+header,
+main,
+footer,
+p {
+  color: inherit;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.logo h1:hover,
+a:hover,
+header .mainmenu ul li:hover,
+.sign-up li a:hover,
+main form button:hover {
+  color: #888;
+  transform: scale(1.1);
+}
+#wrap {
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+  height: 100vh;
+  position: relative;
+}
+/* header */
+header {
+  width: 100%;
+  height: 15vh;
+}
+header .logo {
+  padding: 1rem;
+  text-align: center;
+}
+header .logo h1 {
+  display: inline-block;
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.4rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+header .mainmenu ul {
+  display: flex;
+  justify-content: center;
+}
+header .mainmenu ul li {
+  margin: 0 1.5rem;
+  font-size: 1.3rem;
+  transition: all 0.5s ease;
+}
+header .mainmenu label {
+  display: none; /*block*/
+  text-align: center;
+  transition: all 0.5s ease;
+}
+header .mainmenu label input {
+  margin: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #11010d;
+  padding: 0.5rem;
+  width: 50rem;
+  font-weight: bold;
+}
+header .mainmenu label i {
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* main */
+main {
+  width: 100%;
+  height: 80vh;
+  padding-top: 5rem;
+  /* position: relative; */
+}
+main h1 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+main form {
+  margin: 0 auto;
+  width: 35rem;
+}
+main form .choice {
+  margin: 2rem 3rem;
+}
+main form .choice > input {
+  margin: 0 1rem;
+}
+main form input[type="text"],
+main form input[type="password"],
+main form input[type="email"] {
+  width: 35rem;
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+  border: none;
+  border-bottom: 2px solid #11010d;
+  outline: none;
+  font-size: 1.3rem;
+  background-color: transparent;
+}
+main form p {
+  position: relative;
+  padding: 0.1rem 0.4rem;
+  width: 35rem;
+  font-size: 1rem;
+  display: inline-block;
+  background-color: #fff;
+}
+main form button {
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #11010d;
+  color: #fff;
+  margin-top: 1rem;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.sign-up {
+  display: inline-block;
+  margin: 0.5rem 0;
+  /* color: #fff; */
+}
+.sign-up li {
+  padding: 0.2rem 0;
+  color: inherit;
+}
+.sign-up li a {
+  font-size: 1.3rem;
+  transition: all 0.5s ease;
+}
+/* footer */
+footer {
+  width: 100%;
+}
+footer .gnb {
+  display: flex;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+footer .gnb li {
+  margin: 0 3.5rem;
+}
+footer .gnb li a {
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+  transition: all 0.5s ease;
+}
+
+.changeBgColor {
+  background-color: #11010d;
+}
+.changeBgColor-light {
+  background-color: #fff;
+}
+.changeTextColor {
+  color: #fff;
+}
+.changeTextColor-dark {
+  color: #11010d;
+}
+
+/* 모바일 */
+@media screen and (max-width: 767px) {
+  body {
+    padding: 0;
+  }
+  #wrap {
+    margin: 0;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+  header .mainmenu label input {
+    padding: 0.5rem;
+    width: 12rem;
+    font-weight: bold;
+  }
+  header .logo h1 {
+    font-size: 1.6rem;
+  }
+
+  main {
+    padding-top: 0rem;
+  }
+  main h1 {
+    font-size: 1rem;
+  }
+  main form {
+    margin: 0 auto;
+    width: 20rem;
+  }
+  main form .choice {
+    margin: 0;
+  }
+  main form input[type="text"],
+  main form input[type="password"],
+  main form input[type="email"] {
+    width: 15rem;
+    font-size: 1rem;
+  }
+  main form p {
+    width: 15rem;
+  }
+  main form button {
+    padding: 5px 10px;
+    font-size: 1rem;
+  }
+  .sign-up {
+    margin: 1rem 0;
+  }
+  .sign-up li {
+    padding: 0.4rem 0;
+  }
+  .sign-up li a {
+    font-size: 1rem;
+  }
+
+  footer .gnb li {
+    margin: 0 1.5rem;
+  }
+  footer .gnb li a {
+    font-size: 1.3rem;
+  }
+}

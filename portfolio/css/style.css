@@ -269,7 +269,7 @@ nav {
   justify-content: space-between;
 }
 .publishing-inner {
-  width: 30%;
+  width: 33%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -282,12 +282,17 @@ nav {
 }
 .square {
   width: 100%;
-  height: 55%;
+  height: 64%;
   background-color: #444;
 }
 .publishing-portfolio {
   position: relative;
   cursor: pointer;
+}
+.publishing-portfolio img {
+  width: 100%;
+  height: 100%;
+  
 }
 .publishing-portfolio::before {
   content: "+";
@@ -344,10 +349,14 @@ nav {
   justify-content: end;
 }
 .design-portfolio {
-  width: 95%;
-  height: 80%;
+  width: 99%;
+  height: 97%;
   position: relative;
   cursor: pointer;
+}
+.design-portfolio img{
+  width: 100%;
+  height: 100%;
 }
 .design-portfolio::before {
   content: "+";
@@ -369,22 +378,71 @@ nav {
   opacity: 0.6;
   background-color: rgba(75, 0, 130, 0.4);
 }
+
 /* contact */
 #contact {
   width: 100%;
   height: 100vh;
   position: relative;
 }
-#contact h1{
+#contact h1 {
   font-size: 4.2rem;
   position: absolute;
   top: 8rem;
   left: 50%;
   transform: translateX(-50%);
 }
-.contact-wrap{
+.contact-wrap {
   width: 80%;
   height: 100%;
   margin: 0 auto;
   padding-top: 20rem;
+}
+.contact-message {
+  width: 100%;
+}
+.contact-message h2 {
+  font-size: 3.6rem;
+  font-weight: 300;
+  text-align: center;
+}
+.contact-profile {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-profile > div {
+  padding: 1rem 0;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.contact-profile span {
+  display: inline-block;
+  width: 5rem;
+  font-size: 3.4rem;
+}
+.contact-profile p {
+  width: 40rem;
+  text-align: left;
+  font-size: 3rem;
+  display: inline-block;
+}
+.contact-copyright {
+  width: 100%;
+  height: 20%;
+  border-top: 1px solid #000;
+  position: relative;
+}
+.contact-copyright p {
+  width: 100%;
+  font-size: 1.4rem;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }

@@ -1,0 +1,428 @@
+@charset 'utf-8';
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,600;0,700;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #11010d;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  width: 90vw;
+  height: 100%;
+  padding: 2rem;
+  position: relative;
+  font-family: "Urbanist", sans-serif;
+  transition: all 0.2s linear;
+  /* overflow:hidden; */
+}
+
+ul {
+  list-style: none;
+}
+nav,
+ul,
+li,
+a,
+h1,
+h2,
+p,
+span,
+input,
+label,
+i,
+button,
+div,
+header,
+main,
+footer {
+  color: inherit;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+/* a:hover {
+  color: #888;
+} */
+
+a:hover,
+.submenu .submenu_logo h1:hover,
+.submenu button i:hover,
+.mainmenu ul li:hover,
+.logo h1:hover,
+.scroll_top button:hover {
+  color: #888;
+  transform: scale(1.1);
+}
+#wrap {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* header */
+header {
+  width: 100%;
+  height: 15%;
+  position: relative;
+}
+header nav,
+header .logo,
+header .mainmenu {
+  position: absolute;
+}
+header .logo {
+  margin-left: 0.8rem;
+  padding: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  transition: all 0.5s ease;
+}
+header .logo h1 {
+  display: inline-block;
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.4rem;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+header .mainmenu {
+  right: 1rem;
+  top: 3rem;
+}
+header .mainmenu ul {
+  display: flex;
+  justify-content: center;
+}
+header .mainmenu ul li {
+  padding: 0 1.5rem;
+  font-size: 1.3rem;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+header .mainmenu label {
+  display: none; /*block*/
+  text-align: center;
+  transition: all 0.5s ease;
+}
+header .mainmenu label input {
+  margin: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #11010d;
+  padding: 0.5rem;
+  width: 20rem;
+  font-weight: bold;
+}
+header .mainmenu label i {
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+/* main */
+.product_info {
+  padding-top: 1rem;
+  border-top: 2px solid #11010d;
+  width: 100%;
+  height: 85%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.product_info .info_img {
+  width: 60%;
+  height: 100%;
+}
+.product_info .info_img img {
+  width: 75%;
+}
+.product_info .info_etc {
+  width: 40%;
+  height: 100%;
+}
+.product_info .info_etc > div {
+  width: 100%;
+  height: 15%;
+  padding: 1rem 0;
+  justify-content: center;
+  display: flex;
+}
+.product_info .info_etc > div > span {
+  width: 10rem;
+  font-size: 1.6rem;
+}
+.product_info .info_etc .product_name {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bolder;
+}
+.product_info .info_etc .product_price {
+  display: inline-block;
+  font-size: 1.6rem;
+}
+.product_info .info_etc select {
+  width: 8rem;
+  height: 2.5rem;
+}
+.product_info .info_etc select option:nth-child(1) {
+  text-align: center;
+}
+.product_info .info_etc .product_quantity {
+  font-size: 1.6rem;
+}
+.product_info .info_etc input {
+  width: 10rem;
+  height: 3rem;
+  text-align: right;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #11010d;
+  background-color: transparent;
+}
+.product_info .info_etc .product_explan {
+  font-size: 1.6rem;
+  height: 20%;
+  padding: 0;
+  letter-spacing: 0.15rem;
+}
+.product_info .info_etc button {
+  font-size: 1.3rem;
+  width: 100%;
+  height: 5rem;
+  outline: none;
+  border: none;
+  background-color: #11010d;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* footer */
+footer {
+  position: absolute;
+  top: 8rem;
+  right: 0;
+  z-index: 2;
+}
+footer .gnb {
+  /* display: flex; */
+  justify-content: center;
+  transition: all 0.2s linear;
+}
+footer .gnb li {
+  margin: 0 1rem;
+}
+footer .gnb li a {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+  transition: all 0.5s ease;
+}
+
+/* add class */
+.changeBgColor {
+  background-color: #11010d;
+}
+.changeBgColor-light {
+  background-color: #fff;
+}
+.changeTextColor {
+  color: #fff;
+}
+.changeTextColor-dark {
+  color: #11010d;
+}
+@media screen and (max-width: 1023px) {
+  .product_info {
+    padding-top: 1rem;
+    border-top: 2px solid #11010d;
+    width: 100%;
+    height: 85%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .product_info .info_img {
+    width: 60%;
+    height: 100%;
+  }
+  .product_info .info_img img {
+    width: 75%;
+  }
+  .product_info .info_etc {
+    width: 40%;
+    height: 100%;
+  }
+  .product_info .info_etc > div {
+    width: 100%;
+    height: 10%;
+    padding: 1rem 0;
+    justify-content: center;
+    display: flex;
+  }
+  .product_info .info_etc > div > span {
+    width: 10rem;
+    font-size: 1.3rem;
+  }
+  .product_info .info_etc .product_name {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bolder;
+  }
+  .product_info .info_etc .product_price {
+    display: inline-block;
+    font-size: 1.3rem;
+  }
+  .product_info .info_etc select {
+    width: 8rem;
+    height: 2rem;
+  }
+  .product_info .info_etc select option:nth-child(1) {
+    text-align: center;
+  }
+  .product_info .info_etc .product_quantity {
+    font-size: 1.3rem;
+  }
+  .product_info .info_etc input {
+    width: 10rem;
+    height: 2rem;
+    text-align: right;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #11010d;
+    background-color: transparent;
+  }
+  .product_info .info_etc .product_explan {
+    height: 20%;
+    font-size: 1.3rem;
+    padding: 0 1rem;
+    letter-spacing: 0.15rem;
+  }
+  .product_info .info_etc button {
+    font-size: 1.3rem;
+    width: 100%;
+    height: 3rem;
+    outline: none;
+    border: none;
+    background-color: #11010d;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header .logo h1 {
+    font-size: 1.6rem;
+  }
+  header .mainmenu {
+    right: 0.5rem;
+    top: 2rem;
+  }
+  header .mainmenu ul li {
+    padding: 0 1rem;
+    font-size: 1rem;
+  }
+  header .mainmenu label input {
+    padding: 0;
+    margin: 0;
+    width: 10rem;
+  }
+  header .mainmenu label i {
+    font-size: 1rem;
+  }
+
+  .product_info {
+    padding-top: 1rem;
+    border-top: 2px solid #11010d;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .product_info .info_img {
+    width: 50%;
+    height: 50%;
+  }
+  .product_info .info_img img {
+    width: 100%;
+    height: 100%;
+  }
+  .product_info .info_etc {
+    width: 100%;
+    height: 100%;
+  }
+  .product_info .info_etc > div {
+    width: 100%;
+    height: 15%;
+    padding: 1rem 0;
+    justify-content: center;
+    display: flex;
+  }
+  .product_info .info_etc > div > span {
+    width: 10rem;
+    font-size: 1.3rem;
+  }
+  .product_info .info_etc .product_name {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bolder;
+  }
+  .product_info .info_etc .product_price {
+    display: inline-block;
+    font-size: 1.3rem;
+  }
+  .product_info .info_etc select {
+    width: 8rem;
+    height: 2rem;
+  }
+  .product_info .info_etc select option:nth-child(1) {
+    text-align: center;
+  }
+  .product_info .info_etc .product_quantity {
+    font-size: 1.3rem;
+  }
+  .product_info .info_etc input {
+    width: 10rem;
+    height: 2rem;
+    text-align: right;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #11010d;
+    background-color: transparent;
+  }
+  .product_info .info_etc .product_explan {
+    height: 20%;
+    font-size: 1.3rem;
+    padding: 0 2rem;
+    letter-spacing: 0.15rem;
+  }
+  .product_info .info_etc button {
+    font-size: 1.3rem;
+    width: 100%;
+    height: 3rem;
+  }
+
+  footer {
+    top: 8.5rem;
+    right: -1rem;
+    z-index: 2;
+  }
+  footer .gnb li {
+    margin: 0 1rem;
+  }
+  footer .gnb li a {
+    font-size: 1rem;
+  }
+}

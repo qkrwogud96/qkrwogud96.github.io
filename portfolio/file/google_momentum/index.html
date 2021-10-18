@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_piT76SJGRFDhIZ0Uy8laJ');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                this.contact_number.value = Math.random() * 100000 | 0;
+                emailjs.sendForm('gmail', 'template_66rw967', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+    <link rel="stylesheet" href="css/reset.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    
+    <title>Momentum</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="bg">
+        <h1 id="greet">Set your focus for the day</h1>
+        <div id="pop-up">
+          <form
+            id="contact-form"
+            class="gform"
+             method="POST"
+          >
+            <button class="close">close</button>
+            <input type="hidden" name="contact_number">
+            <label >Name: </label>
+            <input type="text" id="name" name="name" placeholder="name"/> <br>
+            <label>Email :</label>
+            <input type="email" name="email" placeholder="email" /> <br />
+            <textarea
+              name="message"
+              id="message"
+              cols="35"
+              rows="16"
+              placeholder="If you have any questions, please contact our customer service."
+            ></textarea>
+            <button type="submit">submit</button>
+            <button type="reset">reset</button>
+          </form>
+        </div>
+        <div id="quote">
+          <p></p>
+          <br />
+          <span></span>
+        </div>
+        <h2 id="clock">00 : 00</h2>
+        <div id="weather">
+          <img src="" alt="날씨" />
+          <span class="area"></span>
+          <span class="temp"></span>
+        </div>
+        <div id="to-do">
+          <form id="to-do-form">
+            <input
+              required
+              type="text"
+              maxlength="30"
+              placeholder="Enter your to-do.     (up to 10)"
+            />
+          </form>
+          <ul id="to-do-ul"></ul>
+        </div>
+        <div id="log_submit">
+          <h1>Hello</h1>
+          <form id="log-in-form">
+            <input
+              required
+              minlength="2"
+              maxlength="10"
+              type="text"
+              placeholder="Enter Your Name."
+            />
+          </form>
+        </div>
+        <div id="content">
+          <ul>
+            <li class="log-out">
+              <a href="#"><i class="fas fa-sign-out-alt"></i></a>
+            </li>
+            <li class="mail">
+              <a href="#"><i class="far fa-envelope"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="js/login.js"></script>
+    <script src="js/setbg.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/todolist.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/mail.js"></script>
+  </body>
+</html>

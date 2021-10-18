@@ -1,0 +1,354 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+#container {
+  width: 80%;
+  margin: 0 auto;
+  font-weight: bolder;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+
+/************     header         *****************/
+nav {
+  list-style: none;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+nav input[id="menu"]:empty,
+nav label[for="menu"]:empty {
+  display: none;
+}
+nav h1 {
+  background: orange;
+  color: white;
+}
+nav h1 span {
+  color: royalblue;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: right;
+}
+ul li {
+  padding: 0 10px;
+}
+ul a {
+  font-size: 1.5em;
+  color: #000;
+}
+li:hover a,
+li:hover a span {
+  color: violet;
+}
+.banner {
+  height: 60vh;
+  background-image: url(Image/backimg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: white;
+  position: relative;
+}
+.banner div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.banner h1 {
+  color: yellow;
+  font-size: 8vw;
+  letter-spacing: 2.5vw;
+}
+.banner h2 {
+  font-size: 3.5vw;
+}
+.banner p {
+  font-size: 1.5em;
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+}
+
+/************     section1         *****************/
+#info {
+  padding: 40px 0;
+}
+#info input {
+  display: none;
+}
+.btn {
+  display: none;
+}
+.slide_image {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.slide_image .detail {
+  width: 300px;
+  height: 300px;
+}
+.detail .circle {
+  width: 80px;
+  height: 80px;
+  background-color: orange;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.detail .circle p {
+  font-size: 2.5em;
+  height: 100%;
+  line-height: 80px;
+}
+.detail h3 {
+  margin: 10px 0;
+}
+
+/************     section2         *****************/
+#image {
+  padding: 30px 0;
+  background-color: #ddd;
+}
+#image h1 {
+  font-size: 4em;
+}
+#image p {
+  font-size: 1.2em;
+}
+.imgwrap {
+  width: 85%;
+  margin: 30px auto;
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: center;
+}
+#image .img {
+  display: inline-block;
+  width: 400px;
+  margin: 0 40px;
+}
+#image img {
+  display: inline-block;
+  width: 100%;
+  transition: .5s;
+}
+.img > img:hover{
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+/************     section3         *****************/
+#QA {
+  padding: 15px 0;
+}
+#QA h1 {
+  font-size: 4em;
+}
+#QA .sns {
+  margin: 20px 0;
+}
+#QA a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #888;
+  position: relative;
+  overflow: hidden;
+}
+#QA i {
+  font-size: 2em;
+  color: #fff;
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+  transition: 0.5s;
+}
+#QA a::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: yellowgreen;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: 0.5s;
+}
+#QA a:hover::before {
+  transform: translateY(0);
+}
+#QA a:hover .fab {
+  transform: perspective(500px) rotateY(360deg);
+  color: #000;
+}
+
+/************     footer         *****************/
+footer {
+  background-color: #111;
+  color: white;
+  padding-top: 35px;
+  padding-bottom: 10px;
+}
+footer p {
+  font-weight: normal;
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+
+
+/************     tablet         *****************/
+@media screen and (max-width: 1024px) {
+  nav {
+    padding: 10px;
+    align-items: flex-end;
+  }
+  nav h1 {
+    font-size: 1.5em;
+  }
+  nav a {
+    font-size: 1em;
+    height: 18px;
+  }
+  #info .btn {
+    display: inline-block;
+    padding-bottom: 20px;
+  }
+  .btn label {
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    border-radius: 3px;
+    background-color: #444;
+  }
+  #info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .slide {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+  }
+  .slide_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+  }
+  input[id="tab1"]:checked ~ .slide .slide_image {
+    left: 0;
+  }
+  input[id="tab2"]:checked ~ .slide .slide_image {
+    left: -300px;
+  }
+  input[id="tab3"]:checked ~ .slide .slide_image {
+    left: -600px;
+  }
+  input[id="tab1"]:checked ~ .btn label[for="tab1"],
+  input[id="tab2"]:checked ~ .btn label[for="tab2"],
+  input[id="tab3"]:checked ~ .btn label[for="tab3"] {
+    background-color: tomato;
+  }
+  #image .img3 {
+    display: none;
+  }
+}
+
+
+/************     mobile         *****************/
+@media screen and (max-width: 768px) {
+  #container {
+    width: 100%;
+  }
+  nav {
+    padding: 10px 0;
+    flex-wrap: wrap;
+  }
+  nav h1 {
+    margin-left: 10px;
+  }
+  label[for="menu"] {
+    display: inline;
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    position: relative;
+    border: none;
+  }
+  label[for="menu"] .line {
+    width: 100%;
+    height: 2px;
+    background-color: #444;
+    position: absolute;
+    perspective: 500px;
+    transition: 0.5s;
+  }
+  .line1 {
+    top: 0;
+  }
+  .line2 {
+    opacity: 1;
+    top: 50%;
+  }
+  .line3 {
+    top: 100%;
+  }
+  input[id="menu"]:checked ~ label[for="menu"] .line1 {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+  input[id="menu"]:checked ~ label[for="menu"] .line2 {
+    opacity: 0;
+  }
+  input[id="menu"]:checked ~ label[for="menu"] .line3 {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  input[type="checkbox"]:checked ~ ul {
+    display: inline;
+  }
+  nav ul {
+    width: 100%;
+    z-index: 1;
+    top: 100%;
+    display: inline;
+    text-align: left;
+    display: none;
+    transition: 0.1s;
+  }
+  nav ul li {
+    padding: 15px;
+  }
+  nav a span {
+    color: mediumseagreen;
+  }
+  nav a {
+    border-radius: 5px;
+    padding: 8px;
+    color: cornflowerblue;
+  }
+  a:hover {
+    background-color: darkgrey;
+  }
+  #image .img2 {
+    display: none;
+  }
+  #QA p {
+    display: none;
+  }
+}

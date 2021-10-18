@@ -1,0 +1,450 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Inter:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Single+Day&display=swap");
+/* WebKit browsers */
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+/* Mozilla Firefox 4 to 18 */
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder {
+  color: transparent;
+}
+/* Mozilla Firefox 19+ */
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+/* Internet Explorer 10+ */
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+#wrap {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  /* background-color: #11010d; */
+  background-color: cadetblue;
+}
+.bg {
+  width: 960px;
+  height: 640px;
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url(../images/image_1.jpg); /*이미지변경*/
+  background-repeat: none;
+  background-size: 100% 100%;
+  box-shadow: 0 5px 10px #000;
+}
+#greet {
+  position: inherit;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.4em;
+  font-weight: 500;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  /*text-shadow: 1px 1px 4px #333;*/
+}
+#pop-up {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+#pop-up .gform {
+  position: relative;
+  margin: 55px auto;
+  width: 400px;
+  height: 500px;
+  background-color: #fff;
+  border: 3px solid #11010d;
+  font-family: "Inter", sans-serif;
+}
+#pop-up .gform button {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  background-color: transparent;
+  color: #11010d;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.5s ease;
+}
+#pop-up .gform .close {
+  top: 10px;
+  right: 10px;
+}
+#pop-up .gform button[type="submit"] {
+  width: 80px;
+  left: 10px;
+  bottom: 10px;
+}
+#pop-up .gform button[type="reset"] {
+  left: 90px;
+  bottom: 10px;
+}
+#pop-up .gform button:hover {
+  color: #fff;
+  background-color: #11010d;
+}
+.gform h1 {
+  font-size: 2em;
+  font-weight: bolder;
+  text-align: center;
+}
+.gform label {
+  font-size: 24px;
+  margin-left: 5px;
+  font-family: inherit;
+}
+.gform input,
+.gform select {
+  width: 30%;
+  margin: 10px 0;
+  font-family: inherit;
+}
+.gform textarea {
+  margin-top: 15px;
+  margin-left: 25px;
+  font-size: 16px;
+  font-family: inherit;
+  resize: none;
+}
+/*명언*/
+
+#quote {
+  width: 100%;
+  position: inherit;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-style: italic;
+}
+#quote p {
+  padding: 2px 10px 8px 0;
+  font-size: 24px;
+  letter-spacing: -2px;
+  font-weight: 500;
+  color: #11010d;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  border-radius: 8px;
+}
+#quote span {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #fff;
+  padding: 2px 5px 5px 2px;
+  color: #11010d;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  border-radius: 8px;
+}
+/*시계*/
+
+#clock {
+  position: inherit;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 64px;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+}
+/* 날씨 */
+
+#weather {
+  position: absolute;
+  left: 30px;
+  top: 50px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+#weather .area {
+  position: inherit;
+  top: 40px;
+  left: -5px;
+}
+#weather .temp {
+  display: inline-block;
+  width: 100px;
+  position: inherit;
+  top: 55px;
+  left: -10px;
+}
+/*할 일 리스트*/
+
+#to-do {
+  position: inherit;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 60%;
+  width: 80%;
+  height: 250px;
+}
+#to-do #to-do-form input {
+  padding: 0 10px;
+  width: 300px;
+  height: 30px;
+  transition: all 0.5s ease;
+  outline: none;
+  border: none;
+  border-bottom: 3px solid #fff;
+  background: transparent;
+  color: #fff;
+}
+#to-do #to-do-form input:focus {
+  border-bottom: 3px solid #11010d;
+  color: #fff;
+}
+#to-do #to-do-form input::placeholder {
+  color: #fff;
+  font-weight: bold;
+}
+#to-do #to-do-ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  overflow: hidden;
+}
+#to-do #to-do-ul li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: 40px;
+}
+#to-do #to-do-ul li button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+#to-do #to-do-ul li span {
+  font-size: 22px;
+  font-family: "Single Day", cursive;
+  color: #fff;
+  width: 100%;
+}
+/* 로그인 */
+
+#log_submit {
+  margin-top: 150px;
+  text-align: center;
+}
+#log_submit h1 {
+  margin-top: 20px;
+  padding: 5px 10px 0 10px;
+  border-radius: 30px;
+  display: none;
+  font-size: 45px;
+  color: #11010d;
+  background-color: rgba(255, 255, 255, 0.6);
+  font-family: "Do Hyeon", sans-serif;
+}
+#log_submit #log-in-form input {
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 50px 20px;
+  outline: none;
+  border: 3px solid #fff;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+#log_submit #log-in-form input::placeholder {
+  color: #11010d;
+}
+#log_submit #log-in-form input:focus {
+  border: 3px solid #11010d;
+}
+/* useractive */
+#content {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+#content li {
+  margin: 15px 0;
+}
+#content li a {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+#content li a i {
+  color: #11010d;
+  transition: all 0.5s ease;
+}
+#content li a:hover {
+  background-color: #11010d;
+}
+#content li a:hover i {
+  color: #fff;
+}
+
+/* 모바일 */
+/* 
+@media screen and (max-width: 768px) {
+  .bg {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+    background-image: url(../images/image_1.jpg); 
+    background-repeat: none;
+    background-size: 100% 100%;
+  }
+  #greet {
+    display: none;
+  }
+  #quote {
+    width: 80%;
+    position: inherit;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-style: italic;
+  }
+  #quote p {
+    padding: 2px 10px 8px 0;
+    font-size: 16px;
+    letter-spacing: -1px;
+    font-weight: 500;
+    color: #efefef;
+    background-color: #11010d;
+    display: inline-block;
+    border-radius: 6px;
+  }
+  #quote span {
+    font-size: 10px;
+    color: #fff;
+    padding: 2px 5px 5px 2px;
+    color: #efefef;
+    background-color: #11010d;
+    display: inline-block;
+    border-radius: 8px;
+  }
+  #clock {
+    position: inherit;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 50px;
+    font-family: "Inter", sans-serif;
+    color: #fff;
+  }
+  #to-do {
+    position: inherit;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    width: 80%;
+    height: 250px;
+  }
+  #to-do #to-do-form input {
+    padding: 0 10px;
+    width: 300px;
+    height: 30px;
+    transition: all 0.5s ease;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid #fff;
+    background: transparent;
+    color: #fff;
+  }
+  #to-do #to-do-form input:focus {
+    border-bottom: 3px solid #11010d;
+    color: #fff;
+    font-weight: bold;
+  }
+  #to-do #to-do-form input::placeholder {
+    color: #fff;
+  }
+  #to-do #to-do-ul {
+    width: 100%;
+    display: block;
+  }
+  #to-do #to-do-ul li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 35px;
+  }
+  #to-do #to-do-ul li button {
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  #to-do #to-do-ul li span {
+    font-size: 16px;
+    font-family: "Single Day", cursive;
+    color: #fff;
+    width: 100%;
+  }
+  #log_submit h1 {
+    padding-top: 30px;
+    display: none;
+    font-size: 40px;
+    color: dodgerblue;
+    font-family: "Do Hyeon", sans-serif;
+  }
+  .log-out {
+    width: 24px;
+    height: 24px;
+    position: inherit;
+    right: 10px;
+    top: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+  i.fa-sign-out-alt {
+    font-size: 16px;
+    color: #11010d;
+    transition: all 0.5s ease;
+  }
+} */

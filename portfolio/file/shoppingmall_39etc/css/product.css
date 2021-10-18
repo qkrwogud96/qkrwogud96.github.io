@@ -1,0 +1,472 @@
+@charset 'utf-8';
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,600;0,700;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #11010d;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  width: 90vw;
+  height: 100%;
+  padding: 2rem;
+  position: relative;
+  font-family: "Urbanist", sans-serif;
+  transition: all 0.2s linear;
+  /* overflow:hidden; */
+}
+
+ul {
+  list-style: none;
+}
+nav,
+ul,
+li,
+a,
+h1,
+h2,
+p,
+input,
+label,
+i,
+button,
+div,
+header,
+main,
+footer {
+  color: inherit;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+/* a:hover {
+  color: #888;
+} */
+
+a:hover,
+.submenu .submenu_logo h1:hover,
+.submenu button i:hover,
+.mainmenu ul li:hover,
+.logo h1:hover,
+.scroll_top button:hover {
+  color: #888;
+  transform: scale(1.1);
+}
+#wrap {
+  width: 100%;
+  /* height: 230vh; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* overflow: hidden; */
+}
+/* header */
+header {
+  width: 100%;
+  /* height: 15vh; */
+  position: fixed;
+  z-index: 2;
+}
+header nav,
+header .logo,
+header .mainmenu {
+  position: inherit;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  position: inherit;
+  transition: all 0.5s ease;
+
+}
+header nav ul li a {
+  padding: 2rem 1.5rem;
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 300;
+}
+header nav ul li a.now_page {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+header .logo {
+  margin-left: 0.8rem;
+  padding: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  transition: all 0.5s ease;
+}
+header .logo h1 {
+  display: inline-block;
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.4rem;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+header .mainmenu {
+  right: 10rem;
+  top: 3rem;
+  z-index: 2;
+
+}
+header .mainmenu ul {
+  display: flex;
+  justify-content: center;
+
+}
+header .mainmenu ul li {
+  padding: 0 1.5rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+header .mainmenu label {
+  display: none; /*block*/
+  text-align: center;
+  transition: all 0.5s ease;
+}
+header .mainmenu label input {
+  margin: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #11010d;
+  padding: 0.5rem;
+  width: 20rem;
+  font-weight: bold;
+}
+header .mainmenu label i {
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+/* main */
+main {
+  margin-top: 20rem;
+  border-top: 2px solid #11010d;
+  width: 100%;
+  height: 95vh;
+  position: relative;
+}
+main h1 {
+  position: relative;
+  top: -5rem;
+  transition: all 0.2s linear;
+}
+main .product_wrap {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+main .product_wrap .product {
+  width: 35%;
+  display: inline-block;
+  margin: 0 5rem;
+}
+main .product_wrap .product img {
+  /* display: inline-block; */
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+main .product_wrap .product a:hover{
+  color: inherit;
+  transform: scale(1);
+}
+main .product_wrap .product img:hover {
+  border: 1px solid #11010d;
+  opacity: 0.6;
+}
+main .product_wrap .product .inner {
+  margin-bottom: 10rem;
+  display: flex;
+  justify-content: space-between;
+}
+main .product_wrap .product .inner h2 {
+  font-size: 1.6rem;
+}
+main .product_wrap .product .inner p {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+main .product_page {
+  display: flex;
+  margin: 2rem 0;
+  margin-top: 3rem;
+  width: 100%;
+  justify-content: center;
+}
+main .product_page button {
+  padding: 1rem 0.5rem;
+  margin: 0 0.5rem;
+  outline: none;
+  border: none;
+  font-size: 2.4rem;
+  background-color: transparent;
+}
+main .page_num {
+  height: 100%;
+  line-height: 5rem;
+}
+main .product_page a {
+  display: inline;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 0 2rem;
+}
+main .product_page a.now_page {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+/* footer */
+footer {
+  position: fixed;
+  top: 7rem;
+  right: 9rem;
+  z-index: 2;
+}
+footer .gnb {
+  /* display: flex; */
+  justify-content: center;
+  transition: all 0.2s linear;
+}
+footer .gnb li {
+  margin: 0 1rem;
+}
+footer .gnb li a {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+  transition: all 0.5s ease;
+}
+
+.scroll_top {
+  position: fixed;
+  right: 10rem;
+  bottom: 10rem;
+  z-index: 2;
+}
+.scroll_top button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 2.4rem;
+  padding: 0.5rem;
+  /* border-radius: 1rem; */
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.scroll_top button:hover {
+  color: #888;
+}
+/* add class */
+.changeBgColor {
+  background-color: #11010d;
+}
+.changeBgColor-light {
+  background-color: #fff;
+}
+.changeTextColor {
+  color: #fff;
+}
+.changeTextColor-dark {
+  color: #11010d;
+}
+
+/* 태블릿 */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  header nav ul li a {
+    padding: 2rem 0.7rem;
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: 300;
+    transition: all 0.5s ease;
+  }
+  header .mainmenu {
+    right: 2rem;
+    top: 2rem;
+  }
+  main .product_wrap {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  main .product_wrap .product {
+    width: 35%;
+    display: inline-block;
+    margin: 0 5rem;
+  }
+  main .product_wrap .product .inner {
+    margin-bottom: 6rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  main .product_wrap .product .inner h2 {
+    font-size: 1.3rem;
+  }
+  main .product_wrap .product .inner p {
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+  main .product_page button {
+    padding: 1rem 0.5rem;
+    margin: 0 0.5rem;
+    outline: none;
+    border: none;
+    font-size: 1.3rem;
+    background-color: transparent;
+  }
+  main .product_page a {
+    display: inline;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0 2rem;
+  }
+  main .product_page a.now_page {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  footer {
+    position: fixed;
+    top: 5rem;
+    right: -0.5rem;
+    z-index: 2;
+  }
+  .scroll_top {
+    position: fixed;
+    right: 2rem;
+    bottom: 5rem;
+    z-index: 2;
+  }
+  .scroll_top button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 2.4rem;
+    padding: 0.5rem;
+    /* border-radius: 1rem; */
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+}
+
+/* 모바일 */
+@media screen and (max-width: 767px) {
+  header nav ul {
+    flex-direction: column;
+  }
+  header nav ul li a {
+    padding: 0.6rem 0;
+    font-size: 1.3rem;
+  }
+  header .mainmenu {
+    right: 1rem;
+    top: 2rem;
+  }
+  main .product_wrap {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  header .mainmenu label input {
+    width: 10rem;
+  }
+  header .logo h1 {
+    font-size: 1.3rem;
+  }
+  header .mainmenu ul li {
+    padding: 0 1rem;
+    font-size: 1rem;
+  }
+  header .mainmenu label {
+    position: absolute;
+    top: -0.5rem;
+    left: -5.5rem;
+  }
+  header .mainmenu label input {
+    padding: 0;
+    margin: 0;
+    width: 4.5rem;
+  }
+  header .mainmenu label i {
+    font-size: 1rem;
+  }
+
+  main h1 {
+    position: relative;
+    font-size: 1.4rem;
+    top: -5rem;
+    transition: all 0.2s linear;
+  }
+  main .product_wrap {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  main .product_wrap .product {
+    width: 70%;
+    display: inline-block;
+    margin: 0 3rem;
+  }
+  main .product_wrap .product .inner {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  main .product_wrap .product .inner h2 {
+    font-size: 1rem;
+  }
+  main .product_wrap .product .inner p {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  main .product_page button {
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+  }
+  main .product_page a {
+    display: inline;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  main .product_page a.now_page {
+    font-size: 1rem;
+  }
+
+  footer {
+    top: 4rem;
+    right: -1rem;
+  }
+  footer .gnb li a {
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+  }
+  .scroll_top {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 2;
+  }
+  .scroll_top button {
+    font-size: 1.6rem;
+  }
+}

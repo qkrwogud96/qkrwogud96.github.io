@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <title>TEST 06</title>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <nav>
+          <h1>PARK JAE <span>H</span>UYNG</h1>
+          <!-- 모바일용 메뉴 바 -->
+          <input type="checkbox" id="menu">
+          <label for="menu">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+          </label>
+          </input>
+          <!------------------------>
+          <ul>
+            <li>
+              <a href="test.html" style="color : royalblue; font-weight: bolder;">HOME</a></li>
+            <li><a href="abuot.html" >ABOUT</a></li>
+            <li><a href="portfolio.html">PORTFOLIO</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+        <div class="banner">
+          <div>
+            <h1>PORTFOLIO</h1>
+            <h2>I'M A FRONTEND DEVELOPER</h2>
+          </div>
+          <p>SCROLL DOWN</p>
+        </div>
+      </header>
+      <section id="info">
+        <!-- 태블릿,모바일용 슬라이드처리 -->
+        <input type="radio" name="check" id="tab1" checked />
+        <input type="radio" name="check" id="tab2" />
+        <input type="radio" name="check" id="tab3" />
+
+        <div class="btn">
+          <label for="tab1"></label>
+          <label for="tab2"></label>
+          <label for="tab3"></label>
+        </div>
+        <!---------------------------------->
+        <div class="slide">
+          <div class="slide_image">
+            <div class="detail">
+              <div class="circle"><p>D</p></div>
+              <h3>DESIGN</h3>
+              <p>
+                Omnis architecto expedita non reiciendls voluptaum moiestiae
+                numquam debltis labore consequuntur? Incidunt inventore quasi
+                sunt obcaecati ea voluptas pariatur officia! Dignissimos,
+                assumenda.
+              </p>
+            </div>
+            <div class="detail">
+              <div class="circle"><p>P</p></div>
+              <h3>PUBLISING</h3>
+              <p>
+                Omnis architecto expedita non reiciendls voluptaum moiestiae
+                numquam debltis labore consequuntur? Incidunt inventore quasi
+                sunt obcaecati ea voluptas pariatur officia! Dignissimos,
+                assumenda.
+              </p>
+            </div>
+            <div class="detail">
+              <div class="circle"><p>D</p></div>
+              <h3>DEVELOPER</h3>
+              <p>
+                Omnis architecto expedita non reiciendls voluptaum moiestiae
+                numquam debltis labore consequuntur? Incidunt inventore quasi
+                sunt obcaecati ea voluptas pariatur officia! Dignissimos,
+                assumenda.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="image">
+        <h1>PORTFOLIO</h1>
+        <p>최근 작업</p>
+        <div class="imgwrap">
+          <div class="img img1">
+            <img src="Image/img4.jpg" alt="pofol4" />
+            <img src="Image/img5.jpg" alt="pofol5" />
+            <img src="Image/img6.jpg" alt="pofol6" />
+          </div>
+          <div class="img img2">
+            <img src="Image/img1.jpg" alt="pofol1" />
+            <img src="Image/img2.jpg" alt="pofol2" />
+            <img src="Image/img3.png" alt="pofol3" />
+          </div>
+          <div class="img img3">
+            <img src="Image/img6.jpg" alt="pofol7" />
+            <img src="Image/img7.jpg" alt="pofol8" />
+            <img src="Image/img8.jpg" alt="pofol9" />
+          </div>
+        </div>
+      </section>
+
+      <section id="QA">
+        <h1>CONTACT</h1>
+        <p>안녕하세요 박재형 입니다.</p>
+        <p>궁금한 사항을 메일로 문의해 주시면 빠른 시일내</p>
+        <p>에 답변 드리도록 하겠습니다.</p>
+        <p>감사합니다.</p>
+        <div class="sns">
+            <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://google.com"><i class="fab fa-google-plus-g"></i></a>
+        </div>
+      </section>
+
+      <footer>
+        <p>E-Mail. qkrwogud96@gmail.com</p>
+        <p>Copyright ⓒ by PARK JAE HYUNG</p>
+        <p>All Rights Reserved</p>
+      </footer>
+    </div>
+    <script>
+      // const imgTag = document.querySelector('.imgwrap');
+      // const modal = document.querySelector('.modal');
+      // imgTag.addEventListener("click",function(e){
+      //   let targetSrc = e.target.getAttribute("src");
+      //   if( targetSrc == null ){
+  
+      //   }
+      //   else{
+      //     modal.style.display = "block";
+      //    modal.children[1].src = targetSrc;
+      //   }
+        
+      // });
+      // const closeBtn = modal.children[0];
+      // closeBtn.addEventListener("click", function(){
+      //   modal.style.display = "none";
+      // });
+    </script>
+  </body>
+</html>

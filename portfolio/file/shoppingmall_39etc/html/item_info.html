@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/productinfo.css" type="text/css" />
+    <title>Web 39etc</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="logo">
+          <h1>
+            <a href="../index.html">
+              OBJECT <br />
+              DESIGNER
+            </a>
+          </h1>
+        </div>
+        <div class="mainmenu">
+          <ul>
+            <li class="mode">
+              <i class="far fa-lightbulb"></i>
+            </li>
+            <li class="search">
+              <i class="fas fa-search"></i>
+            </li>
+          </ul>
+          <label
+            ><input type="text" name="search" autocomplete="off" /><i
+              class="fas fa-times"
+            ></i
+          ></label>
+        </div>
+      </header>
+      <main class="product_info">
+        <div class="info_img">
+          <img
+            src="../images/woman/outer/Alexander_tweed_jacket1.jpg"
+            alt="상세이미지"
+          />
+        </div>
+        <div class="info_etc">
+          <div>
+            <p class="product_name">이름</p>
+          </div>
+          <div>
+            <span>Price</span>
+            <p class="product_price">10000</p>
+          </div>
+          <div>
+            <span>Size</span>
+            <select name="size" id="size">
+              <option value="">::size::</option>
+              <option value="small">s</option>
+              <option value="medium">m</option>
+            </select>
+          </div>
+          <div>
+            <span>Quantity</span>
+            <input type="text" id="quantity" placeholder="1 or More" />
+          </div>
+          <div class="product_explan">
+            Ut eu Lorem mollit mollit adipisicing aute elit id tempor ad est
+            anim. Nisi quis irure ipsum commodo exercitation reprehenderit
+            cillum mollit. Eiusmod culpa ad officia laborum nisi. Occaecat
+            veniam ea ex qui.
+          </div>
+          <button type="submit">Add To Cart</button>
+        </div>
+      </main>
+      <footer>
+        <ul class="menu gnb">
+          <li><a href="#">KR/USD</a></li>
+          <li><a href="account/account.html">ACCOUNT</a></li>
+          <li><a href="bag/bag.html">BAG</a></li>
+        </ul>
+      </footer>
+    </div>
+    <script src="../script/modeChange.js"></script>
+    <script src="../script/search.js"></script>
+    <script src="../script/translation.js"></script>
+    <script src="../script/addCart.js"></script>
+    <script src="../script/load.js"></script>
+  </body>
+</html>

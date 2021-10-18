@@ -1,0 +1,370 @@
+@charset 'utf-8';
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,600;0,700;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #11010d;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+  font-family: "Urbanist", sans-serif;
+  transition: all 0.2s linear;
+}
+
+ul {
+  list-style: none;
+}
+
+ul,
+li,
+a,
+h1,
+input,
+label,
+i,
+button,
+div,
+header,
+main,
+footer {
+  color: inherit;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+.fa-bars:hover,
+a:hover,
+.submenu button i:hover,
+header .mainmenu ul li:hover,
+.scroll_top button:hover {
+  color: #888;
+  transform: scale(1.1);
+}
+#wrap {
+  width: 80%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.fa-bars {
+  position: absolute;
+  top: 1.5rem;
+  left: -5rem;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+/* submenu */
+
+.submenu {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  background-color: rgba(245, 245, 220, 0.8);
+  color: #11010d;
+  z-index: 3;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.submenu .submenu_section {
+  width: 100%;
+  height: 90%;
+  text-align: center;
+}
+.submenu .submenu_section ul {
+  padding-top: 5rem;
+  width: 100%;
+  height: 100%;
+}
+.submenu .submenu_section ul li a {
+  margin: 2rem 0;
+  padding: 2rem 2rem 0 2rem;
+  width: inherit;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: -0.2rem;
+  transition: all 0.5s ease;
+}
+.submenu .submenu_footer {
+  display: inline-block;
+  width: 100%;
+  height: 50%;
+  border-top: 1px solid #11010d;
+}
+.submenu .submenu_footer ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+.submenu .submenu_footer ul li a {
+  margin: 0 1.3rem;
+  font-size: 1.3rem;
+  transition: all 0.5s ease;
+}
+.submenu .submenu_footer .copyright {
+  text-align: center;
+}
+.submenu .submenu_footer .copyright p {
+  font-size: 1rem;
+}
+.submenu button {
+  display: inline-block;
+  position: absolute;
+  top: 4rem;
+  right: 8rem;
+  font-size: 2.4rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.submenu button i {
+  transition: all 0.5s ease;
+}
+
+/* header */
+header {
+  width: 100%;
+  height: 15vh;
+}
+header .logo {
+  padding: 1rem;
+  text-align: center;
+}
+header .logo h1 {
+  display: inline-block;
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.4rem;
+}
+
+header .mainmenu ul {
+  display: flex;
+  justify-content: center;
+}
+header .mainmenu ul li {
+  margin: 0 1.5rem;
+  font-size: 1.3rem;
+  transition: all 0.5s ease;
+}
+header .mainmenu label {
+  display: none; /*block*/
+  text-align: center;
+  transition: all 0.5s ease;
+}
+header .mainmenu label input {
+  margin: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #11010d;
+  padding: 0.5rem;
+  width: 50rem;
+  font-weight: bold;
+}
+header .mainmenu label i {
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* main */
+main {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+main h2 {
+  display: inline-block;
+  width: 8rem;
+  height: 8rem;
+  position: absolute;
+  top: 35%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  color: #11010d;
+  border-style: solid;
+  border-image: linear-gradient(to right, #5a08ff 0%, #3886ff 100%);
+  border-image-slice: 1;
+  /* border-radius: 50%; */
+  padding: 5px 10px;
+  animation: roofCircle 4s linear infinite;
+  perspective: 300;
+}
+main .swiper {
+  width: 80vw;
+  height: 100vh;
+  position: absolute;
+  top: -15rem;
+  left: 0;
+  z-index: -1;
+}
+main .swiper img {
+  width: 100%;
+  height: 95%;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  position: relative;
+}
+footer .gnb {
+  display: flex;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+footer .gnb li {
+  margin: 0 3.5rem;
+}
+footer .gnb li a {
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+  transition: all 0.5s ease;
+}
+
+.changeBgColor {
+  background-color: #11010d;
+}
+.changeBgColor-light {
+  background-color: #fff;
+}
+.changeTextColor {
+  color: #fff;
+}
+.changeTextColor-dark {
+  color: #11010d;
+}
+
+@keyframes roofCircle {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(180deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+/* 태블릿 */
+@media screen and (max-width: 1023px) {
+  body {
+    padding: 0;
+  }
+  #wrap {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .fa-bars {
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  header .mainmenu label input {
+    width: 25rem;
+  }
+  main .swiper {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: -15rem;
+    left: 0;
+    z-index: -1;
+  }
+  main .swiper img {
+    width: 100%;
+    height: 95%;
+  }
+}
+
+/* 모바일 */
+@media screen and (max-width: 767px) {
+  .fa-bars {
+    font-size: 1.6rem;
+  }
+  .submenu .submenu_section {
+    height: 85%;
+  }
+  .submenu .submenu_section ul {
+    padding-top: 4rem;
+  }
+  .submenu .submenu_section ul li a {
+    margin: 1rem 0;
+    padding: 1rem 1rem 0 1rem;
+    width: inherit;
+    font-size: 1.6rem;
+    letter-spacing: 0rem;
+  }
+  .submenu .submenu_footer ul {
+    padding: 1.2rem 0;
+  }
+  .submenu .submenu_footer ul li a {
+    margin: 0 0.2rem;
+    font-size: 1rem;
+  }
+  .submenu .submenu_footer .copyright p {
+    font-size: 0.8rem;
+  }
+  .submenu button {
+    top: 1rem;
+    right: 2rem;
+    font-size: 1.6rem;
+  }
+  header .mainmenu label input {
+    padding: 0.5rem;
+    width: 12rem;
+    font-weight: bold;
+  }
+  header .logo h1 {
+    font-size: 1.6rem;
+  }
+  main .swiper {
+    width: 100vw;
+    height: 95vh;
+    position: absolute;
+    top: -15rem;
+    left: 0;
+    z-index: -1;
+  }
+  main .swiper img {
+    width: 100%;
+    height: 100%;
+  }
+  footer .gnb li {
+    margin: 0 1.5rem;
+  }
+  footer .gnb li a {
+    font-size: 1.3rem;
+  }
+}

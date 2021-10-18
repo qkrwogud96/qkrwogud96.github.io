@@ -1,6 +1,9 @@
 @charset "utf-8";
 
 /*all  **************/
+html{
+  scroll-behavior: smooth;
+}
 * {
   margin: 0 auto;
   padding: 0;
