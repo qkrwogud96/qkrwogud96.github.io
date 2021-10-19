@@ -15,8 +15,22 @@
     <title>박재형 포트폴리오</title>
   </head>
   <body>
+    <div id="modal">
+      <div class="modal-popup">
+        <div class="modal-img">
+          <img src="images/39etc.jpg" alt="">
+        </div>
+        <div class="modal-detail">
+          <h1>사이트 설명</h1>
+          <p>개요</p>
+          <p>특징</p>
+          <p>활용 라이브러리&API</p>
+        </div>
+      </div>
+      <button>X</button>
+    </div>
     <container id="wrap">
-      <header id="home">
+      <header id="home" class="page">
         <input type="checkbox" id="nav-button" />
         <label for="nav-button">
           <div class="bar bar1"></div>
@@ -25,7 +39,7 @@
         </label>
         <nav>
           <div class="logo">
-            <p><a href="#home">LOGO</a></p>
+            <p><a href="#home">JaeHyungPark</a></p>
           </div>
           <ul class="gnb">
             <li><a href="#profile">profile</a></li>
@@ -47,7 +61,7 @@
           <div class="line"></div>
         </div>
       </header>
-      <section id="profile">
+      <section id="profile" class="page">
         <h1>PROFILE</h1>
         <div class="profile-wrap">
           <div class="profile-img">
@@ -121,36 +135,36 @@
           </div>
         </div>
       </section>
-      <section id="publishing">
+      <section id="publishing" class="page">
         <h1>Web publishing</h1>
         <div class="publishing-wrap">
           <div class="publishing-inner">
             <div class="publishing-portfolio rectangle">
-              <img src="images/animalshelter_thumbnail.JPG" alt="동물보호소홈페이지">
+              <img src="images/animalshelter.jpg" alt="동물보호소홈페이지">
             </div>
             <div class="publishing-portfolio rectangle">
-              <img src="images/momentum_thumbnail.JPG" alt="구글확장프로그램모멘텀">
-            </div>
-          </div>
-          <div class="publishing-inner">
-            <div class="publishing-portfolio rectangle">
-              <img src="images/mac_thumbnail.JPG" alt="맥프로스크롤">
-            </div>
-            <div class="publishing-portfolio rectangle">
-              <img src="images/39etc_thumbnail.JPG" alt="쇼핑몰39etc">
+              <img src="images/momentum.jpg" alt="구글확장프로그램모멘텀">
             </div>
           </div>
           <div class="publishing-inner">
             <div class="publishing-portfolio rectangle">
-              <img src="images/vouge_thumbnail.JPG" alt="vogue태블릿디자인">
+              <img src="images/mac.jpg" alt="맥프로스크롤">
             </div>
             <div class="publishing-portfolio rectangle">
-              <img src="images/interactive_thumbnail.JPG" alt="반응형홈페이지">
+              <img src="images/39etc.jpg" alt="쇼핑몰39etc">
+            </div>
+          </div>
+          <div class="publishing-inner">
+            <div class="publishing-portfolio rectangle">
+              <img src="images/vouge.jpg" alt="vogue태블릿디자인">
+            </div>
+            <div class="publishing-portfolio rectangle">
+              <img src="images/interactive.jpg" alt="반응형홈페이지">
             </div>
           </div>
         </div>
       </section>
-      <section id="design">
+      <section id="design" class="page">
         <h1>Design</h1>
         <div class="design-wrap">
           <div class="design-inner left">
@@ -175,7 +189,7 @@
           </div>
         </div>
       </section>
-      <footer id="contact">
+      <footer id="contact" class="page">
         <h1>Contact</h1>
         <div class="contact-wrap">
           <div class="contact-message">
@@ -209,5 +223,7 @@
         </div>
       </footer>
     </container>
+    <script src="js/page.js"></script>
+    <script src="js/modal.js"></script>
   </body>
 </html>

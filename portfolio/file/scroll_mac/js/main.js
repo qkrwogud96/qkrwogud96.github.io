@@ -274,10 +274,10 @@ const playAnimation = () => {
           currentYOffset
         )}%,0)`;
       }
-      console.log("scene play - 0");
+      // console.log("scene play - 0");
       break;
     case 1:
-      console.log("scene play - 1");
+      // console.log("scene play - 1");
       break;
     case 2:
       //이미지 애니메이션
@@ -371,10 +371,10 @@ const playAnimation = () => {
           currentYOffset
         )}%,0)`;
       }
-      console.log("scene play - 2");
+      // console.log("scene play - 2");
       break;
     case 3:
-      console.log("scene play - 3");
+      // console.log("scene play - 3");
       break;
   }
 };

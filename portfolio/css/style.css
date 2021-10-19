@@ -12,7 +12,29 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
+body.modal-open{
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+/* modal */
+#modal{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0,0, 0,0.6);
+  z-index: 10;
+  overflow: hidden;
+  display: none;
+}
+.modal-img{
+  width: 50rem;
+  height: 50rem;
+}
+button{
+  font-size: 20rem;
+}
 /* home */
 #home {
   width: 100%;
