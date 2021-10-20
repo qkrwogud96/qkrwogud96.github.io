@@ -1,6 +1,10 @@
+const button = document.querySelector(".modal-close-button");
+const modalElem = document.querySelector("#modal");
+const publishingWrap = document.querySelector(".publishing-wrap");
+const designWrap = document.querySelector(".design-wrap");
+const navButton = document.querySelector("label[for=nav-button]");
+let startWidth;
 const modalArray = [
-  //불러오는 이미지, 가져오는 동영상, 사이트 설명, 개요, 특징, 활용 라이브러리
-  //publishing
   {
     img: "39etc",
     video: "",
@@ -78,32 +82,107 @@ const modalArray = [
   //design
   { img: "calexo", video: "" },
   { img: "leaflet", video: "" },
-  { img: "weeding", video: "" },
+  { img: "wedding", video: "" },
   {
     img: "hanatour",
     video: "",
   },
 ];
 
-const button = document.querySelector("button");
-const modalElem = document.querySelector("#modal");
+function findImgIndex(value) {
+  for (let i = 0; i < modalArray.length; i++) {
+    if (modalArray[i].img == value) {
+      return i;
+    }
+  }
+}
+function setModalTitle(index) {
+  const title = document.querySelector(".modal-detail");
+  const firstContents = document.querySelector(".contents");
+  //초기화
+  if (title.querySelector("h1") != null) {
+    title.removeChild(title.querySelector("h1"));
+  }
+
+  const h1 = document.createElement("h1");
+  h1.innerText = modalArray[index].title;
+  title.insertBefore(h1, firstContents);
+}
+function setModalSummary(index) {
+  const summary = document.querySelector(".summary");
+  const li = document.createElement("li");
+
+  //초기화
+  while (summary.querySelector("li") != null) {
+    summary.removeChild(summary.querySelector("li"));
+  }
+
+  li.innerHTML = modalArray[index].summary;
+  summary.appendChild(li);
+}
+function setModalPoint(index) {
+  const point = document.querySelector(".point");
+
+  //초기화
+  while (point.querySelector("li") != null) {
+    point.removeChild(point.querySelector("li"));
+  }
+  for (let i = 0; i < modalArray[index].point.length; i++) {
+    const li = document.createElement("li");
+    li.innerHTML = modalArray[index].point[i];
+    point.appendChild(li);
+  }
+}
+function setModalLibrary(index) {
+  const library = document.querySelector(".library");
+
+  //초기화
+  while (library.querySelector("li") != null) {
+    library.removeChild(library.querySelector("li"));
+  }
+  for (let i = 0; i < modalArray[index].library.length; i++) {
+    const li = document.createElement("li");
+    li.innerHTML = modalArray[index].library[i];
+    library.appendChild(li);
+  }
+}
+function openModal(e) {
+  //초기 width값
+  startWidth = document.body.clientWidth;
+  document.body.classList.add("modal-open");
+  modalElem.style.display = "block";
+  //modal 오픈 후 width값
+  const nowWidth = document.body.clientWidth;
+  //스크롤바 너비
+  const scrollBarWidth = nowWidth - startWidth;
+  //body width값 변경 막기
+  document.body.style.paddingRight = scrollBarWidth + "px";
+  modalElem.style.width = `calc(100% - ${scrollBarWidth}px)`;
+  navButton.classList.add("modal-on");
+
+  //img index 찾기
+  const target = e.target.children[0].getAttribute("alt");
+  const INDEX = findImgIndex(target);
+
+  //modal detail 설정
+  setModalTitle(INDEX);
+  setModalSummary(INDEX);
+  setModalPoint(INDEX);
+  setModalLibrary(INDEX);
+}
 
 function closeModal() {
   modalElem.style.display = "none";
-
   document.body.classList.remove("modal-open");
-}
-button.addEventListener("click", closeModal);
+  document.body.style.paddingRight = 0;
 
-const publishingWrap = document.querySelector(".publishing-wrap");
-const designWrap = document.querySelector(".design-wrap");
-
-function openModal(e) {
-  document.body.classList.add('modal-open');
-  modalElem.style.display = 'block';
-
-  console.log(e.target.children[0].getAttribute("src"));
+  navButton.classList.remove("modal-on");
 }
 
-publishingWrap.addEventListener("click", openModal);
-designWrap.addEventListener("click", openModal);
+const modalEvent = () => {
+  button.addEventListener("click", closeModal);
+  publishingWrap.addEventListener("click", openModal);
+  designWrap.addEventListener("click", openModal);
+};
+
+modalEvent();
