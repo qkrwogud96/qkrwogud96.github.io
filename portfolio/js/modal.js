@@ -89,6 +89,21 @@ const modalArray = [
   },
 ];
 
+function resetUl(value) {
+  while (value.querySelector("li") != null) {
+    value.removeChild(value.querySelector("li"));
+  }
+}
+function settingList(value, index) {
+  console.log(value, index);
+  const valueStr = value.getAttribute('class');
+  console.log(valueStr);
+  for (let i = 0; i < modalArray[index].value.length; i++) {
+    const li = document.createElement("li");
+    li.innerHTML = modalArray[index].value[i];
+    value.appendChild(li);
+  }
+}
 function findImgIndex(value) {
   for (let i = 0; i < modalArray.length; i++) {
     if (modalArray[i].img == value) {
@@ -110,41 +125,18 @@ function setModalTitle(index) {
 }
 function setModalSummary(index) {
   const summary = document.querySelector(".summary");
-  const li = document.createElement("li");
-
-  //초기화
-  while (summary.querySelector("li") != null) {
-    summary.removeChild(summary.querySelector("li"));
-  }
-
-  li.innerHTML = modalArray[index].summary;
-  summary.appendChild(li);
+  resetUl(summary);
+  settingList(summary, index);
 }
 function setModalPoint(index) {
   const point = document.querySelector(".point");
-
-  //초기화
-  while (point.querySelector("li") != null) {
-    point.removeChild(point.querySelector("li"));
-  }
-  for (let i = 0; i < modalArray[index].point.length; i++) {
-    const li = document.createElement("li");
-    li.innerHTML = modalArray[index].point[i];
-    point.appendChild(li);
-  }
+  resetUl(point);
+  settingList(point, index);
 }
 function setModalLibrary(index) {
   const library = document.querySelector(".library");
-
-  //초기화
-  while (library.querySelector("li") != null) {
-    library.removeChild(library.querySelector("li"));
-  }
-  for (let i = 0; i < modalArray[index].library.length; i++) {
-    const li = document.createElement("li");
-    li.innerHTML = modalArray[index].library[i];
-    library.appendChild(li);
-  }
+  resetUl(library);
+  settingList(library, index);
 }
 function openModal(e) {
   //초기 width값
