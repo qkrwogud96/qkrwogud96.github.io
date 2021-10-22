@@ -1,9 +1,7 @@
 const modalElem = document.querySelector("#modal");
-
-const closeButton = document.querySelector(".modal-close-button");
+const button = document.querySelector(".modal-close-button");
 const htmlButton = modalElem.querySelector(".my-html");
 const githubButton = modalElem.querySelector(".my-github");
-
 const publishingWrap = document.querySelector(".publishing-wrap");
 const designWrap = document.querySelector(".design-wrap");
 const navButton = document.querySelector("label[for=nav-button]");
@@ -111,21 +109,6 @@ const modalArray = [
   },
 ];
 
-function resetUl(value) {
-  while (value.querySelector("li") != null) {
-    value.removeChild(value.querySelector("li"));
-  }
-}
-function settingList(value, index) {
-  console.log(value, index);
-  const valueStr = value.getAttribute('class');
-  console.log(valueStr);
-  for (let i = 0; i < modalArray[index].value.length; i++) {
-    const li = document.createElement("li");
-    li.innerHTML = modalArray[index].value[i];
-    value.appendChild(li);
-  }
-}
 function findImgIndex(value) {
   for (let i = 0; i < modalArray.length; i++) {
     if (modalArray[i].img == value) {
@@ -175,18 +158,41 @@ function setModalTitle(index) {
 }
 function setModalSummary(index) {
   const summary = document.querySelector(".summary");
-  resetUl(summary);
-  settingList(summary, index);
+  const li = document.createElement("li");
+
+  //초기화
+  while (summary.querySelector("li") != null) {
+    summary.removeChild(summary.querySelector("li"));
+  }
+
+  li.innerHTML = modalArray[index].summary;
+  summary.appendChild(li);
 }
 function setModalPoint(index) {
   const point = document.querySelector(".point");
-  resetUl(point);
-  settingList(point, index);
+
+  //초기화
+  while (point.querySelector("li") != null) {
+    point.removeChild(point.querySelector("li"));
+  }
+  for (let i = 0; i < modalArray[index].point.length; i++) {
+    const li = document.createElement("li");
+    li.innerHTML = modalArray[index].point[i];
+    point.appendChild(li);
+  }
 }
 function setModalLibrary(index) {
   const library = document.querySelector(".library");
-  resetUl(library);
-  settingList(library, index);
+
+  //초기화
+  while (library.querySelector("li") != null) {
+    library.removeChild(library.querySelector("li"));
+  }
+  for (let i = 0; i < modalArray[index].library.length; i++) {
+    const li = document.createElement("li");
+    li.innerHTML = modalArray[index].library[i];
+    library.appendChild(li);
+  }
 }
 function openModal(e) {
   //modal 세팅 준비
@@ -241,7 +247,7 @@ function closeModal() {
 }
 
 const modalEvent = () => {
-  closeButton.addEventListener("click", closeModal);
+  button.addEventListener("click", closeModal);
   publishingWrap.addEventListener("click", openModal);
   designWrap.addEventListener("click", openModal);
 };
