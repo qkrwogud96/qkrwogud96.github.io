@@ -1,5 +1,5 @@
 const modalElem = document.querySelector("#modal");
-const button = document.querySelector(".modal-close-button");
+const closeButton = document.querySelector(".modal-close-button");
 const htmlButton = modalElem.querySelector(".my-html");
 const githubButton = modalElem.querySelector(".my-github");
 const publishingWrap = document.querySelector(".publishing-wrap");
@@ -8,6 +8,8 @@ const navButton = document.querySelector("label[for=nav-button]");
 let startWidth;
 const modalArray = [
   {
+    gitlink: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/shoppingmall_39etc",
+    htmllink: "qkrwogud96.github.io/portfolio/file/shoppingmall_39etc/index.html",
     img: "39etc",
     type: "publishing",
     video: "images/39etc.mp4",
@@ -21,6 +23,8 @@ const modalArray = [
     library: ["HTML5", "CSS3", "Media query", "Javascript", "Swiper API"],
   },
   {
+    link: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/gird_animalshelter",
+    htmllink: "qkrwogud96.github.io/portfolio/file/gird_animalshelter/index.html",
     img: "animalshelter",
     type: "publishing",
     video: "images/animalshelter.mp4",
@@ -34,6 +38,8 @@ const modalArray = [
     library: ["HTML5", "CSS3", "Javascript"],
   },
   {
+    link: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/interactive_web",
+    htmllink: "qkrwogud96.github.io/portfolio/file/interactive_web/index.html",
     img: "interactive",
     type: "publishing",
     video: "images/interactive.mp4",
@@ -43,6 +49,8 @@ const modalArray = [
     library: ["HTML5", "CSS3", "Media query"],
   },
   {
+    link: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/scroll_mac",
+    htmllink: "qkrwogud96.github.io/portfolio/file/scroll_mac/index.html",
     img: "mac",
     type: "publishing",
     video: "images/mac.mp4",
@@ -56,6 +64,8 @@ const modalArray = [
     library: ["HTML5", "CSS3", "Media query", "Javascript"],
   },
   {
+    link: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/google_momentum",
+    htmllink: "qkrwogud96.github.io/portfolio/file/google_momentum/index.html",
     img: "momentum",
     type: "publishing",
     video: "images/momentum.mp4",
@@ -74,6 +84,8 @@ const modalArray = [
     ],
   },
   {
+    link: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/css_vogue",
+    htmllink: "qkrwogud96.github.io/portfolio/file/css_vogue/index.html",
     img: "vogue",
     type: "publishing",
     video: "images/vogue.mp4",
@@ -198,7 +210,6 @@ function openModal(e) {
   //modal 세팅 준비
   const Detail = modalElem.querySelector(".modal-detail");
   const video = modalElem.querySelector("video");
-
   Detail.style.display = "none";
   video.style.display = "none";
   htmlButton.style.display = "none";
@@ -237,6 +248,14 @@ function openModal(e) {
     setModalImage(INDEX);
     setModalTitle(INDEX);
   }
+
+  //click button event
+  htmlButton.addEventListener("click", () => {
+    window.open(modalArray[INDEX].htmllink);
+  });
+  githubButton.addEventListener("click", () => {
+    window.open(modalArray[INDEX].gitlink);
+  });
 }
 function closeModal() {
   modalElem.style.display = "none";
@@ -247,9 +266,9 @@ function closeModal() {
 }
 
 const modalEvent = () => {
-  button.addEventListener("click", closeModal);
   publishingWrap.addEventListener("click", openModal);
   designWrap.addEventListener("click", openModal);
+  closeButton.addEventListener("click", closeModal);
 };
 
 modalEvent();
