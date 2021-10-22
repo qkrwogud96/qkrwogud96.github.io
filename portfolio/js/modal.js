@@ -9,7 +9,7 @@ let startWidth;
 const modalArray = [
   {
     gitlink: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/shoppingmall_39etc",
-    htmllink: "qkrwogud96.github.io/portfolio/file/shoppingmall_39etc/index.html",
+    htmllink: "https://qkrwogud96.github.io/portfolio/file/shoppingmall_39etc/index.html",
     img: "39etc",
     type: "publishing",
     video: "images/39etc.mp4",
@@ -24,7 +24,7 @@ const modalArray = [
   },
   {
     link: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/gird_animalshelter",
-    htmllink: "qkrwogud96.github.io/portfolio/file/gird_animalshelter/index.html",
+    htmllink: "https://qkrwogud96.github.io/portfolio/file/gird_animalshelter/index.html",
     img: "animalshelter",
     type: "publishing",
     video: "images/animalshelter.mp4",
@@ -39,7 +39,7 @@ const modalArray = [
   },
   {
     link: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/interactive_web",
-    htmllink: "qkrwogud96.github.io/portfolio/file/interactive_web/index.html",
+    htmllink: "https://qkrwogud96.github.io/portfolio/file/interactive_web/index.html",
     img: "interactive",
     type: "publishing",
     video: "images/interactive.mp4",
@@ -50,7 +50,7 @@ const modalArray = [
   },
   {
     link: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/scroll_mac",
-    htmllink: "qkrwogud96.github.io/portfolio/file/scroll_mac/index.html",
+    htmllink: "https://qkrwogud96.github.io/portfolio/file/scroll_mac/index.html",
     img: "mac",
     type: "publishing",
     video: "images/mac.mp4",
@@ -65,7 +65,7 @@ const modalArray = [
   },
   {
     link: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/google_momentum",
-    htmllink: "qkrwogud96.github.io/portfolio/file/google_momentum/index.html",
+    htmllink: "https://qkrwogud96.github.io/portfolio/file/google_momentum/index.html",
     img: "momentum",
     type: "publishing",
     video: "images/momentum.mp4",
@@ -85,7 +85,7 @@ const modalArray = [
   },
   {
     link: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/css_vogue",
-    htmllink: "qkrwogud96.github.io/portfolio/file/css_vogue/index.html",
+    htmllink: "https://qkrwogud96.github.io/portfolio/file/css_vogue/index.html",
     img: "vogue",
     type: "publishing",
     video: "images/vogue.mp4",
@@ -225,7 +225,7 @@ function openModal(e) {
   const scrollBarWidth = nowWidth - startWidth;
   //body width값 변경 막기
   document.body.style.paddingRight = scrollBarWidth + "px";
-  modalElem.style.width = `calc(100% - ${scrollBarWidth}px)`;
+  // modalElem.style.width = `calc(100% - ${scrollBarWidth}px)`;
   navButton.classList.add("modal-on");
 
   //img index 찾기
