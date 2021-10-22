@@ -47,25 +47,25 @@ function ClickEvent(e) {
     }
   }
 }
-function reloadEvent(){
-  console.log(pageCount);
+function reloadEvent() {
+  // console.log(pageCount);
   const localStr = JSON.parse(localStorage.getItem('pageCount'));
-  scrollPosition = localStr * window.innerHeight;
-  window.pageYOffset = scrollPosition;
-  window.localStorage.setItem('pageCount', localStr);
+  pageCount = localStr;
+  scrollPosition = pageCount * window.innerHeight;
+  window.scrollTo({ left: 0, top: scrollPosition, behavior: "smooth" });
 }
 const init = () => {
   //초기 scroll값 맞추기
   // window.scrollTo(0, 0);
 
   //wheel 이벤트 처리
-  wrapElem.addEventListener("wheel", wheelEvent);
+  wrapElem.addEventListener("wheel", wheelEvent,{passive : false});
 
   //gnb 클릭시 pageCount 값 맞춰주기
   gnbElem.addEventListener("click", ClickEvent);
   logoElem.addEventListener("click", ClickEvent);
 
   //새로고침 시 pageCount 값 가져오기
-  window.addEventListener('reload', reloadEvent);
+  window.addEventListener("load", reloadEvent);
 };
 init();

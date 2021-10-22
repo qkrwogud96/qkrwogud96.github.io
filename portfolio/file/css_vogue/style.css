@@ -36,8 +36,9 @@
   justify-content: space-around;
   align-items: center;
   padding: 30px 40px;
-  color: #000;
-  animation: color 6s;
+  color: #fff;
+  animation: color 15s;
+  animation-delay: 5s;
   position: fixed;
   text-align: center;
   z-index: 10;
@@ -47,15 +48,15 @@
     "Lucida Sans", Arial, sans-serif;
   font-size: 2em;
   transition: 2s;
-  animation: action 3s;
-  animation-delay: 2s;
+  animation: action 3s ease-in-out 2s;
 }
 #banner .line {
   margin: 0 20px;
   width: 650px;
   height: 2px;
-  background-color: #000;
-  animation: backcolor 6s;
+  background-color: #fff;
+  animation: backcolor 15s;
+  animation-delay: 5s;
 }
 #banner .menu {
   display: flex;
@@ -64,8 +65,9 @@
   margin: 0 2px;
   width: 4px;
   height: 4px;
-  background-color: #000;
-  animation: backcolor 6s;
+  background-color: #fff;
+  animation: backcolor 15s;
+  animation-delay: 5s;
   border: none;
   border-radius: 50%;
 }
@@ -80,15 +82,17 @@
   position: absolute;
   bottom: 70px;
   right: 30px;
-  z-index: 1;
+  z-index: 2;
 }
 .sns a {
+  display: inline-block;
   margin: 10px 0;
 }
-.sns i,
-.sns p {
-  color: #000;
-  animation: color 6s;
+.sns a i,
+.sns a p {
+  color: #fff;
+  animation: color 15s;
+  animation-delay: 5s;
 }
 .sns a:nth-child(4) {
   writing-mode: tb-rl;
@@ -248,15 +252,15 @@
 .imggroup img:nth-child(4){animation-delay: 18s;}
 .textslide{
   position: absolute;
-  top: 0;
-  margin: 50px;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
   opacity: 0;
   animation: play 8s linear 12s;
 }
-.textslide p {
-  margin-top: 100px;
+.textslide b {
   font-size: 2em;
-  writing-mode: tb-rl;
+  font-weight: 700;
   color: #000;
 }
 /************** 정보화면 *************/
@@ -270,7 +274,8 @@
 }
 @keyframes action {
   100% {
-    transform: translate(414px, 293px);
+    transform: translate(22vw,32vh);
+    opacity: 0;
   }
 }
 @keyframes background {
@@ -288,13 +293,13 @@
 @keyframes color {
   0%,
   100% {
-    color: #fff;
+    color: #000;
   }
 }
 @keyframes backcolor {
   0%,
   100% {
-    background-color: #fff;
+    background-color: #000;
   }
 }
 @keyframes play {
@@ -303,5 +308,5 @@
   }
   100% {
     opacity: 1;
-  }
+  } 
 }

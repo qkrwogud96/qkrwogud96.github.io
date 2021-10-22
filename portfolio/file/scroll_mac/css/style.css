@@ -88,7 +88,7 @@ p {
   opacity: 0;
 }
 .main-message p {
-    font-size: 2.8rem;
+  font-size: 2.8rem;
   font-weight: bold;
   text-align: center;
 }
@@ -99,6 +99,7 @@ p {
   margin: 0 auto;
   padding: 0 1.4rem;
   font-size: 2rem;
+  font-weight: 300;
 }
 #scroll-section-1 .description strong {
   font-size: 4.2rem;
@@ -119,11 +120,11 @@ p {
   width: 40%;
   font-size: 2rem;
 }
-#scroll-section-2 .desc-message.a{
+#scroll-section-2 .desc-message.a {
   top: 10vh;
   left: 60vw;
 }
-#scroll-section-2 .desc-message.b{
+#scroll-section-2 .desc-message.b {
   top: 60vh;
   left: 50vw;
 }
@@ -160,16 +161,15 @@ p {
   top: 60vh;
   left: 0;
 }
-.sticky-elem-canvas{
+.sticky-elem-canvas {
   top: 0;
   height: 100vh;
   z-index: -1;
 }
-.sticky-elem-canvas canvas{
+.sticky-elem-canvas canvas {
   position: absolute;
   top: 50%;
   left: 50%;
-
 }
 
 #show-scene-0 #scroll-section-0 .sticky-elem,
@@ -179,30 +179,35 @@ p {
   display: block;
 }
 
-
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
   #scroll-section-0 h1 {
-    font-size: 8vw;
+    font-size: 7vw;
   }
-  .main-message{
-    font-size: 3vw;
-  }  
+  .main-message p {
+    font-size: 1.5vw;
+  }
+  .main-message p span {
+    font-size: 2.4vw;
+  }
   #scroll-section-1 .description {
-    font-size: 3rem;
+    font-size: 2vw;
   }
   #scroll-section-1 .description strong {
-    font-size: 10rem;
+    font-size: 3vw;
   }
-  #scroll-section-2 .main-message p{
-    font-size: 5rem;
+  #scroll-section-2 .main-message p {
+    font-size: 3vw;
   }
   #scroll-section-2 .main-message small {
-    font-size: 3rem;
+    font-size: 2vw;
   }
   #scroll-section-2 .desc-message {
-    font-size: 3rem;
+    font-size: 1.5vw;
   }
-  #scroll-section-3 .canvas-caption {
-    font-size: 5rem;
+  #scroll-section-3 .canvas-caption strong{
+    font-size: 3vw;
+  }
+  #scroll-section-3 .canvas-caption p{
+    font-size: 1.5vw;
   }
 }
