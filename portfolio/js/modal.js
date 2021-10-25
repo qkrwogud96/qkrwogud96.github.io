@@ -6,10 +6,14 @@ const publishingWrap = document.querySelector(".publishing-wrap");
 const designWrap = document.querySelector(".design-wrap");
 const navButton = document.querySelector("label[for=nav-button]");
 let startWidth;
+let curIndex = 0;
+
 const modalArray = [
   {
-    gitlink: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/shoppingmall_39etc",
-    htmllink: "https://qkrwogud96.github.io/portfolio/file/shoppingmall_39etc/index.html",
+    gitlink:
+      "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/shoppingmall_39etc",
+    htmllink:
+      "https://qkrwogud96.github.io/portfolio/file/shoppingmall_39etc/index.html",
     img: "39etc",
     type: "publishing",
     video: "images/39etc.mp4",
@@ -23,8 +27,9 @@ const modalArray = [
     library: ["HTML5", "CSS3", "Media query", "Javascript", "Swiper API"],
   },
   {
-    link: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/gird_animalshelter",
-    htmllink: "https://qkrwogud96.github.io/portfolio/file/gird_animalshelter/index.html",
+    gitlink: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/gird_animalshelter",
+    htmllink:
+      "https://qkrwogud96.github.io/portfolio/file/gird_animalshelter/index.html",
     img: "animalshelter",
     type: "publishing",
     video: "images/animalshelter.mp4",
@@ -38,19 +43,21 @@ const modalArray = [
     library: ["HTML5", "CSS3", "Javascript"],
   },
   {
-    link: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/interactive_web",
-    htmllink: "https://qkrwogud96.github.io/portfolio/file/interactive_web/index.html",
+    gitlink: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/interactive_web",
+    htmllink:
+      "https://qkrwogud96.github.io/portfolio/file/interactive_web/index.html",
     img: "interactive",
     type: "publishing",
     video: "images/interactive.mp4",
-    title: "어디서든 열어볼 수 있는 쇼핑몰",
-    summary: "반응형으로 동작하는 쇼핑몰 홈페이지를 퍼블리싱 했습니다.",
+    title: "어디서든 열어볼 수 있는 홈페이지",
+    summary: "반응형으로 동작하는 홈페이지를 퍼블리싱 했습니다.",
     point: ["반응형 웹(PC/Tablet/Mobile) 구현", "fontawesome 활용한 sns 구현"],
     library: ["HTML5", "CSS3", "Media query"],
   },
   {
-    link: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/scroll_mac",
-    htmllink: "https://qkrwogud96.github.io/portfolio/file/scroll_mac/index.html",
+    gitlink: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/scroll_mac",
+    htmllink:
+      "https://qkrwogud96.github.io/portfolio/file/scroll_mac/index.html",
     img: "mac",
     type: "publishing",
     video: "images/mac.mp4",
@@ -64,8 +71,9 @@ const modalArray = [
     library: ["HTML5", "CSS3", "Media query", "Javascript"],
   },
   {
-    link: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/google_momentum",
-    htmllink: "https://qkrwogud96.github.io/portfolio/file/google_momentum/index.html",
+    gitlink: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/google_momentum",
+    htmllink:
+      "https://qkrwogud96.github.io/portfolio/file/google_momentum/index.html",
     img: "momentum",
     type: "publishing",
     video: "images/momentum.mp4",
@@ -84,8 +92,9 @@ const modalArray = [
     ],
   },
   {
-    link: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/css_vogue",
-    htmllink: "https://qkrwogud96.github.io/portfolio/file/css_vogue/index.html",
+    gitlink: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/css_vogue",
+    htmllink:
+      "https://qkrwogud96.github.io/portfolio/file/css_vogue/index.html",
     img: "vogue",
     type: "publishing",
     video: "images/vogue.mp4",
@@ -120,7 +129,12 @@ const modalArray = [
     title: "여행사 메인 홈페이지",
   },
 ];
-
+function openHtml(index) {
+  window.open(modalArray[index].htmllink);
+}
+function openGit(index) {
+  window.open(modalArray[index].gitlink);
+}
 function findImgIndex(value) {
   for (let i = 0; i < modalArray.length; i++) {
     if (modalArray[i].img == value) {
@@ -229,9 +243,11 @@ function openModal(e) {
   navButton.classList.add("modal-on");
 
   //img index 찾기
+  console.log(e.target);
   const target = e.target.children[0].getAttribute("alt");
+  console.log(target);
   const INDEX = findImgIndex(target);
-
+  curIndex = INDEX;
   //modal detail 설정
   const targetType = modalArray[INDEX].type;
   if (targetType == "publishing") {
@@ -248,14 +264,7 @@ function openModal(e) {
     setModalImage(INDEX);
     setModalTitle(INDEX);
   }
-
   //click button event
-  htmlButton.addEventListener("click", () => {
-    window.open(modalArray[INDEX].htmllink);
-  });
-  githubButton.addEventListener("click", () => {
-    window.open(modalArray[INDEX].gitlink);
-  });
 }
 function closeModal() {
   modalElem.style.display = "none";
@@ -269,6 +278,14 @@ const modalEvent = () => {
   publishingWrap.addEventListener("click", openModal);
   designWrap.addEventListener("click", openModal);
   closeButton.addEventListener("click", closeModal);
+
+  htmlButton.addEventListener("click", ()=>{
+    window.open(modalArray[curIndex].htmllink);
+  });
+  githubButton.addEventListener("click", () =>{
+    window.open(modalArray[curIndex].gitlink);
+  });
+  
 };
 
 modalEvent();

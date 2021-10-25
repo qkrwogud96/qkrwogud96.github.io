@@ -48,18 +48,15 @@ function ClickEvent(e) {
   }
 }
 function reloadEvent() {
-  // console.log(pageCount);
-  const localStr = JSON.parse(localStorage.getItem('pageCount'));
+  const localStr = JSON.parse(localStorage.getItem("pageCount"));
   pageCount = localStr;
   scrollPosition = pageCount * window.innerHeight;
   window.scrollTo({ left: 0, top: scrollPosition, behavior: "smooth" });
 }
 const init = () => {
   //초기 scroll값 맞추기
-  // window.scrollTo(0, 0);
-
   //wheel 이벤트 처리
-  wrapElem.addEventListener("wheel", wheelEvent,{passive : false});
+  wrapElem.addEventListener("wheel", wheelEvent, { passive: false });
 
   //gnb 클릭시 pageCount 값 맞춰주기
   gnbElem.addEventListener("click", ClickEvent);

@@ -31,11 +31,14 @@ textarea:focus:-ms-input-placeholder {
   top: 0;
   left: 0;
   /* background-color: #11010d; */
-  background-color: cadetblue;
+  background-image: url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
 }
 .bg {
-  width: 960px;
-  height: 640px;
+  width: 65vw;
+  height: 75vh;
   position: absolute;
   top: 150px;
   left: 50%;
@@ -47,13 +50,14 @@ textarea:focus:-ms-input-placeholder {
 }
 #greet {
   position: inherit;
-  top: -60px;
+  top: -80px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 2.4em;
+  font-size: 3em;
   font-weight: 500;
   text-align: center;
   font-family: "Inter", sans-serif;
+  color: #eee;
   /*text-shadow: 1px 1px 4px #333;*/
 }
 #pop-up {
