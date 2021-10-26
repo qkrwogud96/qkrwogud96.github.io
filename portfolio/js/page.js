@@ -15,8 +15,16 @@ function wheelEvent(e) {
   // 아래로 스크롤
   if (e.deltaY >= 0) {
     pageCount++;
-    if (pageCount >= pageElem.length - 1) {
-      pageCount = pageElem.length - 1;
+    console.log(pageElem.length);
+    if (pageCount >= pageElem.length) {
+      if (
+        wrapElem.querySelector("#publishing").clientHeight ==
+        window.innerHeight * 2
+      ) {
+        pageCount = pageElem.length;
+      } else {
+        pageCount = pageElem.length;
+      }
     }
   }
   // 위로 스크롤
@@ -64,5 +72,10 @@ const init = () => {
 
   //새로고침 시 pageCount 값 가져오기
   window.addEventListener("load", reloadEvent);
+
+  //닫을때 pageCount 초기화
+  window.addEventListener("beforeunload", () => {
+    localStorage.setItem("pageCount", 0);
+  });
 };
 init();

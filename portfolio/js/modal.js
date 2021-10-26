@@ -11,9 +11,9 @@ let curIndex = 0;
 const modalArray = [
   {
     gitlink:
-      "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/shoppingmall_39etc",
+      "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/project/file/shoppingmall_39etc",
     htmllink:
-      "https://qkrwogud96.github.io/portfolio/file/shoppingmall_39etc/index.html",
+      "https://qkrwogud96.github.io/project/file//shoppingmall_39etc/index.html",
     img: "39etc",
     type: "publishing",
     video: "images/39etc.mp4",
@@ -27,9 +27,9 @@ const modalArray = [
     library: ["HTML5", "CSS3", "Media query", "Javascript", "Swiper API"],
   },
   {
-    gitlink: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/gird_animalshelter",
+    gitlink: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/project/file/gird_animalshelter",
     htmllink:
-      "https://qkrwogud96.github.io/portfolio/file/gird_animalshelter/index.html",
+      "https://qkrwogud96.github.io/project/file/gird_animalshelter/index.html",
     img: "animalshelter",
     type: "publishing",
     video: "images/animalshelter.mp4",
@@ -43,9 +43,9 @@ const modalArray = [
     library: ["HTML5", "CSS3", "Javascript"],
   },
   {
-    gitlink: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/interactive_web",
+    gitlink: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/project/file/interactive_web",
     htmllink:
-      "https://qkrwogud96.github.io/portfolio/file/interactive_web/index.html",
+      "https://qkrwogud96.github.io/project/file/interactive_web/index.html",
     img: "interactive",
     type: "publishing",
     video: "images/interactive.mp4",
@@ -55,9 +55,9 @@ const modalArray = [
     library: ["HTML5", "CSS3", "Media query"],
   },
   {
-    gitlink: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/scroll_mac",
+    gitlink: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/project/file/scroll_mac",
     htmllink:
-      "https://qkrwogud96.github.io/portfolio/file/scroll_mac/index.html",
+      "https://qkrwogud96.github.io/project/file/scroll_mac/index.html",
     img: "mac",
     type: "publishing",
     video: "images/mac.mp4",
@@ -71,9 +71,9 @@ const modalArray = [
     library: ["HTML5", "CSS3", "Media query", "Javascript"],
   },
   {
-    gitlink: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/portfolio/file/google_momentum",
+    gitlink: "https://github.com/qkrwogud96/qkrwogud96.github.io/tree/main/project/file/google_momentum",
     htmllink:
-      "https://qkrwogud96.github.io/portfolio/file/google_momentum/index.html",
+      "https://qkrwogud96.github.io/project/file/google_momentum/index.html",
     img: "momentum",
     type: "publishing",
     video: "images/momentum.mp4",
@@ -243,9 +243,7 @@ function openModal(e) {
   navButton.classList.add("modal-on");
 
   //img index 찾기
-  console.log(e.target);
-  const target = e.target.children[0].getAttribute("alt");
-  console.log(target);
+  const target = e.target.getAttribute("alt");
   const INDEX = findImgIndex(target);
   curIndex = INDEX;
   //modal detail 설정

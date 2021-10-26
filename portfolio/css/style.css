@@ -157,7 +157,6 @@ input[id="nav-button"]:checked ~ label[for="nav-button"] .bar2 {
 input[id="nav-button"]:checked ~ label[for="nav-button"] .bar3 {
   top: 50%;
   transform: rotate(-45deg);
-
 }
 input[id="nav-button"]:checked ~ nav {
   transform: translateY(0rem);
@@ -472,7 +471,7 @@ nav {
 }
 .design-portfolio {
   width: 99%;
-  height: 97%;
+  height: 98%;
   position: relative;
   cursor: pointer;
 }
@@ -480,10 +479,10 @@ nav {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  z-index: -1;
+  /* z-index: -1; */
 }
 .design-portfolio::before {
   display: inline-block;
@@ -581,3 +580,139 @@ nav {
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .logo {
+    font-size: 2rem;
+  }
+  .gnb {
+    margin-right: 15rem;
+  }
+  .gnb > li > a {
+    font-size: 1.5rem;
+  }
+  .home-logo {
+    font-size: 2rem;
+  }
+  .home-header {
+    font-size: 8rem;
+  }
+  .home-scroll p {
+    font-size: 1.5rem;
+  }
+  #publishing {
+    height: 200vh;
+  }
+  #publishing h1 {
+    font-size: 3rem;
+  }
+  .publishing-wrap {
+    display: block;
+  }
+  .publishing-inner {
+    width: 100%;
+    height: 33%;
+    flex-direction: row;
+  }
+  .rectangle {
+    width: 49%;
+    height: 95%;
+  }
+
+  #design h1 {
+    font-size: 3rem;
+  }
+
+  #contact h1 {
+    font-size: 3rem;
+  }
+  .contact-message h2 {
+    font-size: 2.4rem;
+  }
+  .contact-profile > div {
+    margin-left: 15rem;
+  }
+  .contact-profile span {
+    font-size: 3rem;
+  }
+  .contact-profile p {
+    font-size: 3rem;
+  }
+  .contact-copyright p {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 1023px){
+  .publishing-wrap,
+  .design-wrap
+   {
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+  .gnb {
+    margin-right: 15rem;
+  }
+  .gnb > li > a {
+    font-size: 1.5rem;
+  }
+  .home-logo {
+    font-size: 2rem;
+  }
+  .home-header {
+    font-size: 6.8rem;
+  }
+  .home-scroll p {
+    font-size: 1.5rem;
+  }
+  #publishing {
+    height: 200vh;
+  }
+  #publishing h1 {
+    font-size: 3rem;
+  }
+  .publishing-wrap {
+    display: block;
+  }
+  .publishing-inner {
+    width: 100%;
+    height: 33%;
+    flex-direction: row;
+  }
+  .rectangle {
+    width: 49%;
+    height: 95%;
+  }
+
+  #design h1 {
+    font-size: 3rem;
+  }
+
+  #contact h1 {
+    font-size: 3rem;
+  }
+  .contact-message h2 {
+    font-size: 2rem;
+  }
+  .contact-profile > div {
+    margin-left: 15rem;
+  }
+  .contact-profile span {
+    font-size: 2.4rem;
+  }
+  .contact-profile p {
+    font-size: 2.4rem;
+  }
+  .contact-copyright p {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+  }
+} 
+
+@media screen and (max-width: 768px){
+ 
+} 
