@@ -15,7 +15,6 @@ function wheelEvent(e) {
   // 아래로 스크롤
   if (e.deltaY >= 0) {
     pageCount++;
-    console.log(pageElem.length);
     if (pageCount >= pageElem.length) {
       if (
         wrapElem.querySelector("#publishing").clientHeight ==

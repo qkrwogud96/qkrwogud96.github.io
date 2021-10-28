@@ -243,11 +243,12 @@ function openModal(e) {
   navButton.classList.add("modal-on");
 
   //img index 찾기
-  const target = e.target.getAttribute("alt");
+  let target = e.target.children[0].getAttribute("alt");
   const INDEX = findImgIndex(target);
   curIndex = INDEX;
   //modal detail 설정
   const targetType = modalArray[INDEX].type;
+
   if (targetType == "publishing") {
     Detail.style.display = "block";
     video.style.display = "block";
