@@ -1,26 +1,18 @@
-import Custom from "./Custom";
-const pageName = [
-  {
-    name: "hong",
-    age: "26",
-  },
-  {
-    name: "kim",
-    age: "21",
-  },
-  {
-    name: "park",
-    age: "51",
-  },
-];
-function App() {
+import { useEffect, useState } from "react";
+
+
+
+function App() {  
+  const [counter, setCounter] = useState(0);
+  function onClick(){
+    setCounter((current) => current+1);
+  }
+  useEffect(() => { console.log('useEffect') }, [])
   return (
-    <>
-      <h1>Hello World</h1>
-      {pageName.map((obj) => (
-        <Custom name={obj.name} age={obj.age}></Custom>
-      ))}
-    </>
+    <div className="App">
+      <h1>{counter}</h1>
+      <button onClick ={onClick}>Click Me</button>
+    </div>
   );
 }
 
